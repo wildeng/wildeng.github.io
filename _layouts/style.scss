@@ -1,0 +1,30 @@
+---
+---
+
+{% include css/menu.scss %}
+{% include css/main.scss %}
+{% include css/about.scss %}
+{% include css/career.scss %}
+{% include css/contact.scss %}
+{{ content }}
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-row {
+  flex: 1;
+}
+
+.main-about{
+  flex: 1;
+}
+
+.main-career {
+  flex: 1;
+}

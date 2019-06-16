@@ -1,0 +1,18 @@
+<section id="contact">
+  <div class="contact-container">
+    <div class="contact-pic-container">
+      <img src="images/alain_the_floow.jpg" class="career-pic" />
+    </div>
+    <div class="contact-text-container">
+      {% for network in site.social %}
+        <a href="{{ network.url }}">
+          <i class="fab fa-{{ network.title }}"></i>
+        </a>
+      {% endfor %}
+      <div class="contact-title">
+        CONTACT
+      </div>
+      <hr />
+    </div>
+  </div>
+</section>

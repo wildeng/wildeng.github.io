@@ -1,0 +1,55 @@
+# Site settings
+name: Alain Mauri
+email: edwin+contactme@someemail.com
+#canonical_url: https://edwinexemplar.com
+keywords: "Software Engineer, Team Leader, Ruby, Kanban,Startups, Agile, Pair Programming, Web Development, Javascript, CSS"
+skills: "Senior Software Engineer and Team Leader in Sheffield - UK"
+baseurl:
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# You should replace these with your social networks, of course. :)
+social:
+  - title: linkedin
+    url: https://www.linkedin.com/in/alainmauri
+  - title: twitter
+    url: https://twitter.com/wildeng
+
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+mytheme:
+  blueaccent:
+    mainmenu: '#559FEA'
+    mmhover: '#AECCEA'
+    mainpage: '#8ED3F4'
+    about: '#328DAA'
+    career: '#8A8683'
+    contact: '#5A4D4C'
+  summer:
+    mainmenu: '#8F4F06'
+    mmhover: '#773C05'
+    mainpage: '#728CA3'
+    about: '#F3E4C6'
+    career: '#E6EFF3'
+    contact: '#73C0F4'
+  refreshing:
+    mainmenu: '#003D73'
+    mmhover: '#03569F'
+    mainpage: '#EDD170'
+    about: '#C05640'
+    career: '#1ECFD6'
+    contact: '#0878A4'
+  brightorange:
+    mainmenu: '#10000C'
+    mmhover: '#252625'
+    mainpage: '#515B51'
+    about: '#8C7547'
+    career: '#EFA747'
+    contact: '#DAC6AC'

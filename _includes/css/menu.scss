@@ -1,0 +1,30 @@
+.navbar-default {
+  color: #FFF;
+  background-color: {{ site.mytheme.blueaccent.mainmenu }};
+  border-color: {{ site.mytheme.blueaccent.mainmenu }};
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+  color: #FFF;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover  {
+  color: #FFF;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #FFF;
+  background-color: {{ site.mytheme.blueaccent.mmhover }};
+}
+.menu-container {
+  color: #FFF;
+  font-family: Source Sans Pro;
+  font-size: 4vmin;
+  margin: 0px 10px 0px 10px;
+}
