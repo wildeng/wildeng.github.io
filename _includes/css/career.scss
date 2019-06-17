@@ -3,16 +3,34 @@
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-columns: repeat(10, 20vmin);
-  grid-template-rows: repeat(10, 20vmin);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "head head head"
+    "left text text"
+    "pic pic pic"
+    "footer footer footer";
   grid-gap: 10px;
 }
 
+@media (min-width: 992px) {
+  .career-container {
+    background-color: {{ site.mytheme.blueaccent.career }};
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "head head head"
+      "left text pic"
+      "footer footer footer";
+    grid-gap: 10px;
+  }
+}
+
 .career-pic-container {
-  grid-column-start: 2;
-  grid-column-end:  5;
-  grid-row-start: 2;
-  grid-row-end: 5;
+  grid-area: pic;
 }
 
 .career-pic {
@@ -24,23 +42,9 @@
 }
 
 .career-text-container {
-  grid-column-start: 2;
-  grid-column-end:  4;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-area: text;
   color: white;
   font-family: Source Sans Pro;
-}
-
-@media (min-width: 1280px) {
-  .career-text-container {
-    grid-column-start: 7;
-    grid-column-end:  9;
-    grid-row-start: 3;
-    grid-row-end: 5;
-    color: white;
-    font-family: Source Sans Pro;
-  }
 }
 
 .career-title {
