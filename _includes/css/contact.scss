@@ -1,41 +1,51 @@
-
 .contact-container {
   background-color: {{ site.mytheme.blueaccent.contact }};
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-columns: repeat(10, 20vmin);
-  grid-template-rows: repeat(10, 20vmin);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "head head head"
+    "left pic right"
+    "left contact right"
+    "footer footer footer";
   grid-gap: 10px;
 }
 
+
+@media (min-width: 992px) {
+  .contact-container {
+    background-color: {{ site.mytheme.blueaccent.contact }};
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "head head head"
+      "left pic contact"
+      "footer footer footer";
+    grid-gap: 10px;
+  }
+}
+
+.contact-pic-container img {
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+
 .contact-pic-container {
-  grid-column-start: 2;
-  grid-column-end:  5;
-  grid-row-start: 2;
-  grid-row-end: 5;
+  grid-area: pic;
 }
 
 .contact-text-container {
-  grid-column-start: 2;
-  grid-column-end:  4;
-  grid-row-start: 6;
-  grid-row-end: 7;
+  grid-area: contact;
+  align-self: center;
   color: white;
   font-family: Source Sans Pro;
   align-items: center;
-}
-
-@media (min-width: 1280px) {
-  .contact-text-container {
-    grid-column-start: 7;
-    grid-column-end:  9;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    color: white;
-    font-family: Source Sans Pro;
-    align-items: center;
-  }
 }
 
 .contact-title {
@@ -49,8 +59,6 @@
   line-height: 100%;
   max-width: 20vmin;
 }
-
-
 
 .contact-text-container hr {
   width: 100%;
