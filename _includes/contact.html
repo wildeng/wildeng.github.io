@@ -2,6 +2,8 @@
   <div class="contact-container">
     <div class="contact-pic-container">
       <img src="images/alain_the_floow.jpg" class="career-pic" />
+      <p class="copyright">&copy; 1971-{{ "now" | date: "%Y" }} <b>Alain Mauri</b>.
+      <br>rev {{ site.github.build_revision }} - {{ "now" | date: "%Y.%m.%d" }}</p>
     </div>
     <div class="contact-text-container">
       {% for network in site.social %}
@@ -13,8 +15,6 @@
         CONTACT
       </div>
       <hr />
-      <p class="copyright">&copy; 1971-{{ "now" | date: "%Y" }} <b>Alain Mauri</b>.
-      <br>rev {{ site.github.build_revision }} - {{ "now" | date: "%Y.%m.%d" }}</p>
     </div>
   </div>
 </section>
