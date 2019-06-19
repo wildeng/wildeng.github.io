@@ -1,6 +1,6 @@
 # Site settings
 title: Alain Mauri
-email: edwin+contactme@someemail.com
+email: wildeng@alainmauri.eu
 #canonical_url: https://edwinexemplar.com
 keywords: "Software Engineer, Team Leader, Ruby, Kanban,Startups, Agile, Pair Programming, Web Development, Javascript, CSS"
 skills: "Senior Software Engineer and Team Leader in Sheffield - UK"
@@ -13,6 +13,8 @@ social:
     url: https://www.linkedin.com/in/alainmauri
   - title: twitter
     url: https://twitter.com/wildeng
+  - title: github
+    url: https://github.com/wildeng
 
 # Google webmaster tools
 google_verify:

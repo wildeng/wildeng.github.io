@@ -28,3 +28,30 @@ body {
 .main-career {
   flex: 1;
 }
+
+.error-container {
+  background-color: {{ site.mytheme.blueaccent.mainpage }};
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "head head head"
+    "left title right"
+    "left whoiam right";
+  grid-gap: 10px;
+  background-image: url("images/not_found.png");
+}
+
+.not-found {
+  grid-area: title;
+  color: white;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5vmin;
+  text-align: center;
+  margin: 1vw 0 1vw 0;
+  line-height: 100%;
+}
