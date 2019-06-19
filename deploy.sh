@@ -17,6 +17,8 @@ if [ -d "$BUILD_DIR" ]; then
 
     # Move BUILD_DIR to /tmp
     mv $BUILD_DIR $TMP_DIR
+    # Copy CNAME to /tmp
+    cp CNAME $TMP_DIR
 
     # Change branch to master
     if git checkout master; then
