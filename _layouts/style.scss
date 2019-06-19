@@ -47,11 +47,19 @@ body {
 .not-found {
   grid-area: title;
   color: white;
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 5vmin;
   text-align: center;
   margin: 1vw 0 1vw 0;
-  line-height: 100%;
+  font-style: normal;
+  font-weight: 900;
+}
+
+
+.not-found-title {
+  font-family: Oswald;
+  font-size: 6vmin;
+}
+
+.not-found-text {
+  font-family: Source Sans Pro;
+  font-size: 3vmin;
 }
