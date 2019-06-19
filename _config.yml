@@ -4,7 +4,13 @@ email: wildeng@alainmauri.eu
 #canonical_url: https://edwinexemplar.com
 keywords: "Software Engineer, Team Leader, Ruby, Kanban,Startups, Agile, Pair Programming, Web Development, Javascript, CSS"
 skills: "Senior Software Engineer and Team Leader in Sheffield - UK"
-baseurl:
+baseurl: ""
+twitter_username: wildeng
+github_username: wildeng
+repository: wildeng/wildeng.github.io
+plugins:
+  - "jekyll-github-metadata"
+
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 # You should replace these with your social networks, of course. :)
@@ -21,10 +27,6 @@ google_verify:
 
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
-
-# Build settings
-markdown: kramdown
-permalink: pretty
 
 mytheme:
   blueaccent:
@@ -55,3 +57,7 @@ mytheme:
     about: '#8C7547'
     career: '#EFA747'
     contact: '#DAC6AC'
+
+# Build settings
+markdown: kramdown
+permalink: pretty
