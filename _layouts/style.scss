@@ -17,6 +17,17 @@ body {
   flex-direction: column;
 }
 
+
+@media (max-width: 767px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding-top: calc(constant(safe-area-inset-top) + 65px);
+    padding-top: calc(env(safe-area-inset-top) + 65px);
+  }
+}
+
+
 .main-row {
   flex: 1;
 }
