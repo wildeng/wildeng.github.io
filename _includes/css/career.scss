@@ -1,6 +1,8 @@
 @media (max-width: 666px) {
   .career-container {
     background-color: {{ site.mytheme.blueaccent.career }};
+    padding-top: calc(constant(safe-area-inset-top) + 40px);
+    padding-top: calc(env(safe-area-inset-top) + 40px);
     display: grid;
     width: 100vw;
     height: 100vh;

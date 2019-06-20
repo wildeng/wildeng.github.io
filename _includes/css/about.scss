@@ -1,6 +1,8 @@
 @media (max-width: 666px) {
   .about-container {
     background-color: {{ site.mytheme.blueaccent.about }};
+    padding-top: calc(constant(safe-area-inset-top) + 40px);
+    padding-top: calc(env(safe-area-inset-top) + 40px);
     display: grid;
     width: 100vw;
     height: 100vh;
