@@ -57,6 +57,13 @@ mytheme:
     about: '#8C7547'
     career: '#EFA747'
     contact: '#DAC6AC'
+  vibrant:
+    mainmenu: '#F8E9A1'
+    mmhover: '#F8E9A1'
+    mainpage: '#F76C6C'
+    about: '#A8D0E6'
+    career: '#374785'
+    contact: '#24305E'
 
 # Build settings
 markdown: kramdown
