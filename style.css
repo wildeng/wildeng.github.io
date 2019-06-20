@@ -87,6 +87,8 @@
 @media (max-width: 666px) {
   .about-container {
     background-color: #328DAA;
+    padding-top: calc(constant(safe-area-inset-top) + 40px);
+    padding-top: calc(env(safe-area-inset-top) + 40px);
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -249,6 +251,8 @@
 @media (max-width: 666px) {
   .career-container {
     background-color: #8A8683;
+    padding-top: calc(constant(safe-area-inset-top) + 40px);
+    padding-top: calc(env(safe-area-inset-top) + 40px);
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -579,17 +583,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-
-@media (max-width: 767px) {
-  .main {
-    display: flex;
-    flex-direction: column;
-    padding-top: calc(constant(safe-area-inset-top) + 65px);
-    padding-top: calc(env(safe-area-inset-top) + 65px);
-  }
-}
-
 
 .main-row {
   flex: 1;
