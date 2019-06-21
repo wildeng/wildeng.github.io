@@ -30,7 +30,7 @@
 }
 
 .main-container {
-  background-color: #8ED3F4;
+  background-color: #31708E;
   display: grid;
   width: 100vw;
   height: 100vh;
@@ -250,7 +250,7 @@
 
 @media (max-width: 666px) {
   .career-container {
-    background-color: #8A8683;
+    background-color: #022140;
     padding-top: calc(constant(safe-area-inset-top) + 40px);
     padding-top: calc(env(safe-area-inset-top) + 40px);
     display: grid;
@@ -285,7 +285,7 @@
 
 @media (min-width: 667px) {
   .career-container {
-    background-color: #8A8683;
+    background-color: #022140;
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -317,7 +317,7 @@
 
 @media (min-width: 767px) and (max-width: 991px){
   .career-container {
-    background-color: #8A8683;
+    background-color: #022140;
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -351,7 +351,7 @@
 
 @media (min-width: 992px) {
   .career-container {
-    background-color: #8A8683;
+    background-color: #022140;
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -409,7 +409,7 @@
 
 @media (max-width: 666px) {
   .contact-container {
-    background-color: #5A4D4C;
+    background-color: #1E4258;
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -442,7 +442,7 @@
 
 @media (min-width: 667px) {
   .contact-container {
-    background-color: #5A4D4C;
+    background-color: #1E4258;
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -474,7 +474,7 @@
 
 @media (min-width: 767px) and (max-width: 991px){
   .contact-container {
-    background-color: #5A4D4C;
+    background-color: #1E4258;
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -508,7 +508,7 @@
 
 @media (min-width: 992px) {
   .contact-container {
-    background-color: #5A4D4C;
+    background-color: #1E4258;
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -597,7 +597,7 @@ body {
 }
 
 .error-container {
-  background-color: #8ED3F4;
+  background-color: #31708E;
   display: grid;
   width: 100vw;
   height: 100vh;
@@ -609,6 +609,11 @@ body {
     "left whoiam right";
   grid-gap: 10px;
   background-image: url("images/not_found.png");
+}
+
+.error-container a {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 .not-found {
