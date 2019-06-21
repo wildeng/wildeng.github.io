@@ -1,7 +1,7 @@
 .navbar-default {
   color: #FFF;
-  background-color: {{ site.mytheme.blueaccent.mainmenu }};
-  border-color: {{ site.mytheme.blueaccent.mainmenu }};
+  background-color: {{ site.mytheme.highcontrast.mainmenu }};
+  border-color: {{ site.mytheme.highcontrast.mainmenu }};
 }
 
 .navbar-default .navbar-brand,
@@ -20,7 +20,7 @@
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
   color: #FFF;
-  background-color: {{ site.mytheme.blueaccent.mmhover }};
+  background-color: {{ site.mytheme.highcontrast.mmhover }};
 }
 .menu-container {
   color: #FFF;

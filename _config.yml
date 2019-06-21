@@ -29,6 +29,13 @@ google_verify:
 bing_verify:
 
 mytheme:
+  highcontrast:
+    mainmenu: '#559FEA'
+    mmhover: '#AECCEA'
+    mainpage: '#31708E'
+    about: '#328DAA'
+    career: '#022140'
+    contact: '#1E4258'
   blueaccent:
     mainmenu: '#559FEA'
     mmhover: '#AECCEA'

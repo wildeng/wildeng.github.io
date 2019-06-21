@@ -1,6 +1,6 @@
 @media (max-width: 666px) {
   .about-container {
-    background-color: {{ site.mytheme.blueaccent.about }};
+    background-color: {{ site.mytheme.highcontrast.about }};
     padding-top: calc(constant(safe-area-inset-top) + 40px);
     padding-top: calc(env(safe-area-inset-top) + 40px);
     display: grid;
@@ -35,7 +35,7 @@
 
 @media (min-width: 667px) {
   .about-container {
-    background-color: {{ site.mytheme.blueaccent.about }};
+    background-color: {{ site.mytheme.highcontrast.about }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -67,7 +67,7 @@
 
 @media (min-width: 767px) and (max-width: 991px){
   .about-container {
-    background-color: {{ site.mytheme.blueaccent.about }};
+    background-color: {{ site.mytheme.highcontrast.about }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -101,7 +101,7 @@
 
 @media (min-width: 992px) {
   .about-container {
-    background-color: {{ site.mytheme.blueaccent.about }};
+    background-color: {{ site.mytheme.highcontrast.about }};
     display: grid;
     width: 100vw;
     height: 100vh;

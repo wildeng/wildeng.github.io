@@ -1,6 +1,6 @@
 @media (max-width: 666px) {
   .contact-container {
-    background-color: {{ site.mytheme.blueaccent.contact }};
+    background-color: {{ site.mytheme.highcontrast.contact }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -33,7 +33,7 @@
 
 @media (min-width: 667px) {
   .contact-container {
-    background-color: {{ site.mytheme.blueaccent.contact }};
+    background-color: {{ site.mytheme.highcontrast.contact }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -65,7 +65,7 @@
 
 @media (min-width: 767px) and (max-width: 991px){
   .contact-container {
-    background-color: {{ site.mytheme.blueaccent.contact }};
+    background-color: {{ site.mytheme.highcontrast.contact }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -99,7 +99,7 @@
 
 @media (min-width: 992px) {
   .contact-container {
-    background-color: {{ site.mytheme.blueaccent.contact }};
+    background-color: {{ site.mytheme.highcontrast.contact }};
     display: grid;
     width: 100vw;
     height: 100vh;

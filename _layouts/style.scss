@@ -30,7 +30,7 @@ body {
 }
 
 .error-container {
-  background-color: {{ site.mytheme.blueaccent.mainpage }};
+  background-color: {{ site.mytheme.highcontrast.mainpage }};
   display: grid;
   width: 100vw;
   height: 100vh;
@@ -42,6 +42,11 @@ body {
     "left whoiam right";
   grid-gap: 10px;
   background-image: url("images/not_found.png");
+}
+
+.error-container a {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 .not-found {
