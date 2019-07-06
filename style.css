@@ -433,13 +433,14 @@
   }
 
   .contact-pic-container {
+    position: relative;
+    display: inline-block;
     grid-area: pic;
   }
 
   .contact-pic-container img {
     width: 300px;
     height: 300px;
-    align-self: center;
   }
 
   .contact-text-container {
@@ -466,13 +467,14 @@
   }
 
   .contact-pic-container {
+    position: relative;
+    display: inline-block;
     grid-area: pic;
   }
 
   .contact-pic-container img {
     width: 300px;
     height: 300px;
-    align-self: center;
   }
 
   .contact-text-container {
@@ -500,13 +502,14 @@
 
   .contact-pic-container {
     grid-area: pic;
+    position: relative;
+    display: inline-block;
     padding: 20px;
   }
 
   .contact-pic-container img {
     width: 300px;
     height: 300px;
-    align-self: center;
   }
 
   .contact-text-container {
@@ -534,13 +537,14 @@
   }
 
   .contact-pic-container {
+    position: relative;
+    display: inline-block;
     grid-area: pic;
   }
 
   .contact-pic-container img {
     width: 400px;
     height: 400px;
-    align-self: center;
   }
 
   .contact-text-container {
@@ -549,6 +553,20 @@
     font-family: Source Sans Pro;
     padding-right: 80px;
   }
+}
+
+
+.contact-pic-container .career-pic {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  align-self: center;
+}
+
+.contact-pic-container:hover .career-pic {
+  display: inline;
 }
 
 .contact-title {
