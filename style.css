@@ -435,6 +435,7 @@
   .contact-pic-container {
     position: relative;
     display: inline-block;
+    margin: 20px;
     grid-area: pic;
   }
 
@@ -469,6 +470,7 @@
   .contact-pic-container {
     position: relative;
     display: inline-block;
+    margin: 20px;
     grid-area: pic;
   }
 
@@ -504,7 +506,8 @@
     grid-area: pic;
     position: relative;
     display: inline-block;
-    padding: 20px;
+    margin: 20px;
+    //padding: 20px;
   }
 
   .contact-pic-container img {
@@ -539,6 +542,7 @@
   .contact-pic-container {
     position: relative;
     display: inline-block;
+    margin: 20px;
     grid-area: pic;
   }
 
