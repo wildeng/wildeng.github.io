@@ -1,6 +1,7 @@
 @media (max-width: 666px) {
   .contact-container {
-    background-color: {{ site.mytheme.highcontrast.contact }};
+    //background-color: {{ site.mytheme.highcontrast.contact }};
+    background-image: url('images/90s-background.png');
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -33,7 +34,8 @@
 
 @media (min-width: 667px) {
   .contact-container {
-    background-color: {{ site.mytheme.highcontrast.contact }};
+    //background-color: {{ site.mytheme.highcontrast.contact }};
+    background-image: url('images/90s-background.png');
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -65,7 +67,8 @@
 
 @media (min-width: 767px) and (max-width: 991px){
   .contact-container {
-    background-color: {{ site.mytheme.highcontrast.contact }};
+    //background-color: {{ site.mytheme.highcontrast.contact }};
+    background-image: url('images/90s-background.png');
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -99,7 +102,8 @@
 
 @media (min-width: 992px) {
   .contact-container {
-    background-color: {{ site.mytheme.highcontrast.contact }};
+    //background-color: {{ site.mytheme.highcontrast.contact }};
+    background-image: url('images/90s-background.png');
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -156,10 +160,10 @@
 .contact-text-container a {
   font-size: 10vmin;
   text-decoration: none;
-  color: white;
+  color: #6231c2;
 }
 
 .contact-text-container > a:focus,
 .contact-text-container > a:hover {
-  color: #3c3838;
+  color: #8c52ff;
 }
