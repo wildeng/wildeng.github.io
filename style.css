@@ -573,6 +573,7 @@
 .contact-pic-container:hover .career-pic {
   display: inline;
   animation: rotation 3s infinite linear;
+  border-radius: 50%;
 }
 
 .contact-title {
