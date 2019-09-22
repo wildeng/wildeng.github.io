@@ -567,10 +567,12 @@
   left: 0;
   z-index: 99;
   align-self: center;
+  overflow: hidden;
 }
 
 .contact-pic-container:hover .career-pic {
   display: inline;
+  animation: rotation 3s infinite linear;
 }
 
 .contact-title {
@@ -605,6 +607,15 @@
 .contact-text-container > a:focus,
 .contact-text-container > a:hover {
   color: #8c52ff;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 
