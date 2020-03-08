@@ -21,6 +21,13 @@ social:
     url: https://twitter.com/wildeng
   - title: github
     url: https://github.com/wildeng
+  - title: gitlab
+    url: https://gitlab.com/wildeng
+  - title: free-code-camp
+    url: https://www.freecodecamp.org/wildeng
+  - title: dev
+    url: https://dev.to/wildeng
+
 
 # Google webmaster tools
 google_verify:
@@ -65,12 +72,12 @@ mytheme:
     career: '#EFA747'
     contact: '#DAC6AC'
   vibrant:
-    mainmenu: '#F8E9A1'
-    mmhover: '#F8E9A1'
-    mainpage: '#F76C6C'
-    about: '#A8D0E6'
-    career: '#374785'
-    contact: '#24305E'
+    mainmenu: '#000000'
+    mmhover: '#000000'
+    mainpage: '#000000'
+    about: '#000000'
+    career: '#000000'
+    contact: '#000000'
 
 # Build settings
 markdown: kramdown

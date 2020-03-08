@@ -1,5 +1,23 @@
+body {
+  font-family: Inconsolata, monospace;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #CCC;
+}
+
+
+a:link {
+  color: #0BC;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0BC;
+  text-decoration: underline;
+}
+
 .main-container {
-  background-color: {{ site.mytheme.highcontrast.mainpage }};
+  background-color: {{ site.mytheme.vibrant.mainpage }};
   display: grid;
   width: 100vw;
   height: 100vh;
@@ -15,10 +33,8 @@
 
 .title-one {
   grid-area: title;
-  color: white;
-  font-family: Oswald;
+  color: #FFF;
   font-style: normal;
-  font-weight: 900;
   font-size: 20vmin;
   text-align: center;
   margin: 1vw 0 1vw 0;
@@ -26,7 +42,7 @@
 }
 
 .subtitle {
-  color: white;
+  color: #FFF;
   font-family: Source Sans Pro;
   font-size: 2vmin;
   text-align: center;
@@ -39,7 +55,7 @@
   height: 0.5vmin;
   margin-left: auto;
   margin-right: auto;
-  background-color:#fff;
+  background-color: #FFF;
   border: 0 none;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -48,15 +64,19 @@
 .copyright {
   grid-area: whoiam;
   font-family: Source Sans Pro;
-  font-size: 10px;
+  font-size: 15px;
   line-height: 18px;
   color: #FFF;
 }
 
 .nineties {
-  grid-area: whoiam;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-family: Source Sans Pro;
   font-size: 18px;
   line-height: 18px;
-  color: #6231c2;
+  color: #8c52ff;
+  margin: auto;
+  align-self: center;
 }
