@@ -629,6 +629,111 @@ a:visited {
   }
 }
 
+body {
+  background-color: #000000;
+}
+.basecamp-main {
+  display: flex;
+}
+
+.hello h1 {
+  text-align: center;
+  color: #0BC;
+}
+
+.reasons ol {
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .basecamp-main {
+    flex-direction: column;
+  }
+  .hello {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: justify
+  }
+
+  .hello h1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 3rem;
+  }
+
+  .basecamp-icon {
+    max-width: 15%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .links a {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .right-column {
+    padding: 1rem;
+  }
+
+  .reasons {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reasons ol {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: justify
+  }
+}
+
+@media (min-width: 769px){
+  .hello {
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: justify
+  }
+
+  .links a {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .right-column {
+    padding: 2rem;
+  }
+
+  .reasons {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reasons ol {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: justify
+  }
+}
+
 
 body {
   height: 100%;
