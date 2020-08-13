@@ -6,6 +6,7 @@
 {% include css/about.scss %}
 {% include css/career.scss %}
 {% include css/contact.scss %}
+{% include css/basecamp_content.scss %}
 {{ content }}
 body {
   height: 100%;
