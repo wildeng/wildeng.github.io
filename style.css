@@ -423,6 +423,10 @@ a:visited {
   margin-bottom: 0px;
 }
 
+.open-challenge {
+  color: #ffe300;
+}
+
 @media (max-width: 666px) {
   .contact-container {
     background-color: #000000;
