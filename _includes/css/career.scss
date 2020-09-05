@@ -1,18 +1,18 @@
 @media (max-width: 666px) {
   .career-container {
-    background-color: {{ site.mytheme.highcontrast.career }};
+    background-color: {{ site.mytheme.vibrant.career }};
     padding-top: calc(constant(safe-area-inset-top) + 40px);
     padding-top: calc(env(safe-area-inset-top) + 40px);
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
-      "head head head"
-      "left text right"
-      "left pic right"
-      "footer footer footer";
+      "head"
+      "text"
+      "pic"
+      "footer";
     grid-row-gap: 20px;
   }
 
@@ -21,21 +21,21 @@
   }
 
   .career-pic-container img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     align-self: center;
   }
 
   .career-text-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
+    padding: 20px;
   }
 }
 
 @media (min-width: 667px) {
   .career-container {
-    background-color: {{ site.mytheme.highcontrast.career }};
+    background-color: {{ site.mytheme.vibrant.career }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -53,21 +53,20 @@
   }
 
   .career-pic-container img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     align-self: center;
   }
 
   .career-text-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
   }
 }
 
 @media (min-width: 767px) and (max-width: 991px){
   .career-container {
-    background-color: {{ site.mytheme.highcontrast.career }};
+    background-color: {{ site.mytheme.vibrant.career }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -86,22 +85,21 @@
   }
 
   .career-pic-container img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     align-self: center;
   }
 
   .career-text-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
     padding: 80px;
   }
 }
 
 @media (min-width: 992px) {
   .career-container {
-    background-color: {{ site.mytheme.highcontrast.career }};
+    background-color: {{ site.mytheme.vibrant.career }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -119,15 +117,14 @@
   }
 
   .career-pic-container img {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     align-self: center;
   }
 
   .career-text-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
     padding-right: 80px;
     font-size: 3vmin;
   }
@@ -135,9 +132,6 @@
 
 .career-title {
   color: white;
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: 900;
   font-size: 10vmin;
   text-align: left;
   margin-bottom: 1vmin;
@@ -155,4 +149,8 @@
   border: 0 none;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.open-challenge {
+  color: #ffe300;
 }

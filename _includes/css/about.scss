@@ -1,6 +1,6 @@
 @media (max-width: 666px) {
   .about-container {
-    background-color: {{ site.mytheme.highcontrast.about }};
+    background-color: {{ site.mytheme.vibrant.about }};
     padding-top: calc(constant(safe-area-inset-top) + 40px);
     padding-top: calc(env(safe-area-inset-top) + 40px);
     display: grid;
@@ -29,13 +29,12 @@
   .story-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
   }
 }
 
 @media (min-width: 667px) {
   .about-container {
-    background-color: {{ site.mytheme.highcontrast.about }};
+    background-color: {{ site.mytheme.vibrant.about }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -61,13 +60,12 @@
   .story-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
   }
 }
 
 @media (min-width: 767px) and (max-width: 991px){
   .about-container {
-    background-color: {{ site.mytheme.highcontrast.about }};
+    background-color: {{ site.mytheme.vibrant.about }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -94,14 +92,13 @@
   .story-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
     padding: 80px;
   }
 }
 
 @media (min-width: 992px) {
   .about-container {
-    background-color: {{ site.mytheme.highcontrast.about }};
+    background-color: {{ site.mytheme.vibrant.about }};
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -127,16 +124,13 @@
   .story-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
     padding-right: 80px;
   }
 }
 
 .title-story {
   color: white;
-  font-family: Oswald;
   font-style: normal;
-  font-weight: bolder;
   font-size: 10vmin;
   text-align: left;
   margin-bottom: 1vw;
@@ -145,7 +139,6 @@
 
 .subtitle-story {
   color: white;
-  font-family: Source Sans Pro;
   font-size: 3vmin;
   text-align: justify;
   margin-top: 2vw;

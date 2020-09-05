@@ -1,7 +1,7 @@
 @media (max-width: 666px) {
   .contact-container {
-    //background-color: {{ site.mytheme.highcontrast.contact }};
-    background-image: url('images/90s-background.png');
+    background-color: {{ site.mytheme.vibrant.contact }};
+    //background-image: url('images/90s-background.png');
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -30,14 +30,13 @@
   .contact-text-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
   }
 }
 
 @media (min-width: 667px) {
   .contact-container {
-    //background-color: {{ site.mytheme.highcontrast.contact }};
-    background-image: url('images/90s-background.png');
+    background-color: {{ site.mytheme.vibrant.contact }};
+    //background-image: url('images/90s-background.png');
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -65,14 +64,13 @@
   .contact-text-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
   }
 }
 
 @media (min-width: 767px) and (max-width: 991px){
   .contact-container {
-    //background-color: {{ site.mytheme.highcontrast.contact }};
-    background-image: url('images/90s-background.png');
+    background-color: {{ site.mytheme.vibrant.contact }};
+    //background-image: url('images/90s-background.png');
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -101,15 +99,14 @@
   .contact-text-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
     padding: 80px;
   }
 }
 
 @media (min-width: 992px) {
   .contact-container {
-    //background-color: {{ site.mytheme.highcontrast.contact }};
-    background-image: url('images/90s-background.png');
+    background-color: {{ site.mytheme.vibrant.contact }};
+    //background-image: url('images/90s-background.png');
     display: grid;
     width: 100vw;
     height: 100vh;
@@ -137,11 +134,14 @@
   .contact-text-container {
     grid-area: text;
     color: white;
-    font-family: Source Sans Pro;
     padding-right: 80px;
   }
 }
 
+.career-links {
+  // animation: blink 1s steps(2, start) infinite;
+  // -webkit-animation: blink 1s steps(2, start) infinite;
+}
 
 .contact-pic-container .career-pic {
   display: none;
@@ -153,17 +153,8 @@
   overflow: hidden;
 }
 
-.contact-pic-container:hover .career-pic {
-  display: inline;
-  animation: rotation 3s infinite linear;
-  border-radius: 50%;
-}
-
 .contact-title {
   color: white;
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: 900;
   font-size: 5vmin;
   text-align: left;
   margin-bottom: 1vmin;
@@ -185,7 +176,7 @@
 .contact-text-container a {
   font-size: 10vmin;
   text-decoration: none;
-  color: #6231c2;
+  color: #0BC;
 }
 
 .contact-text-container > a:focus,
@@ -199,5 +190,16 @@
   }
   to {
     transform: rotate(359deg);
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
   }
 }
