@@ -7,6 +7,8 @@
 {% include css/career.scss %}
 {% include css/contact.scss %}
 {% include css/basecamp_content.scss %}
+{% include css/garden_content.scss %}
+{{ content }}
 {{ content }}
 body {
   height: 100%;
