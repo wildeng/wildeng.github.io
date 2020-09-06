@@ -7,3 +7,5 @@ gem "jekyll-github-metadata"
 gem 'jemoji'
 
 gem "webrick"
+gem 'jemoji'
+
