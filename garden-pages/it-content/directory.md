@@ -24,10 +24,10 @@ permalink: /garden-pages/it-content/directory
 
 ## General
 
-#### [Hacker News](https://news.ycombinator.com) an evergreen classic
 #### [Signal vs Noise](https://m.signalvnoise.com) a blog by the makers and friends of [Basecamp](https://basecamp.com)
 #### [Learn Vim](https://github.com/iggredible/Learn-Vim) the smart way
 #### Vim [cheatsheet](https://vim.rtorr.com)
 #### GNU Emacs reference [card](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
 #### How [sustainable web design](https://www.wired.com/story/sustainable-software-design-climate-change/) could help fight climate change
 #### Markdown Emoji [cheatsheet](https://github.com/StuartDaniells/Markdown_Emoji-s_List)
+#### [C64 nostalgia](https://www.c64.com) Exclusive material about the C64 :smile:
