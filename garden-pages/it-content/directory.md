@@ -31,3 +31,4 @@ permalink: /garden-pages/it-content/directory
 #### How [sustainable web design](https://www.wired.com/story/sustainable-software-design-climate-change/) could help fight climate change
 #### Markdown Emoji [cheatsheet](https://github.com/StuartDaniells/Markdown_Emoji-s_List)
 #### [C64 nostalgia](https://www.c64.com) Exclusive material about the C64 :smile:
+#### [How a browser works](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#The_browsers_we_will_talk_about)
