@@ -21,10 +21,10 @@ permalink: /garden-pages/it-content/directory
 
 #### A guide to [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 #### A guide to [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+#### I've just discovered [@counter-style CSS selector](https://www.w3.org/TR/predefined-counter-styles/#abstract) :innocent:
 
 ## General
 
-#### [Signal vs Noise](https://m.signalvnoise.com) a blog by the makers and friends of [Basecamp](https://basecamp.com)
 #### [Learn Vim](https://github.com/iggredible/Learn-Vim) the smart way
 #### Vim [cheatsheet](https://vim.rtorr.com)
 #### GNU Emacs reference [card](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
