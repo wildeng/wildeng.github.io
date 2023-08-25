@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/alainmauri
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alainmauri.eu
+  * I am alainmauri (https://keybase.io/alainmauri) on keybase.
+  * I have a public key ASAfkBM0S_eL5QZC0hqxRVPCAQiBz5_V04bA66KqoVwbYgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01201f9013344bf78be50642d21ab14553c2010881cf9fd5d386c0eba2aaa15c1b620a",
+      "host": "keybase.io",
+      "kid": "01201f9013344bf78be50642d21ab14553c2010881cf9fd5d386c0eba2aaa15c1b620a",
+      "uid": "307ca093abebeba513dde743bfb2be19",
+      "username": "alainmauri"
+    },
+    "merkle_root": {
+      "ctime": 1692955248,
+      "hash": "d948a50358c6f001ef14f3a8866c4eda209616a66ac0e2e5f18bc8a654bd7134bb59248f5e62734727889e5322906c6ff925bef77b9ff311a313ff9bc2059099",
+      "hash_meta": "9304b9d495a1a4b41a8c8ba3e200a072f45a676f46928940d5c8057ab51f8773",
+      "seqno": 24849428
+    },
+    "service": {
+      "entropy": "+t1nDVG7566S7cMYbd0Ly1dc",
+      "hostname": "alainmauri.eu",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.2.1"
+  },
+  "ctime": 1692955266,
+  "expire_in": 504576000,
+  "prev": "1fe23470c37bace283f92efc467b970faa41963c0ffe506d1b17c8be1eef0b56",
+  "seqno": 11,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgH5ATNEv3i+UGQtIasUVTwgEIgc+f1dOGwOuiqqFcG2IKp3BheWxvYWTESpcCC8QgH+I0cMN7rOKD+S78RnuXD6pBljwP/lBtGxfIvh7vC1bEIHYN0QSkrhU0azzr/0lAc0P5acmw1EiNVTVC6meX8YQQAgHCo3NpZ8RAYugrvbXs5NKhf/Co1eiOqQ4PtuREhgf6I03n84jC0m3sAISeUjjtsy35NiuN8YBrv5jmZU785aeuDCDrho/KC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKyYovZCc1PhWEk4CfwRnT2wiG1d093k1nKh9lnCoTGJo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alainmauri
+
+==================================================================
