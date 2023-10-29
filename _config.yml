@@ -10,6 +10,7 @@ github_username: wildeng
 repository: wildeng/wildeng.github.io
 plugins:
   - "jekyll-github-metadata"
+  - jekyll-feed
   - jemoji
 pages:
   permalink: /:path/:basename
