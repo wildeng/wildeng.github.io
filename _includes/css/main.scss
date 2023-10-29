@@ -80,3 +80,29 @@ a:visited {
   margin: auto;
   align-self: center;
 }
+
+ul {
+  list-style-type: none;
+}
+
+footer {
+  padding: 2rem;
+}
+
+@media (max-width: 666px){
+  footer {
+    font-size: 2.5vmin;
+    .copyright {
+      font-size: 2.5vmin;
+    }
+  }
+}
+
+@media (min-width: 667px){
+  footer {
+    font-size: 1.5vmin;
+    .copyright {
+      font-size: 1.5vmin;
+    }
+  }
+}

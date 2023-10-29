@@ -1,0 +1,46 @@
+.post-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-author {
+  font-style: oblique;
+  color: aliceblue;
+  font-weight: bolder;
+}
+
+.blog-content {
+  padding: 2rem;
+}
+
+.blog-content hr {
+  border-top: 1px dashed #eee;
+}
+
+.blog-content h4 {
+  font-style: oblique;
+  color: aliceblue;
+  font-weight: bolder;
+}
+
+@media (max-width: 666px){
+  .post-image {
+    height: auto;
+    max-width: 95%;
+  }
+
+  .blog-content p {
+    font-size: 2.5vmin;
+  }
+}
+
+@media (min-width: 667px){
+  .post-image {
+    height: auto;
+    max-width: 50%;
+  } 
+
+  .blog-content p {
+    font-size: 1.5vmin;
+  }
+}
