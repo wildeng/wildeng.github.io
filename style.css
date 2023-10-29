@@ -121,12 +121,20 @@ footer {
   padding: 2rem;
 }
 
+footer div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 666px){
   footer {
     font-size: 2.5vmin;
     .copyright {
       font-size: 2.5vmin;
     }
+  }
+  footer a {
+    font-size: 6vmin;
   }
 }
 
@@ -136,6 +144,9 @@ footer {
     .copyright {
       font-size: 1.5vmin;
     }
+  }
+  footer a {
+    font-size: 3vmin;
   }
 }
 
