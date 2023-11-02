@@ -13,7 +13,7 @@ Now that I'm in a sort of midlife crisis, I've decided to come back and try agai
 My current tools are `Lunarvim` and I'm using `Markdown` to format the text more, I'm generating - through Jekyll - static `HTML` pages and publish them using a shell script on <b>Github Pages</b>.  
 A bit of old school that makes writing more fun and more related to my job as a backend engineer, since I don't have to change my "tools". A bit lazy? Well, yes :smile: 
 
-I also set up a goal for myself: One post each week and it doesn't have to be a log one, but it must be worth my time. it could only be a bunch of links about interesting things that I found online or that I've read in some newsletter I've subscribed to, or memes or anything else.  
+I also set up a goal for myself: One post each week and it doesn't have to be a long one, but it must be worth my time. it could only be a bunch of links about interesting things that I found online or that I've read in some newsletter I've subscribed to, or memes or anything else.  
 This will be my personal space and I need to feel good and proud about it.
 
 ---

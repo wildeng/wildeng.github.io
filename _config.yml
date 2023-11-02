@@ -14,7 +14,8 @@ plugins:
   - jemoji
 pages:
   permalink: /:path/:basename
-
+feed:
+  disable_in_development: true
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 # You should replace these with your social networks, of course. :)
