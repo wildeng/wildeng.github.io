@@ -1,0 +1,126 @@
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta charset="utf-8">
+
+  <title>Alain Mauri - Wildeng</title>
+  <meta name="author" content="Alain Mauri">
+  <meta name="description" content="Alain Mauri Senior Software Engineer and Team Leader in Sheffield - UK">
+  <meta name="keywords" content="Software Engineer, Team Leader, Ruby, Kanban,Startups, Agile, Pair Programming, Web Development, Javascript, CSS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+  <body>
+    <div class="post-main">
+      <div class="blog-content">
+          
+  <h1>A Light in the Shadow</h1>
+
+<p class="post-author"><u>11 Nov 2023 - Wildeng</u></p>
+
+<p></p>
+<p>The past week at work has been quite nice from a personal perspective. I’ve delivered a couple of nice cool features and sorted out an interesting bug.
+I cannot say much about the contest but I’m working in a software company that creates tools for professional sport teams and we deal with games and periods. We thus had the following problem: After creating a game with a certain duration and a certain number of periods, the UI was always displaying 90 minutes and 2 periods of 45 minutes.
+<br>
+<img src="/images/boyhack.gif" alt="gif of a boy furiously typing on a computer keyboard seen by the back">
+<br>
+So I started tracing down the bug and found the cause: A case of variable shadowing.</p>
+
+<p>But what is variable shadowing? According to <a href="https://en.wikipedia.org/wiki/Variable_shadowing">wikipedia</a> variable shadowing occurs when a variable declared within a certain scope has the same name of the variable in the outer scope leading to some possible confusion about which one of the two is used. An example of this similar to the code I had and one that you can try in <code class="language-plaintext highlighter-rouge">irb</code> - open the terminal and type <a href="https://rubyreferences.github.io/rubyref/intro/irb.html">irb</a> - is:</p>
+
+<p>A case with variables</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">06</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="o">=&gt;</span> <span class="mi">0</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">070</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span> <span class="k">def</span> <span class="nf">shadow</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">071</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span>   <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">||</span> <span class="mi">1</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">072</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span>   <span class="nb">puts</span> <span class="n">x</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">073</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">end</span>
+<span class="o">=&gt;</span> <span class="ss">:inner</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">074</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">shadow</span>
+<span class="mi">1</span>
+</code></pre></div></div>
+<p><br>
+And a case with methods</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">05</span><span class="mi">9</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span> <span class="k">class</span> <span class="nc">Baz</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">060</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>   <span class="k">def</span> <span class="nf">bar</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">061</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>     <span class="s2">"bar"</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">062</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span>   <span class="k">end</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">063</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>   <span class="k">def</span> <span class="nf">shadow</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">064</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>     <span class="n">bar</span> <span class="o">=</span> <span class="n">bar</span> <span class="o">||</span> <span class="mi">21</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">065</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>     <span class="nb">puts</span> <span class="n">bar</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">066</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span>   <span class="k">end</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">067</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">end</span>
+<span class="o">=&gt;</span> <span class="ss">:shadow</span>
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">06</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="no">Baz</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">shadow</span>
+<span class="mi">21</span>
+</code></pre></div></div>
+
+<p>but hey, why is this happening? To put it in simple terms, the local variable is created during parsing time and not during the code execution when the assignment really occurs. This means that you can’t access the outer variable because you have defined a local one with the same name. Remember, this could also happen to methods too, as you can see from one of the examples. Nice uh?<br>
+Scary? No, not at all! There are many programming languages where variable shadowing can happen, such as Python, Rust, Go etc. so be aware of it and take your own precautions.</p>
+
+<p><br></p>
+<h5 id="further-readings-and-sources">Further readings and sources:</h5>
+<p><a href="https://www.paulfioravanti.com/blog/curious-incident-shadow-run-time/">The curious incident of the Shadow in the Runtime</a> where you can find some other interesting links.<br>
+Local variables and methods: <a href="https://docs.ruby-lang.org/en/2.4.0/syntax/assignment_rdoc.html#label-Local+Variables+and+Methods">Ruby Docs</a></p>
+
+<hr>
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>Even though I don’t think about myself as a “hard” sporty person - I do sport, mostly to try to keep up a bit my fitness level and indulge with some food treats <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20"> - I really enjoy watching live sport events  and here are my favourite ones</p>
+
+<ul>
+  <li>Volleyball - I’ve played and coached volleyball for a total of more than 30 years….</li>
+  <li>Football - Just remember that there’s no such thing called soccer <img class="emoji" title=":wink:" alt=":wink:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f609.png" height="20" width="20">
+</li>
+  <li>Basketball - Given the age I now play walking basketball</li>
+  <li>Rugby - both Union and League. Fun fact about this: Not being a rugby conosseur I didn’t know the difference betwen them until when we moved to Sheffield we were looking for a rugby team that they could have joined (this was their sport back in Italy) and we found a local one, Sheffield Hawks. After a couple of training sessions we’ve been invited to assist a pro rugby game from the local team Sheffield Eagles and at the first tackle they stopped, set the defense and offense lines and started again. Well, I turned to a man next to me and asked “Is this a particular kind of foul?” and this man kindly told me “This is rugby league NOT UNION!” - <img class="emoji" title=":rofl:" alt=":rofl:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f923.png" height="20" width="20">
+</li>
+</ul>
+
+<p>There’s been a lot of criticism around the last Beatles song, but I like it, so who cares? <a href="https://youtu.be/Opxhh9Oh3rg?si=Q12a1NWKn4ei5uiE">Now And Then</a></p>
+
+<p>Sheffield has some stunning views, this is one that I took from the <a href="https://en.wikipedia.org/wiki/Bolehill_Recreation_Ground">Bole Hills</a></p>
+<figure>
+<img src="/images/bole_hills.jpeg" alt="view of the neighborough of Stannington in Sheffield as seen from the bole hills park" class="post-image">
+</figure>
+<p><br><br>
+Here is one that I took from the back of Bradfield School in <a href="https://en.wikipedia.org/wiki/Worrall">Worrall</a></p>
+<figure>
+<img src="/images/worrall.jpg" alt="view of the countryside around worrall as seen from the back of bradfield school" class="post-image">
+</figure>
+
+<hr>
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>Gemini Project <a href="https://cheapskatesguide.org/articles/gemini.html">Going Dark</a></p>
+
+<p>Ruby delights built into the language <a href="https://technology.doximity.com/articles/ruby-delights-built-into-the-language">no gems needed</a></p>
+
+<p>The secret life of <a href="https://podcast.duolingo.com/episode-96-the-secret-life-of-josephine-baker-josephine-la-danseuse">Josephine Baker</a> a Duolingo podcast</p>
+
+<p>C64 <a href="https://www.commodore.ca/commodore-manuals/commodore-64-programmers-reference-guide/">Programming Reference Guide</a></p>
+
+
+      </div>
+      <footer>
+          <hr>
+
+<div>
+  <a href="/index.html">Home</a>
+  <a href="/blog">Posts</a>
+  <a href="/digital_garden.html">Digital Garden</a>
+</div>
+<hr>
+<p class="copyright">© 1971-2023 <b>Alain Mauri</b>.
+<br>rev 65a01e116f36d9c31ecbafba55293c7de96675d3 - 2023.11.11</p>
+
+ 
+      </footer>
+    </div>
+  </body>
+</html>
