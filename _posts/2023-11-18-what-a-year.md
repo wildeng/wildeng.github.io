@@ -21,7 +21,7 @@ Apple [PowerBook](https://en.wikipedia.org/wiki/PowerBook) series of laptop was 
 
 I do love all Beatles albums but my favourite one is [Sgt. Pepper's Lonely Heart Club Band](https://album.link/i/1441164604)
 <br/>
-The Cray 1 supercomputer: Unfortunatley I couldn't use it but the Maths department of my university had it and I've been able to see it diplayed in a room after its operational period was over. What a cool design it had!
+The Cray 1 supercomputer: Unfortunately I couldn't use it but the Maths department of my university had it and I've been able to see it displayed in a room after its operational period was over. What a cool design it had!
 <br/>
 <img src="/images/Cray1.jpg" alt="image of a Cray1 supercomputer in a red color in a room" class="post-image"/>
 <br/>
@@ -43,11 +43,11 @@ A picture I took in October 2016 in [Castelmonte](https://www.cividale.com/uk/sa
 
 On Apple music [Rock Hits: 1991](https://music.apple.com/gb/playlist/rock-hits-1991/pl.0248cb21232d4f12bb823f234e2961e5)    
 
-From the Cern website [The Birth of the Web](https://home.web.cern.ch/science/computing/birth-web)  
+From the CERN website [The Birth of the Web](https://home.web.cern.ch/science/computing/birth-web)  
 
 A nice article about <b>POSSE</b> - <i>Publish (on your) Own Site, Syndicate Elsewhere</I> from [David Pierce](https://indieweb.org/POSSE?utm_source=ownyourweb&utm_medium=email&utm_campaign=issue-02)  
 
 <b>Own your web</b> newsletter [subscribe page](https://buttondown.email/ownyourweb)  
 
-Naomi Klein on why welness culture is embracing far-right theories: From the [Guardian](https://www.theguardian.com/books/2023/nov/15/naomi-klein-interview-wellness-culture-far-right)
+Naomi Klein on why wellness culture is embracing far-right theories: From the [Guardian](https://www.theguardian.com/books/2023/nov/15/naomi-klein-interview-wellness-culture-far-right)
 
