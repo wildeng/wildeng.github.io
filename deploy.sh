@@ -8,7 +8,7 @@ CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 rm -rf $BUILD_DIR
 
 # Build
-bundle exec jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 
 # If Build succeeds
 if [ -d "$BUILD_DIR" ]; then
