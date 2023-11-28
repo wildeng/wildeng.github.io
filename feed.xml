@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2023-11-19T15:24:44+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">1991 What a Year!</title><link href="https://alainmauri.eu/2023/11/18/what-a-year/" rel="alternate" type="text/html" title="1991 What a Year!" /><published>2023-11-18T00:00:00+00:00</published><updated>2023-11-18T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/11/18/what-a-year</id><content type="html" xml:base="https://alainmauri.eu/2023/11/18/what-a-year/">&lt;p&gt;Personally it was quite an ordinary year, I didn’t have much time to study for the university because I was playing in a band and I didn’t have much time left. Honestly I was enjoying my time and not thinking too much about studying, but still doing a bit of programming on my C64c and exploring the UNIX mainframe of the University of Trieste IT department.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2023-11-28T21:44:43+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">To Feed or not Too Feed</title><link href="https://alainmauri.eu/2023/11/28/to-feed-or-not-to-feed/" rel="alternate" type="text/html" title="To Feed or not Too Feed" /><published>2023-11-28T00:00:00+00:00</published><updated>2023-11-28T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/11/28/to-feed-or-not-to-feed</id><content type="html" xml:base="https://alainmauri.eu/2023/11/28/to-feed-or-not-to-feed/">&lt;p&gt;Recently I started reading about the &lt;a href=&quot;https://indieweb.org/?utm_source=ownyourweb&amp;amp;utm_medium=email&amp;amp;utm_campaign=issue-03&quot;&gt;Indie Web&lt;/a&gt; movement, which is a people-focused alternative to the corporate owned one, and it really struck a chord.&lt;br /&gt;
+Principles like owning your content and being in control of what gets published are the things that got me started trying to understand how to build websites and to become a web developer.&lt;br /&gt;
+And after many years trying to use different platforms such as Wordpress, Medium, Dev etc. I went back to the most simple stuff: HTML, CSS and a simple RSS Feed - Atom to be honest.&lt;/p&gt;
+
+&lt;p&gt;Knowing the building blocks is something that every web developer should know before moving to other stuff like modern JS frameworks. It’s like Lego building, you cannot start from difficult Technic builds if you never experienced the barebone ones. More it unleashes your creativity, without boundaries and any kind of constraint or rules which are dictated by the framework used.&lt;br /&gt;
+This can easily be seen if you remember &lt;a href=&quot;https://web.archive.org/web/19961226182558/http://www3.geocities.com/&quot;&gt;Geocities&lt;/a&gt; and compare the craziness of any of those websites - &lt;a href=&quot;https://web.archive.org/web/19961221002840/http://www.geocities.com/Area51/4091/&quot;&gt;Aden’s Boba Fett Page&lt;/a&gt; for example - with the uniformity of styles that we have today and you would easily understand what I mean.&lt;br /&gt;
+I do appreciate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;responsive design&lt;/code&gt; and other modern features but to me, most of the web applications and websites are looking the same. Same colours, same icons, same fonts, same left side menu and toast messages. 
+The corporate world definitely took over and we’re all doing stuff in the same way. We lost that primal spirit that drove the innovation, we lost the will to learn the building blocks, find your own way and have fun building something unique.&lt;br /&gt;
+Take a look at the job offers, they’re all looking the same - not talking about backend developers even though it is not much different - all looking for the same kind of developers, all looking for xyz framework, xyz years of experience etc.&lt;br /&gt;
+This means that if someone wants a job in this industry, the first thing they could possibly do is enrolling in a bootcamp that teaches the xyz framework, start building a small portfolio and eventually doing some job interviews.&lt;br /&gt;
+Nothing wrong with it, but you end up learning what the businesses need, skipping the basics.&lt;/p&gt;
+
+&lt;p&gt;From the web owned by a lot of people we transitioned to a web owned by a few, from a decentralised web to a centralised one. Most of the “new web” makes money by selling services or selling data such as age, gender, what of websites you visit, what kind of searches you do etc, to third parties that will then use them for some kind of business. Another way is by offering a platform where you can create content - think about Medium, Wattpad etc. - with revenues coming from subscription fees, data sold to third parties and advertisement. Now, think about the worst case: What happens if one of these platforms goes down and suffers a loss of data? What if one of these platforms file for bankruptcy and closes their servers or sells everything to some rogue company? You will probably lose most of your work without any chance to recover it.&lt;/p&gt;
+
+&lt;p&gt;Is there a solution to this?  Maybe, but there’s one thing I’m sure of: Owning your website is part of it. If you own your site you can decide what to publish, how to do it and when to do it. You will still need some hosting service to publish it but if that service has any kind of problem, you can simply move it somewhere else. Your personal website is all around the content you produce and not around the business model decided by the corporate company that owns the platform you are using and more, it’s a reflection of your personality, your choices and your personal taste.&lt;/p&gt;
+
+&lt;p&gt;The personal website is NOT dead, - just a bit forgotten - long live the personal website!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;things-i-like---in-random-order&quot;&gt;Things I like - in random order&lt;/h4&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;b&gt;Space Jam original website&lt;/b&gt;
+&lt;br /&gt;
+&lt;a href=&quot;https://www.spacejam.com/1996/jam.html&quot; target=&quot;_blank&quot; title=&quot;1996 Space Jam website§&quot;&gt;
+&lt;img src=&quot;/images/space-jam-1996.jpg&quot; alt=&quot;space jam 1996 website homepage still available online&quot; class=&quot;post-image&quot; /&gt;
+&lt;/a&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Ganymede as seen from Juno - Nasa &lt;a href=&quot;https://apod.nasa.gov/apod/&quot;&gt;picture of the week&lt;/a&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/images/Ganymede2_JunoGill_960.jpg&quot; alt=&quot;image of Ganymede as seen from Juno&quot; class=&quot;post-image&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;todays-links&quot;&gt;Today’s Links&lt;/h4&gt;
+
+&lt;p&gt;Barack Obama interviewed on AI, Free Speech and the future of technology &lt;a href=&quot;https://youtu.be/X15o2sG8HF4?si=7EGxmmOHhDi-EC7e&quot;&gt;YouTube&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Envy Office - how corporates are trying to lure employees back in the office by making them instagrammable - from the &lt;a href=&quot;https://www.nytimes.com/2023/11/26/business/office-design-rto.html?unlocked_article_code=1.B00.u1dg.ytttC4l3-02x&amp;amp;smid=url-share&quot;&gt;New York Times&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Is &lt;a href=&quot;https://neocities.org/browse&quot;&gt;Neocities&lt;/a&gt; the new Geocities?&lt;/p&gt;
+
+&lt;p&gt;I am on Neocities too &lt;a href=&quot;https://wildeng.neocities.org&quot;&gt;Wildeng&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Publish (on your) Own Site, Syndicate Elsewhere &lt;a href=&quot;https://indieweb.org/POSSE&quot;&gt;POSSE&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Probably one of the most influential minicomputers of all times &lt;a href=&quot;https://arstechnica.com/gadgets/2022/03/a-brief-tour-of-the-pdp-11-the-most-influential-minicomputer-of-all-time/&quot;&gt;PDP11&lt;/a&gt;&lt;/p&gt;</content><author><name>Wildeng</name></author><summary type="html">Recently I started reading about the Indie Web movement, which is a people-focused alternative to the corporate owned one, and it really struck a chord. Principles like owning your content and being in control of what gets published are the things that got me started trying to understand how to build websites and to become a web developer. And after many years trying to use different platforms such as Wordpress, Medium, Dev etc. I went back to the most simple stuff: HTML, CSS and a simple RSS Feed - Atom to be honest.</summary></entry><entry><title type="html">1991 What a Year!</title><link href="https://alainmauri.eu/2023/11/18/what-a-year/" rel="alternate" type="text/html" title="1991 What a Year!" /><published>2023-11-18T00:00:00+00:00</published><updated>2023-11-18T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/11/18/what-a-year</id><content type="html" xml:base="https://alainmauri.eu/2023/11/18/what-a-year/">&lt;p&gt;Personally it was quite an ordinary year, I didn’t have much time to study for the university because I was playing in a band and I didn’t have much time left. Honestly I was enjoying my time and not thinking too much about studying, but still doing a bit of programming on my C64c and exploring the UNIX mainframe of the University of Trieste IT department.&lt;/p&gt;
 
 &lt;p&gt;Rock Music was mainstream and big names - Metallica, Nirvana, REM, Extreme, Pearl Jam  where battling for number ones. So many good albums have been released that year from artists like Nirvana &lt;a href=&quot;https://en.wikipedia.org/wiki/Nevermind&quot;&gt;Nevermind&lt;/a&gt;, Metallica &lt;a href=&quot;https://en.wikipedia.org/wiki/Metallica_(album)&quot;&gt;“Black Album”&lt;/a&gt;, R.E.M. &lt;a href=&quot;https://en.wikipedia.org/wiki/Out_of_Time_(album)&quot;&gt;Out of Time&lt;/a&gt;, Guns’n’Roses &lt;a href=&quot;https://en.wikipedia.org/wiki/Use_Your_Illusion_I&quot;&gt;Use your Illusion I&lt;/a&gt;  and &lt;a href=&quot;https://en.wikipedia.org/wiki/Use_Your_Illusion_II&quot;&gt;Use your Illusion II&lt;/a&gt;, Pearl Jam &lt;a href=&quot;https://en.wikipedia.org/wiki/Ten_(Pearl_Jam_album)&quot;&gt;Ten&lt;/a&gt;, RHCP &lt;a href=&quot;https://en.wikipedia.org/wiki/Blood_Sugar_Sex_Magik&quot;&gt;Blood Sugar Sex Magik&lt;/a&gt; and many others - e.g. Soundgarden, Stone Temple Pilots, Alice in chains etc.&lt;/p&gt;
 
