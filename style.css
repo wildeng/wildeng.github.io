@@ -888,10 +888,15 @@ body {
   font-weight: bolder;
 }
 
+
 @media (max-width: 666px){
   .post-image {
     height: auto;
     max-width: 95%;
+  }
+
+  .align-post-image {
+    padding: 1rem;
   }
 
   .blog-content p {
@@ -904,6 +909,11 @@ body {
     height: auto;
     max-width: 50%;
   } 
+
+  .align-post-image {
+    padding: 2rem;
+    max-width: 30%;
+  }
 
   .blog-content p {
     font-size: 1.5vmin;
