@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2023-12-23T17:35:04+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">The Sacred Graal of Editors</title><link href="https://alainmauri.eu/2023/12/23/editor-sacred-graal/" rel="alternate" type="text/html" title="The Sacred Graal of Editors" /><published>2023-12-23T00:00:00+00:00</published><updated>2023-12-23T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/12/23/editor-sacred-graal</id><content type="html" xml:base="https://alainmauri.eu/2023/12/23/editor-sacred-graal/">&lt;p&gt;In my last post I said that I wanted to be more technical and so be it. But in a different way and not “so technical”: I won’t talk about classes, methods, modules, mixin or some other Ruby related stuff. I’m going to write about my journey in search of my “almost perfect” editor.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2023-12-28T17:30:53+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Blocks Procs and Lambdas</title><link href="https://alainmauri.eu/2023/12/28/blocks-procs-and-lambdas/" rel="alternate" type="text/html" title="Blocks Procs and Lambdas" /><published>2023-12-28T00:00:00+00:00</published><updated>2023-12-28T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/12/28/blocks-procs-and-lambdas</id><content type="html" xml:base="https://alainmauri.eu/2023/12/28/blocks-procs-and-lambdas/">&lt;p&gt;Ruby has three types of anonymous functions: Blocks, Procs and Lambdas.&lt;/p&gt;
+
+&lt;h5 id=&quot;-block-&quot;&gt;====== Block ======&lt;/h5&gt;
+
+&lt;p&gt;Blocks are anonymous pieces of code that are not objects but can be passed to methods for execution. An example is the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt; method from the &lt;a href=&quot;https://ruby-doc.org/core-3.0.2/Enumerable.html#method-i-map&quot;&gt;Enumerable mixin&lt;/a&gt;, which accepts and executes a block of code:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Methods explicitly or implicitly accept blocks:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method_implicit&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Starting the method&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block_given?&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ending&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;method_explicit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Starting explicit&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;ending explicit&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the first case, the method uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yield&lt;/code&gt; to execute the block if provided. In the second case, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;block&lt;/code&gt; syntax indicates that the method expects a block as an argument.
+One more thing to remember is that when the block is executed the control passes to it and returns to the method when the block has finished its execution.&lt;/p&gt;
+
+&lt;h5 id=&quot;-proc-&quot;&gt;====== Proc ======&lt;/h5&gt;
+
+&lt;p&gt;Unlike blocks, Proc - from the &lt;a href=&quot;https://ruby-doc.org/3.3.0/Proc.html&quot;&gt;Ruby docs&lt;/a&gt; - are objects which encapsulate blocks of code. They can be stored in a variable, passed to a method or to other Procs. Proc are closures,meaning they remember and can use the entire context in which they were created. For instance:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pow_two&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pow_two&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Output: 9&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Procs retain access to variables in their creation context:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;create_proc&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;local_variable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I am from the original scope&quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;proc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local_variable&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;proc&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Create a Proc in one scope&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;my_proc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_proc&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Call the Proc in a different scope&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;my_proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Output: I&apos;m from the original scope&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It’s worth mentioning that this could potentially lead to troubles if the creation context is not available anymore or has changed such in the case of serialization/deserialization or if used in a different object or class context.&lt;/p&gt;
+
+&lt;p&gt;Consider now this example:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;another_proc&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;local_var&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&apos;m local&quot;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;proc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local_var&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;another one&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;irb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;053&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;another_proc&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;I&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Procs do not pass back control to the calling method but immediately return.  &lt;br /&gt;
+They are generous about accepting arguments. Missing ones will be fit with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nil&lt;/code&gt;, single Array will be deconstructed if having multiple arguments and no errors will be raised on extra ones.&lt;/p&gt;
+
+&lt;h5 id=&quot;-lambda-&quot;&gt;====== Lambda ======&lt;/h5&gt;
+
+&lt;p&gt;Lambdas are objects of the Proc class created using the &lt;a href=&quot;https://ruby-doc.org/3.3.0/Kernel.html#method-i-lambda&quot;&gt;kernel#lambda&lt;/a&gt; semantics. They are stricter with passed arguments compared to regular Procs. Notably, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;break&lt;/code&gt; in a lambda exits the lambda and returns control to the calling function:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;lambda_method&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&apos;m local&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;lam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;local&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;end&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;lambda_method&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Output: I&apos;m local end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Understanding when to employ each of these constructs is crucial for writing clean and efficient Ruby code. Blocks are excellent for short, one-off operations, Procs offer encapsulation and context retention, while Lambdas provide a balance of strict argument handling and the familiarity of Proc behavior.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;things-i-like---in-random-order&quot;&gt;Things I like - in random order&lt;/h4&gt;
+
+&lt;p&gt;The Astronomy Picture of the Day is something beautiful: &lt;a href=&quot;https://apod.nasa.gov/apod/ap231225.html&quot;&gt;Cathedral, Mountain, Moon&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Probably a lot of people started using a computer with Windows installed - a stock &lt;a href=&quot;https://archive.org/details/win3_stock&quot;&gt;Windows 3.1&lt;/a&gt; on the Internet Archive&lt;/p&gt;
+
+&lt;p&gt;What an extraordinary historical archive: &lt;a href=&quot;https://clp.bbcrewind.co.uk/&quot;&gt;BBC Computer Literacy Project 1980 - 1989&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+The Acorn BBC Micro&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/images/acorn-bbc-micro.jpg&quot; alt=&quot;the acorn bbc micro computer&quot; class=&quot;post-image&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;todays-links&quot;&gt;Today’s Links&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;They say that electronic mail tends to be informal in style (as opposed to written mail) and makes people bolder. This encourages those who wouldn’t dare to say something direct to your face (and who don’t have anything serious enough to say to commit it to a formal, written memo) to send you “brazen” messages.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sounds familiar? An old article about email and conventional post - 1983 &lt;a href=&quot;https://www.theguardian.com/technology/2023/dec/01/could-email-undermine-conventional-post-1983&quot;&gt;Could electronic mail undermine conventional post?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ruby-lang.org/en/news/2023/12/25/ruby-3-3-0-released/&quot;&gt;Ruby 3.3&lt;/a&gt; has been released with some really interesting additions to the language&lt;/p&gt;
+
+&lt;p&gt;The Most Important Unsolved Problem in Computer Science &lt;a href=&quot;https://www.scientificamerican.com/article/the-most-important-unsolved-problem-in-computer-science/&quot;&gt;Scientific American&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Good news you didn’t hear about &lt;a href=&quot;https://futurecrunch.com/goodnews2023/&quot;&gt;Futurecrunch&lt;/a&gt;&lt;/p&gt;</content><author><name>Wildeng</name></author><summary type="html">Ruby has three types of anonymous functions: Blocks, Procs and Lambdas.</summary></entry><entry><title type="html">The Sacred Graal of Editors</title><link href="https://alainmauri.eu/2023/12/23/editor-sacred-graal/" rel="alternate" type="text/html" title="The Sacred Graal of Editors" /><published>2023-12-23T00:00:00+00:00</published><updated>2023-12-23T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/12/23/editor-sacred-graal</id><content type="html" xml:base="https://alainmauri.eu/2023/12/23/editor-sacred-graal/">&lt;p&gt;In my last post I said that I wanted to be more technical and so be it. But in a different way and not “so technical”: I won’t talk about classes, methods, modules, mixin or some other Ruby related stuff. I’m going to write about my journey in search of my “almost perfect” editor.&lt;/p&gt;
 
 &lt;p&gt;&lt;img align=&quot;left&quot; src=&quot;https://twobithistory.org/images/c64_startup.png&quot; class=&quot;post-image align-post-image&quot; alt=&quot;a commodore 64 shell&quot; /&gt;  When I started doing some programming there wasn’t much of a choice. The C64 was offering one type of editing mode and nothing more so I didn’t bother much about it and the
 same happened while in high school, &lt;a href=&quot;https://en.wikipedia.org/wiki/Olivetti_M24&quot;&gt;Olivetti M24&lt;/a&gt; and &lt;a href=&quot;https://classic.technology/wp-content/uploads/2021/10/olivettim240german.pdf&quot;&gt;Olivetti M240&lt;/a&gt; had some really simple text editors not that different from C64 shell. In the end I got used to it and this probably why

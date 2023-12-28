@@ -1,0 +1,160 @@
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta charset="utf-8">
+
+  <title>Alain Mauri - Wildeng</title>
+  <meta name="author" content="Alain Mauri">
+  <meta name="description" content="Alain Mauri Senior Software Engineer and Team Leader in Sheffield - UK">
+  <meta name="keywords" content="Software Engineer, Team Leader, Ruby, Kanban,Startups, Agile, Pair Programming, Web Development, Javascript, CSS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+  <body>
+    <div class="post-main">
+      <div class="blog-content">
+          
+  <h1>Blocks Procs and Lambdas</h1>
+
+<p class="post-author"><u>28 Dec 2023 - Wildeng</u></p>
+
+<p><p>Ruby has three types of anonymous functions: Blocks, Procs and Lambdas.</p>
+
+<h5 id="-block-">====== Block ======</h5>
+
+<p>Blocks are anonymous pieces of code that are not objects but can be passed to methods for execution. An example is the <code class="language-plaintext highlighter-rouge">map</code> method from the <a href="https://ruby-doc.org/core-3.0.2/Enumerable.html#method-i-map">Enumerable mixin</a>, which accepts and executes a block of code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">*</span> <span class="mi">2</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>Methods explicitly or implicitly accept blocks:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">method_implicit</span>
+  <span class="nb">puts</span> <span class="s2">"Starting the method"</span>
+  <span class="k">yield</span> <span class="k">if</span> <span class="nb">block_given?</span>
+  <span class="nb">puts</span> <span class="s2">"ending"</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">method_explicit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Starting explicit"</span>
+  <span class="n">block</span><span class="p">.</span><span class="nf">call</span>
+  <span class="nb">puts</span> <span class="s2">"ending explicit"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>In the first case, the method uses <code class="language-plaintext highlighter-rouge">yield</code> to execute the block if provided. In the second case, the <code class="language-plaintext highlighter-rouge">&amp;block</code> syntax indicates that the method expects a block as an argument.
+One more thing to remember is that when the block is executed the control passes to it and returns to the method when the block has finished its execution.</p>
+
+<h5 id="-proc-">====== Proc ======</h5>
+
+<p>Unlike blocks, Proc - from the <a href="https://ruby-doc.org/3.3.0/Proc.html">Ruby docs</a> - are objects which encapsulate blocks of code. They can be stored in a variable, passed to a method or to other Procs. Proc are closures,meaning they remember and can use the entire context in which they were created. For instance:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pow_two</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="p">}</span>
+<span class="n">pow_two</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># Output: 9</span>
+</code></pre></div></div>
+
+<p>Procs retain access to variables in their creation context:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create_proc</span>
+  <span class="n">local_variable</span> <span class="o">=</span> <span class="s2">"I am from the original scope"</span>
+  <span class="nb">proc</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
+    <span class="nb">puts</span> <span class="n">local_variable</span>
+  <span class="k">end</span>
+  <span class="nb">proc</span>
+<span class="k">end</span>
+
+<span class="c1"># Create a Proc in one scope</span>
+<span class="n">my_proc</span> <span class="o">=</span> <span class="n">create_proc</span>
+
+<span class="c1"># Call the Proc in a different scope</span>
+<span class="n">my_proc</span><span class="p">.</span><span class="nf">call</span> <span class="c1"># Output: I'm from the original scope</span>
+</code></pre></div></div>
+<p>It’s worth mentioning that this could potentially lead to troubles if the creation context is not available anymore or has changed such in the case of serialization/deserialization or if used in a different object or class context.</p>
+
+<p>Consider now this example:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">another_proc</span>
+  <span class="n">local_var</span> <span class="o">=</span> <span class="s2">"I'm local"</span>
+  <span class="nb">proc</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="k">return</span> <span class="n">local_var</span> <span class="p">}</span>
+  <span class="nb">proc</span><span class="p">.</span><span class="nf">call</span>
+  <span class="k">return</span> <span class="s2">"another one"</span>
+<span class="k">end</span>
+
+<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">053</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">another_proc</span>
+<span class="no">I</span><span class="err">'</span><span class="n">m</span> <span class="n">local</span>
+</code></pre></div></div>
+
+<p>Procs do not pass back control to the calling method but immediately return.  <br />
+They are generous about accepting arguments. Missing ones will be fit with <code class="language-plaintext highlighter-rouge">nil</code>, single Array will be deconstructed if having multiple arguments and no errors will be raised on extra ones.</p>
+
+<h5 id="-lambda-">====== Lambda ======</h5>
+
+<p>Lambdas are objects of the Proc class created using the <a href="https://ruby-doc.org/3.3.0/Kernel.html#method-i-lambda">kernel#lambda</a> semantics. They are stricter with passed arguments compared to regular Procs. Notably, <code class="language-plaintext highlighter-rouge">return</code> and <code class="language-plaintext highlighter-rouge">break</code> in a lambda exits the lambda and returns control to the calling function:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">lambda_method</span>
+  <span class="n">local</span> <span class="o">=</span> <span class="s2">"I'm local"</span>
+  <span class="n">lam</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span><span class="k">return</span> <span class="n">local</span> <span class="p">}</span>
+  <span class="nb">puts</span> <span class="n">lam</span><span class="p">.</span><span class="nf">call</span>
+  <span class="nb">puts</span> <span class="s2">"end"</span>
+<span class="k">end</span>
+
+<span class="n">lambda_method</span> <span class="c1"># Output: I'm local end</span>
+</code></pre></div></div>
+<p>Understanding when to employ each of these constructs is crucial for writing clean and efficient Ruby code. Blocks are excellent for short, one-off operations, Procs offer encapsulation and context retention, while Lambdas provide a balance of strict argument handling and the familiarity of Proc behavior.</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>The Astronomy Picture of the Day is something beautiful: <a href="https://apod.nasa.gov/apod/ap231225.html">Cathedral, Mountain, Moon</a></p>
+
+<p>Probably a lot of people started using a computer with Windows installed - a stock <a href="https://archive.org/details/win3_stock">Windows 3.1</a> on the Internet Archive</p>
+
+<p>What an extraordinary historical archive: <a href="https://clp.bbcrewind.co.uk/">BBC Computer Literacy Project 1980 - 1989</a></p>
+
+<p><br />
+The Acorn BBC Micro<br />
+<br />
+<img src="/images/acorn-bbc-micro.jpg" alt="the acorn bbc micro computer" class="post-image" />
+<br />
+<br /></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<blockquote>
+  <p>They say that electronic mail tends to be informal in style (as opposed to written mail) and makes people bolder. This encourages those who wouldn’t dare to say something direct to your face (and who don’t have anything serious enough to say to commit it to a formal, written memo) to send you “brazen” messages.</p>
+</blockquote>
+
+<p>Sounds familiar? An old article about email and conventional post - 1983 <a href="https://www.theguardian.com/technology/2023/dec/01/could-email-undermine-conventional-post-1983">Could electronic mail undermine conventional post?</a></p>
+
+<p><a href="https://www.ruby-lang.org/en/news/2023/12/25/ruby-3-3-0-released/">Ruby 3.3</a> has been released with some really interesting additions to the language</p>
+
+<p>The Most Important Unsolved Problem in Computer Science <a href="https://www.scientificamerican.com/article/the-most-important-unsolved-problem-in-computer-science/">Scientific American</a></p>
+
+<p>Good news you didn’t hear about <a href="https://futurecrunch.com/goodnews2023/">Futurecrunch</a></p>
+</p>
+
+      </div>
+      <footer>
+          <hr>
+
+<div>
+  <a href="/index.html" >Home</a>
+  <a href="/blog" >Posts</a>
+  <a href="/digital_garden.html" >Digital Garden</a>
+</div>
+<hr>
+<p class="copyright">&copy; 1971-2023 <b>Alain Mauri</b>.
+<br>rev db9a143fcc30024076f2471120ce43d7fc9e4db3 - 2023.12.28</p>
+<br/><p class="copyright">Subscribe to my <a href="/feed.xml" title="RSS Feed for the blog">RSS Feed</a></p>
+
+ 
+      </footer>
+    </div>
+  </body>
+</html>
