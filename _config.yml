@@ -13,11 +13,21 @@ plugins:
   - "jekyll-github-metadata"
   - jekyll-feed
   - jemoji
+  - jekyll-paginate-v2
 pages:
   permalink: /:path/:basename
+# Pagination Settings
+pagination:
+  enabled: true
+  debug: true
+  per_page: 5
+  permalink: '/blog/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 feed:
-  disable_in_development: true
-
+  disable_in_development: false
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 # You should replace these with your social networks, of course. :)
 social:

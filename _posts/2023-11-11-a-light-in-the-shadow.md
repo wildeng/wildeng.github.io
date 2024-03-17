@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Wildeng
+date: 2023-11-11
 title: A Light in the Shadow
 ---
 

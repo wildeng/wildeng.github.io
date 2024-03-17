@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Wildeng
+date: 2023-12-23
 title: The Sacred Graal of Editors  
 ---
 

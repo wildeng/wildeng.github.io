@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Wildeng
+date: 2024-01-19
 title: Ruby Insights, Learning Journey, and Cultural Exploration 
 ---
 

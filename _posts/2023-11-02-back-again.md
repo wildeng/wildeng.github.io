@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Wildeng
+date: 2023-11-02
 title: Writing in a Rainy Day 
 ---
 

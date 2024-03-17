@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Wildeng
+2024: 2024-02-18
 title: Finding balance, The Web and HTML's Power 
 ---
 Despite my best efforts to consistently publish blog posts, I've found it challenging to maintain the required level of commitment. Opting for the latter, I've decided to write a post whenever inspiration strikes, sharing thoughts that hold personal meaning rather than aiming solely for a wide audience. Writing is an enjoyable endeavor for me, serving as a way to capture discoveries, experiences, and thoughts in a cohesive order.
