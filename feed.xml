@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-03-17T17:38:22+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Finding balance, The Web and HTML’s Power</title><link href="https://alainmauri.eu/2024/02/18/finding-balance-html-power/" rel="alternate" type="text/html" title="Finding balance, The Web and HTML’s Power" /><published>2024-02-18T00:00:00+00:00</published><updated>2024-02-18T00:00:00+00:00</updated><id>https://alainmauri.eu/2024/02/18/finding-balance-html-power</id><content type="html" xml:base="https://alainmauri.eu/2024/02/18/finding-balance-html-power/"><![CDATA[<p>Despite my best efforts to consistently publish blog posts, I’ve found it challenging to maintain the required level of commitment. Opting for the latter, I’ve decided to write a post whenever inspiration strikes, sharing thoughts that hold personal meaning rather than aiming solely for a wide audience. Writing is an enjoyable endeavor for me, serving as a way to capture discoveries, experiences, and thoughts in a cohesive order.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-04-10T21:38:59+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Rise of the machines, are software engineers next?</title><link href="https://alainmauri.eu/2024/04/09/ai-big-replacement/" rel="alternate" type="text/html" title="Rise of the machines, are software engineers next?" /><published>2024-04-09T00:00:00+01:00</published><updated>2024-04-09T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/04/09/ai-big-replacement</id><content type="html" xml:base="https://alainmauri.eu/2024/04/09/ai-big-replacement/"><![CDATA[<p>Watching the rise of different tools that “can function as a fully autonomous software engineer”(<a href="https://easywithai.com/ai-developer-tools/devin/">Devin Introduction</a>) I’ve started thinking about the future of my job as a software engineer and obviously one big question came into my mind:</p>
+
+<p>Will my job be replaced by LLMs or is this simply a new tool to learn and improve my daily workflow? <br />
+I’m honestly worried about this and I started researching a bit around the argument and what I’ve found is not so encouraging at all.<br />
+Take a look at what Jensen Huang Nvidia CEO <a href="https://twitter.com/Carnage4Life/status/1761483377365152234">said</a>. Now, should we stop teaching Computer Science because AI will generate all the code we want by using natural language? Honestly, should we take the word of someone with a vested financial interest? I don’t think so, however his words are outlining a common trend that’s well explained in this post by <a href="https://www.baldurbjarnason.com/2024/the-one-about-the-web-developer-job-market/">Baldur Bjarnason</a> which is a long one to summarize but let me put it in plain and simple words:<br />
+As software engineers we are well paid and this, in the modern tech - and not only - corporate world is something that needs to be fixed with every means, and honestly this is what management believes: Read this <a href="https://www.reddit.com/r/cscareerquestions/comments/1axlbub/executive_leadership_believes_llms_will_replace/">Reddit</a> thread quoted in Bjarnason’s post, among other things.</p>
+
+<p>The most positive approach I found so far is this by <a href="https://thenewstack.io/code-in-context-how-ai-can-help-improve-our-documentation/">Jon Udell</a> he thinks that LLms will help us understanding existing code rather than writing it, because of their “ability” to recognise patterns and summarise the findings. In his eyes this should improve the quality of the documentation and the overall quality of the code itself, that will for sure still be written by humans.</p>
+
+<p>Now what should I do? Well, before moving to the Uk I was freelancing and I never put my eggs in one basket so I will try to diversify my knowledge again. By diversifying my skills with languages like Rust and Crystal, honing my writing abilities, and pursuing scrum master training - my company required it though -, I do hop I’m well-positioned to adapt to these changes. What I do hope is that human expertise in problem-solving and creative thinking will continue to be valuable in this field, despite the push to automate everything.</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>I honestly love my second hand Canon EOS 100D because I’m finally able to experiment with photography in a proper way, learning what different settings are doing and boosting my creativity. Digital photography for sure helped photographers and not replaced them and this what tech innovation means to me.<br />
+Here are two pictures that I took with it:
+<br />
+<br />
+<img src="/images/burned-car-carcass.jpg" alt="a burned car carcass found in a park in sheffield" class="post-image" />
+<br />
+<br />
+<img src="/images/grass-blades.jpg" alt="grass blades in the wind" class="post-image" />
+<br /></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>The uncanny music of Slack Huddles on <a href="https://www.wired.com/story/slack-huddle-hold-music-secret-history/">Wired</a><br />
+Texas is replacing human graders with AI <a href="https://www.theverge.com/2024/4/10/24126206/texas-staar-exam-graders-ai-automated-scoring-engine">The Verge</a>
+Own Your Web <a href="https://buttondown.email/ownyourweb/archive/issue-13/">Issue 13</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Watching the rise of different tools that “can function as a fully autonomous software engineer”(Devin Introduction) I’ve started thinking about the future of my job as a software engineer and obviously one big question came into my mind:]]></summary></entry><entry><title type="html">Finding balance, The Web and HTML’s Power</title><link href="https://alainmauri.eu/2024/02/18/finding-balance-html-power/" rel="alternate" type="text/html" title="Finding balance, The Web and HTML’s Power" /><published>2024-02-18T00:00:00+00:00</published><updated>2024-02-18T00:00:00+00:00</updated><id>https://alainmauri.eu/2024/02/18/finding-balance-html-power</id><content type="html" xml:base="https://alainmauri.eu/2024/02/18/finding-balance-html-power/"><![CDATA[<p>Despite my best efforts to consistently publish blog posts, I’ve found it challenging to maintain the required level of commitment. Opting for the latter, I’ve decided to write a post whenever inspiration strikes, sharing thoughts that hold personal meaning rather than aiming solely for a wide audience. Writing is an enjoyable endeavor for me, serving as a way to capture discoveries, experiences, and thoughts in a cohesive order.</p>
 
 <p>In my current job, I predominantly work on backend applications with occasional forays into frontend development. Despite the shift, I still find joy in working on simple HTML and CSS projects. Recently, I stumbled upon a fascinating book by <a href="https://htmlandcssbook.com">John Duckett</a> in a charity shop, published in 2011. Despite its age, the book encapsulates fundamental web development knowledge in an aesthetically pleasing format.</p>
 
@@ -530,40 +561,4 @@ Some good Synthpop from <a href="https://fm84.bandcamp.com/album/atlas">FM-84</a
 <p>Some interesting considerations about web design:
 <a href="https://heather-buchel.com/blog/2023/10/why-your-web-design-sucks/">It’s 2023, here is why your web design sucks.</a></p>
 
-<p>NASA project to let members of the public collaborate with scientists <a href="https://science.nasa.gov/citizen-science/">Citizen Science</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Today I’m writing from a soggy Sheffield and this is probably the right time to open the laptop and start thinking about what to say. Finding the right topics is not an easy task, especially for someone that’s not used to “common” writing - I do write a lot of code during the day though :smile: - and therefore I’m always scared of a blank page and that’s why I usually start by adding the Things I like and Today's links. But when the topic has been decided, well words flow smoothly.]]></summary></entry><entry><title type="html">A New Start</title><link href="https://alainmauri.eu/2023/10/28/back-to-blogging/" rel="alternate" type="text/html" title="A New Start" /><published>2023-10-28T00:00:00+01:00</published><updated>2023-10-28T00:00:00+01:00</updated><id>https://alainmauri.eu/2023/10/28/back-to-blogging</id><content type="html" xml:base="https://alainmauri.eu/2023/10/28/back-to-blogging/"><![CDATA[<p>It’s been a while since last time I wrote a blog post about something. I do not know what happened but I had the feeling that it wasn’t worth doing it anymore.
-I think that my expectations were so high that it’s been hard accepting the truth: In the world outside there are so many people writing about anything, and some of them
-are so good, that my posts were just a drop in a vast ocean of information.</p>
-
-<p>Now that I’m in a sort of midlife crisis, I’ve decided to come back and try again, without any expectation. I’m here just because I feel the need to write about whatever goes through my mind, no limits, and I’ve decided to not use any kind of third party platform. It will all be hosted on my personal website, at the end this is what the Internet was meant to be isn’t it?</p>
-
-<p>My current tools are <code class="language-plaintext highlighter-rouge">Lunarvim</code> and I’m using <code class="language-plaintext highlighter-rouge">Markdown</code> to format the text more, I’m generating - through Jekyll - static <code class="language-plaintext highlighter-rouge">HTML</code> pages and publish them using a shell script on <b>Github Pages</b>.<br />
-A bit of old school that makes writing more fun and more related to my job as a backend engineer, since I don’t have to change my “tools”. A bit lazy? Well, yes :smile:</p>
-
-<p>I also set up a goal for myself: One post each week and it doesn’t have to be a long one, but it must be worth my time. it could only be a bunch of links about interesting things that I found online or that I’ve read in some newsletter I’ve subscribed to, or memes or anything else.<br />
-This will be my personal space and I need to feel good and proud about it.</p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>It’s been a couple of years now since singning up to Duolingo, but honestly I’ve only recently started to enjoy it. I’m currently trying to learn a bit of what I call survival skills in both German and French. I need the bare minimum, going to a supermarket and being able to buy groceries, talk to a taxi driver, ask for informations etc. I think that trying to express yourself in the local language shows appreciation to the country’s culture. As an Italian living in the UK I really appreciate when someone makes the effort to share some Italian words with me.</p>
-
-<p>Music is what makes me happy and always will be. I cannot see my life without it and I do love playing my guitar, my bass and singing in the choir, it just makes me feel great.<br />
-I would like to have more time to invest in all these activities but I don’t, so I’m trying to enjoy every single bit of what I have.</p>
-
-<p>:heart: Family, I have a great partner and two wonderful kids :heart: :smile:</p>
-
-<p>A nice image I found on a wonderful fediverse profile <a href="https://tech.lgbt/@mhzmodels">MhzModels</a></p>
-
-<p><img src="https://media.tech.lgbt/media_attachments/files/111/301/458/192/796/183/original/74849cdcb74a45a5.png" alt="Voxel render of a Commodore 64 computer, television, disk drive and WICO Command Control joystick. BASIC is displayed on the screen." class="post-image" /></p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>I found this in a newsletter called <b>Own your web</b> and it’s a 1998 post from Tim Berners Lee: 
-<a href="https://www.w3.org/Provider/Style/URI.html?utm_source=ownyourweb&amp;utm_medium=email&amp;utm_campaign=issue-01">Cool URIs don’t change</a></p>
-
-<p>A nice post around a Ruby not that new feature: <a href="https://zverok.space/blog/2023-10-20-syntax-sugar2-pattern-matching.html">Pattern Matching</a></p>
-
-<p>Why the so called “Tech Bros” are potentially dangerous: <a href="https://www.nytimes.com/2023/10/28/opinion/marc-andreessen-manifesto-techno-optimism.html?unlocked_article_code=1.6Uw.jmaL.VtOfnGERrmqK&amp;smid=url-share">Elizabeth Spiers on NY Times</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[It’s been a while since last time I wrote a blog post about something. I do not know what happened but I had the feeling that it wasn’t worth doing it anymore. I think that my expectations were so high that it’s been hard accepting the truth: In the world outside there are so many people writing about anything, and some of them are so good, that my posts were just a drop in a vast ocean of information.]]></summary></entry></feed>
+<p>NASA project to let members of the public collaborate with scientists <a href="https://science.nasa.gov/citizen-science/">Citizen Science</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Today I’m writing from a soggy Sheffield and this is probably the right time to open the laptop and start thinking about what to say. Finding the right topics is not an easy task, especially for someone that’s not used to “common” writing - I do write a lot of code during the day though :smile: - and therefore I’m always scared of a blank page and that’s why I usually start by adding the Things I like and Today's links. But when the topic has been decided, well words flow smoothly.]]></summary></entry></feed>
