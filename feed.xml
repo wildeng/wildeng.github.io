@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-05-27T21:48:42+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Busy Bee, balancing work, life and photography</title><link href="https://alainmauri.eu/2024/05/27/what-i-am-doing/" rel="alternate" type="text/html" title="Busy Bee, balancing work, life and photography" /><published>2024-05-27T00:00:00+01:00</published><updated>2024-05-27T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/05/27/what-i-am-doing</id><content type="html" xml:base="https://alainmauri.eu/2024/05/27/what-i-am-doing/"><![CDATA[<h5 id="what-im-up-to">What I’m up to</h5>
-
-<p>In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-05-27T22:06:39+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Busy Bee, balancing work, life and photography</title><link href="https://alainmauri.eu/2024/05/27/what-i-am-doing/" rel="alternate" type="text/html" title="Busy Bee, balancing work, life and photography" /><published>2024-05-27T00:00:00+01:00</published><updated>2024-05-27T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/05/27/what-i-am-doing</id><content type="html" xml:base="https://alainmauri.eu/2024/05/27/what-i-am-doing/"><![CDATA[<p>In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding.
 This is something I’m hoping to create more space for in the coming weeks. But even with a busy schedule,
 I’ve been able to find moments to move forward with my French and Friulian studies, mostly during the evenings.</p>
 
@@ -20,7 +18,7 @@ I’m particularly looking forward to hearing from Nadia Odunayio, the developer
 and Chris Oliver, the mind behind Go Rails. I’m also eager to learn more about Ruby Ractors from Daniel Vartanov’s talk. 
 Having some experience with Goroutines, I’m curious about the similarities between the two for parallel processing.</p>
 
-<h5 id="my-relation-with-llms">My relation with LLMs</h5>
+<h4 id="my-relation-with-llms">My relation with LLMs</h4>
 
 <p>So far I’ve developed a cautios relationship with LLMs, sometimes I use them but I’ve got in the habit of checking the information provided, given the
 frequent hallucinations they have. Still, although they are sometimes useful, I don’t feel that scraping the Internet to feed them without paying anything to
@@ -45,8 +43,9 @@ accountable for any kind of damage their activity can cause.</p>
 <img src="https://pxscdn.com/public/m/_v2/424813098022428933/7321b8e85-c3df53/nBzo0vhN1wlg/6NuzDIkzXbxXxXOZ2LqfcFTL2jDh2qEFUobiQIdd.jpg" alt="barkers pool in sheffield, photo taken at dusk with the camera sitting on a marble bench reflecting some images" class="post-image" />
 <br />
 <br />
-<img src="https://pxscdn.com/public/m/_v2/424813098022428933/7321b8e85-c3df53/nssuu91hRBMz/H0sZD3ddVokltUyezlFZ828tijHGQV3pni6R79Wu.jpg" class="post-image" />
-—</p>
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/7321b8e85-c3df53/nssuu91hRBMz/H0sZD3ddVokltUyezlFZ828tijHGQV3pni6R79Wu.jpg" class="post-image" /></p>
+
+<hr />
 
 <h4 id="todays-links">Today’s Links</h4>
 
@@ -56,7 +55,7 @@ accountable for any kind of damage their activity can cause.</p>
 
 <p>An Introduction to ractors in Ruby on <a href="https://blog.appsignal.com/2022/08/24/an-introduction-to-ractors-in-ruby.html">Appsignal</a></p>
 
-<p>Slack users horrified to discover messages used for AI training <a href="https://arstechnica.com/tech-policy/2024/05/slack-defends-default-opt-in-for-ai-training-on-chats-amid-user-outrage/">Ars Technica</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[What I’m up to In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding. This is something I’m hoping to create more space for in the coming weeks. But even with a busy schedule, I’ve been able to find moments to move forward with my French and Friulian studies, mostly during the evenings.]]></summary></entry><entry><title type="html">Rise of the machines, are software engineers next?</title><link href="https://alainmauri.eu/2024/04/09/ai-big-replacement/" rel="alternate" type="text/html" title="Rise of the machines, are software engineers next?" /><published>2024-04-09T00:00:00+01:00</published><updated>2024-04-09T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/04/09/ai-big-replacement</id><content type="html" xml:base="https://alainmauri.eu/2024/04/09/ai-big-replacement/"><![CDATA[<p>Watching the rise of different tools that “can function as a fully autonomous software engineer”(<a href="https://easywithai.com/ai-developer-tools/devin/">Devin Introduction</a>) I’ve started thinking about the future of my job as a software engineer and obviously one big question came into my mind:</p>
+<p>Slack users horrified to discover messages used for AI training <a href="https://arstechnica.com/tech-policy/2024/05/slack-defends-default-opt-in-for-ai-training-on-chats-amid-user-outrage/">Ars Technica</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding. This is something I’m hoping to create more space for in the coming weeks. But even with a busy schedule, I’ve been able to find moments to move forward with my French and Friulian studies, mostly during the evenings.]]></summary></entry><entry><title type="html">Rise of the machines, are software engineers next?</title><link href="https://alainmauri.eu/2024/04/09/ai-big-replacement/" rel="alternate" type="text/html" title="Rise of the machines, are software engineers next?" /><published>2024-04-09T00:00:00+01:00</published><updated>2024-04-09T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/04/09/ai-big-replacement</id><content type="html" xml:base="https://alainmauri.eu/2024/04/09/ai-big-replacement/"><![CDATA[<p>Watching the rise of different tools that “can function as a fully autonomous software engineer”(<a href="https://easywithai.com/ai-developer-tools/devin/">Devin Introduction</a>) I’ve started thinking about the future of my job as a software engineer and obviously one big question came into my mind:</p>
 
 <p>Will my job be replaced by LLMs or is this simply a new tool to learn and improve my daily workflow? <br />
 I’m honestly worried about this and I started researching a bit around the argument and what I’ve found is not so encouraging at all.<br />
