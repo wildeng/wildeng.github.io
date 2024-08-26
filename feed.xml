@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-05-27T22:37:39+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Busy Bee, balancing work, life and photography</title><link href="https://alainmauri.eu/2024/05/27/what-i-am-doing/" rel="alternate" type="text/html" title="Busy Bee, balancing work, life and photography" /><published>2024-05-27T00:00:00+01:00</published><updated>2024-05-27T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/05/27/what-i-am-doing</id><content type="html" xml:base="https://alainmauri.eu/2024/05/27/what-i-am-doing/"><![CDATA[<p>In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-08-26T19:31:52+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Thoughts in random order</title><link href="https://alainmauri.eu/2024/08/26/random-thoughts/" rel="alternate" type="text/html" title="Thoughts in random order" /><published>2024-08-26T00:00:00+01:00</published><updated>2024-08-26T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/08/26/random-thoughts</id><content type="html" xml:base="https://alainmauri.eu/2024/08/26/random-thoughts/"><![CDATA[<p>AI-generated images are a problem, no more or less than “natural” ones. Can we determine whether an image is authentic or not? If someone claims an image is fake - e.g., Trump regarding a Kamala Harris rally -
+can we produce documentation to prove its authenticity? And if so, will others be willing to accept the truth, or will they continue to believe what suits them best?
+Italian researcher Walter Quattrociocchi, in an article for the financial newspaper <a href="https://www.ilsole24ore.com/art/armarsi-contro-fake-news-strumenti-il-prebunking-e-debunking-AGTHB8W">Il Sole 24 ore</a>, explains that debunking doesn’t work, mostly because people stick to their mental models
+even when confronted with the truth. This is where prebunking becomes useful.
+Prebunking, also known as inoculation theory in communication studies, is a proactive approach to combating misinformation.
+The goal of prebunking is to equip people with the skills to spot false and misleading information online before they encounter it, thereby preempting manipulation.
+This method works by exposing individuals to weakened forms of misinformation and teaching them how to identify and counter deceptive tactics.</p>
+
+<p>Key aspects of prebunking include:</p>
+
+<ol>
+  <li>Education: Teaching critical thinking skills and common manipulation techniques used in misinformation.</li>
+  <li>Exposure: Presenting mild doses of misinformation along with explanations of why it’s misleading.</li>
+  <li>Practice: Allowing individuals to apply their new knowledge in controlled scenarios.</li>
+  <li>Reinforcement: Regularly updating and reinforcing these skills as misinformation tactics evolve.</li>
+</ol>
+
+<p>By implementing prebunking strategies, the aim is to make online users more resilient to being misled in the future.
+This approach acknowledges that prevention is often more effective than cure when it comes to battling the spread of misinformation in our digital age.</p>
+
+<p>I’ve been back to Italy with the whole family after two years. Many things have changed, and I feel I belong to a different place now.
+But still, when I come here, many sweet memories come to my mind, and I start questioning my past choices.
+I guess it’s normal, given that I moved to the UK for two main reasons: better job opportunities for a Rubyist and putting some distance between myself and all the pressures my former life was
+putting on me. 
+Anyway, seeing what my kids have become and the happiness in my wife’s eyes is enough to say that our life has improved a lot,
+despite Brexit and all the xenophobic rhetoric that comes from the British far right.</p>
+
+<p>I want to learn how to solve a Rubik’s cube! :smile: I remember when I was a kid, back in the 80s, I had a Rubik’s cube and after scrambling it, I detached all the coloured stickers and
+put them back in the right order, pretending I had solved it!</p>
+
+<p>I’m reading “Ruby under a Microscope” again. Sometimes I need to refresh my understanding of the language, and I think that I know more about Ruby than I do about Rails.
+This hasn’t always been valued during interviews. What fascinates me is the way the language handles different scenarios, such as <code class="language-plaintext highlighter-rouge">include</code>, <code class="language-plaintext highlighter-rouge">extend</code>, and <code class="language-plaintext highlighter-rouge">prepend</code>,
+the algorithms used to parse the code, and generally all the internal mechanisms that make my life as a developer easier.</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>Some other pictures I recently took:</p>
+
+<p><br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/3781ba7d4-1bb9dc/8S7jdImacpHV/VPQAShFmJHjrIN6kSm5rsgAEpqHGsNxA9IEYmgIf.jpg" alt="a woman smiling while walking the dogs in Brighton" class="post-image" />
+<br />
+<br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/530d83cd3-f15549/ShUL7h8BaWYq/b5eRHVRH7oE3gvjTsAuXkrwGUOmNmbb2OreasATo.jpg" alt="a photographer with some dancers posing for him in kelham island sheffield" class="post-image" />
+<br />
+<br /></p>
+
+<p>:heart: I’ve tried many IDEs in my career but I always come back to Lunarvim or Emacs :heart:</p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>Prebunking with <a href="https://prebunking.withgoogle.com">Google</a></p>
+
+<p>You need just 19 words to provide <a href="https://www.youtube.com/watch?v=8lfQGSV47Y8">wise feedback</a> from Daniel Pink <code class="language-plaintext highlighter-rouge">Pinkcast</code></p>
+
+<p>Microsoft refuses to patch multiple flaws in Microsoft macOS apps <a href="https://www.theregister.com/2024/08/19/cisco_talos_microsoft_macos/">The Register</a></p>
+
+<p>Who uses LLM <a href="https://www.theregister.com/2024/08/13/who_uses_llm_prompt_injection/">prompt injection?</a></p>
+
+<p>The Obamas’ <a href="https://slate.com/news-and-politics/2024/08/barack-obama-crowd-size-michelle-obama-black-jobs-dnc-speech.html">real superpower</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[AI-generated images are a problem, no more or less than “natural” ones. Can we determine whether an image is authentic or not? If someone claims an image is fake - e.g., Trump regarding a Kamala Harris rally - can we produce documentation to prove its authenticity? And if so, will others be willing to accept the truth, or will they continue to believe what suits them best? Italian researcher Walter Quattrociocchi, in an article for the financial newspaper Il Sole 24 ore, explains that debunking doesn’t work, mostly because people stick to their mental models even when confronted with the truth. This is where prebunking becomes useful. Prebunking, also known as inoculation theory in communication studies, is a proactive approach to combating misinformation. The goal of prebunking is to equip people with the skills to spot false and misleading information online before they encounter it, thereby preempting manipulation. This method works by exposing individuals to weakened forms of misinformation and teaching them how to identify and counter deceptive tactics.]]></summary></entry><entry><title type="html">Busy Bee, balancing work, life and photography</title><link href="https://alainmauri.eu/2024/05/27/what-i-am-doing/" rel="alternate" type="text/html" title="Busy Bee, balancing work, life and photography" /><published>2024-05-27T00:00:00+01:00</published><updated>2024-05-27T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/05/27/what-i-am-doing</id><content type="html" xml:base="https://alainmauri.eu/2024/05/27/what-i-am-doing/"><![CDATA[<p>In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding.
 This is something I’m hoping to create more space for in the coming weeks. But even with a busy schedule,
 I’ve been able to find moments to move forward with my French and Friulian studies, mostly during the evenings.</p>
 
@@ -472,83 +534,4 @@ A picture I took in October 2016 in <a href="https://www.cividale.com/uk/santuar
 
 <p><b>Own your web</b> newsletter <a href="https://buttondown.email/ownyourweb">subscribe page</a></p>
 
-<p>Naomi Klein on why wellness culture is embracing far-right theories: From the <a href="https://www.theguardian.com/books/2023/nov/15/naomi-klein-interview-wellness-culture-far-right">Guardian</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Personally it was quite an ordinary year, I didn’t have much time to study for the university because I was playing in a band and I didn’t have much time left. Honestly I was enjoying my time and not thinking too much about studying, but still doing a bit of programming on my C64c and exploring the UNIX mainframe of the University of Trieste IT department.]]></summary></entry><entry><title type="html">A Light in the Shadow</title><link href="https://alainmauri.eu/2023/11/11/a-light-in-the-shadow/" rel="alternate" type="text/html" title="A Light in the Shadow" /><published>2023-11-11T00:00:00+00:00</published><updated>2023-11-11T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/11/11/a-light-in-the-shadow</id><content type="html" xml:base="https://alainmauri.eu/2023/11/11/a-light-in-the-shadow/"><![CDATA[<p>The past week at work has been quite nice from a personal perspective. I’ve delivered a couple of nice cool features and sorted out an interesting bug.
-I cannot say much about the contest but I’m working in a software company that creates tools for professional sport teams and we deal with games and periods. We thus had the following problem: After creating a game with a certain duration and a certain number of periods, the UI was always displaying 90 minutes and 2 periods of 45 minutes.
-<br />
-<img src="/images/boyhack.gif" alt="gif of a boy furiously typing on a computer keyboard seen by the back" />
-<br />
-So I started tracing down the bug and found the cause: A case of variable shadowing.</p>
-
-<p>But what is variable shadowing? According to <a href="https://en.wikipedia.org/wiki/Variable_shadowing">wikipedia</a> variable shadowing occurs when a variable declared within a certain scope has the same name of the variable in the outer scope leading to some possible confusion about which one of the two is used. An example of this similar to the code I had and one that you can try in <code class="language-plaintext highlighter-rouge">irb</code> - open the terminal and type <a href="https://rubyreferences.github.io/rubyref/intro/irb.html">irb</a> - is:</p>
-
-<p>A case with variables</p>
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">06</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">=&gt;</span> <span class="mi">0</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">070</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span> <span class="k">def</span> <span class="nf">shadow</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">071</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span>   <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">||</span> <span class="mi">1</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">072</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span>   <span class="nb">puts</span> <span class="n">x</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">073</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">end</span>
-<span class="o">=&gt;</span> <span class="ss">:inner</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">074</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">shadow</span>
-<span class="mi">1</span>
-</code></pre></div></div>
-<p><br />
-And a case with methods</p>
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">05</span><span class="mi">9</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span> <span class="k">class</span> <span class="nc">Baz</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">060</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>   <span class="k">def</span> <span class="nf">bar</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">061</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>     <span class="s2">"bar"</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">062</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span>   <span class="k">end</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">063</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>   <span class="k">def</span> <span class="nf">shadow</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">064</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>     <span class="n">bar</span> <span class="o">=</span> <span class="n">bar</span> <span class="o">||</span> <span class="mi">21</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">065</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span>     <span class="nb">puts</span> <span class="n">bar</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">066</span><span class="p">:</span><span class="mi">1</span><span class="o">*</span>   <span class="k">end</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">067</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">end</span>
-<span class="o">=&gt;</span> <span class="ss">:shadow</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">06</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="no">Baz</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">shadow</span>
-<span class="mi">21</span>
-</code></pre></div></div>
-
-<p>but hey, why is this happening? To put it in simple terms, the local variable is created during parsing time and not during the code execution when the assignment really occurs. This means that you can’t access the outer variable because you have defined a local one with the same name. Remember, this could also happen to methods too, as you can see from one of the examples. Nice uh?<br />
-Scary? No, not at all! There are many programming languages where variable shadowing can happen, such as Python, Rust, Go etc. so be aware of it and take your own precautions.</p>
-
-<p><br /></p>
-<h5 id="further-readings-and-sources">Further readings and sources:</h5>
-<p><a href="https://www.paulfioravanti.com/blog/curious-incident-shadow-run-time/">The curious incident of the Shadow in the Runtime</a> where you can find some other interesting links.<br />
-Local variables and methods: <a href="https://docs.ruby-lang.org/en/2.4.0/syntax/assignment_rdoc.html#label-Local+Variables+and+Methods">Ruby Docs</a></p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>Even though I don’t think about myself as a “hard” sporty person - I do sport, mostly to try to keep up a bit my fitness level and indulge with some food treats :smile: - I really enjoy watching live sport events  and here are my favourite ones</p>
-
-<ul>
-  <li>Volleyball - I’ve played and coached volleyball for a total of more than 30 years….</li>
-  <li>Football - Just remember that there’s no such thing called soccer :wink:</li>
-  <li>Basketball - Given the age I now play walking basketball</li>
-  <li>Rugby - both Union and League. Fun fact about this: Not being a rugby conosseur I didn’t know the difference betwen them until when we moved to Sheffield we were looking for a rugby team that they could have joined (this was their sport back in Italy) and we found a local one, Sheffield Hawks. After a couple of training sessions we’ve been invited to assist a pro rugby game from the local team Sheffield Eagles and at the first tackle they stopped, set the defense and offense lines and started again. Well, I turned to a man next to me and asked “Is this a particular kind of foul?” and this man kindly told me “This is rugby league NOT UNION!” - :rofl:</li>
-</ul>
-
-<p>There’s been a lot of criticism around the last Beatles song, but I like it, so who cares? <a href="https://youtu.be/Opxhh9Oh3rg?si=Q12a1NWKn4ei5uiE">Now And Then</a></p>
-
-<p>Sheffield has some stunning views, this is one that I took from the <a href="https://en.wikipedia.org/wiki/Bolehill_Recreation_Ground">Bole Hills</a></p>
-<figure>
-<img src="/images/bole_hills.jpeg" alt="view of the neighborough of Stannington in Sheffield as seen from the bole hills park" class="post-image" />
-</figure>
-<p><br /><br />
-Here is one that I took from the back of Bradfield School in <a href="https://en.wikipedia.org/wiki/Worrall">Worrall</a></p>
-<figure>
-<img src="/images/worrall.jpg" alt="view of the countryside around worrall as seen from the back of bradfield school" class="post-image" />
-</figure>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>Gemini Project <a href="https://cheapskatesguide.org/articles/gemini.html">Going Dark</a></p>
-
-<p>Ruby delights built into the language <a href="https://technology.doximity.com/articles/ruby-delights-built-into-the-language">no gems needed</a></p>
-
-<p>The secret life of <a href="https://podcast.duolingo.com/episode-96-the-secret-life-of-josephine-baker-josephine-la-danseuse">Josephine Baker</a> a Duolingo podcast</p>
-
-<p>C64 <a href="https://www.commodore.ca/commodore-manuals/commodore-64-programmers-reference-guide/">Programming Reference Guide</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[The past week at work has been quite nice from a personal perspective. I’ve delivered a couple of nice cool features and sorted out an interesting bug. I cannot say much about the contest but I’m working in a software company that creates tools for professional sport teams and we deal with games and periods. We thus had the following problem: After creating a game with a certain duration and a certain number of periods, the UI was always displaying 90 minutes and 2 periods of 45 minutes. So I started tracing down the bug and found the cause: A case of variable shadowing.]]></summary></entry></feed>
+<p>Naomi Klein on why wellness culture is embracing far-right theories: From the <a href="https://www.theguardian.com/books/2023/nov/15/naomi-klein-interview-wellness-culture-far-right">Guardian</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Personally it was quite an ordinary year, I didn’t have much time to study for the university because I was playing in a band and I didn’t have much time left. Honestly I was enjoying my time and not thinking too much about studying, but still doing a bit of programming on my C64c and exploring the UNIX mainframe of the University of Trieste IT department.]]></summary></entry></feed>
