@@ -464,13 +464,14 @@ footer div {
   color: #ffe300;
 }
 
+*/
 .tasks {
   display: block;
   margin-left: 1rem;
   width: 100%;
   list-style-type: hiragana;
 }
-*/
+
 
 
 @counter-style hiragana {
