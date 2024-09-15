@@ -18,4 +18,6 @@ well sort of... :smile:
 [Rubenerd](https://rubenerd.com)  
 [BrainBaking](https://brainbaking.com)  
 [Baldur Bjarnason](https://www.baldurbjarnason.com/archive/)  
-[The School of Life](https://www.theschooloflife.com)
+[The School of Life](https://www.theschooloflife.com)   
+[Once a maintainer](https://onceamaintainer.substack.com)
+

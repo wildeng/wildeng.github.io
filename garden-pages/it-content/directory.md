@@ -17,6 +17,10 @@ permalink: /garden-pages/it-content/directory
 
 #### How to fix [slow code](https://engineering.shopify.com/blogs/engineering/how-fix-slow-code-ruby) in Ruby
 
+#### Everything you need to know about Ruby Operators [Ruby Guides](https://www.rubyguides.com/2018/07/ruby-operators/) 
+
+#### Ruby [ractors](https://gist.github.com/joeywang2023/fb5576ae680da697dc78a8c2b05ef287)
+
 ## FrontEnd development
 
 #### A guide to [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
@@ -27,6 +31,7 @@ permalink: /garden-pages/it-content/directory
 
 #### [Learn Vim](https://github.com/iggredible/Learn-Vim) the smart way
 #### Vim [cheatsheet](https://vim.rtorr.com)
+#### Neovim [tutorial](https://docs.google.com/spreadsheets/d/15k_UgeY0C3j8tVQnR2hD_kNljB1AApG3x3gYrKtUAlw/edit?pli=1&gid=309657549#gid=309657549)
 #### GNU Emacs reference [card](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf)
 #### How [sustainable web design](https://www.wired.com/story/sustainable-software-design-climate-change/) could help fight climate change
 #### Markdown Emoji [cheatsheet](https://github.com/StuartDaniells/Markdown_Emoji-s_List)
