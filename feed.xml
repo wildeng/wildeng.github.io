@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-09-15T17:32:40+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Thoughts in random order</title><link href="https://alainmauri.eu/2024/08/26/random-thoughts/" rel="alternate" type="text/html" title="Thoughts in random order" /><published>2024-08-26T00:00:00+01:00</published><updated>2024-08-26T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/08/26/random-thoughts</id><content type="html" xml:base="https://alainmauri.eu/2024/08/26/random-thoughts/"><![CDATA[<p>AI-generated images are a problem, no more or less than “natural” ones. Can we determine whether an image is authentic or not? If someone claims an image is fake - e.g., Trump regarding a Kamala Harris rally -
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-09-21T23:59:00+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">My Own Generator</title><link href="https://alainmauri.eu/2024/09/21/my-own-generator/" rel="alternate" type="text/html" title="My Own Generator" /><published>2024-09-21T00:00:00+01:00</published><updated>2024-09-21T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/09/21/my-own-generator</id><content type="html" xml:base="https://alainmauri.eu/2024/09/21/my-own-generator/"><![CDATA[<p>Many things are recently going on in my mind, but I guess it’s just part of that process called aging. I’m having that feeling that I still have so many things to do and learn (<a href="https://album.link/i/258622449">Kenny G.</a> is playing in the background) but the time left is not enough.
+Despite this and the fact that I’m not that fast as a developer as before - never been a 10x though… more a 2x :smile: - I’m still enjoying writing in that bizarre language called “code” and share my small achievements in blog posts, even though I realized
+that I have to write when I feel too and not with a predefined routine. This is what I am and I think I’m not going to change much… 
+Anyway I enjoy writing with my usual editor (Neovim or Lunarvim) but I don’t enjoy copy pasting things around. More I was in the process of learning how to use the <a href="http://whatisthor.com">Thor</a> gem so I said to myself that probably the best thing to do learn how it works is building something wih it. 
+It took me less than one hour to build an alpha version of my personal blogpost generator and you can find the code <a href="https://github.com/wildeng/wildeng.github.io/blob/55bac77ea91252e72c3c45f8b57593d20f3b0454/_scripts/blogpost.rb">here</a>. 
+<br />
+More, I already have in my mind some improvements:
+<br />
+Add some validations to the name and date passed as arguments 
+<br />
+Add the possibility to set up a customisable path for saving the file. I’m just thinking about how to organise posts e.g. by category 
+<br />
+Maybe add a file path to a template as a /a/ameter. In this way I could potentially change the structure of my posts and make the generator more general.</p>
+
+<p>I probably have many more improvements in my mind but the music is almost over and the beer is finished - It’s a Saturday evening so I can indulge a bit more with drinks!</p>
+
+<p>Cheers!
+<br />
+By the way, I also added some animation to my career page, check it out!</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p><br /></p>
+
+<p>Look at the difference between the two! The Webb telescope is amazing! The original is <a href="https://www.flickr.com/photos/nasawebbtelescope/53969828422/in/album-72177720313923911">here</a> <br />
+<img src="https://live.staticflickr.com/65535/53969828422_e000c6a967_k.jpg" alt="Question Mark Galaxy - Hubble and Webb | by James Webb Space Telescope" class="post-image" />
+<br />
+<br />
+This one is called “Peeking into Perseus”, I love the colours… original <a href="https://www.flickr.com/photos/nasawebbtelescope/53951942710/in/album-72177720313923911">here</a><br />
+<img src="https://live.staticflickr.com/65535/53951942710_5f4cef91ce_b.jpg" alt="Webb Finds Early Galaxies Weren't Too Big for Their Britches After All | by James Webb Space Telescope" class="post-image" />
+<br />
+<br /></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>Shady firm are already manipulating <a href="https://futurism.com/shady-firms-manipulating-chatbots">chatbots</a> <br />
+Where do music genres come from? <a href="https://www.honest-broker.com/p/where-do-music-genres-come-from">Ted Gioia</a> <br />
+Cards against humanity sues Space X <a href="https://arstechnica.com/tech-policy/2024/09/cards-against-humanity-sues-spacex-alleges-invasion-of-land-on-us-mexico-border/">Arstechnica</a><br />
+Secret calculator chat brings ChatGPT to TI-84 <a href="https://arstechnica.com/information-technology/2024/09/secret-calculator-hack-brings-chatgpt-to-the-ti-84-enabling-easy-cheating/">Arstechnica</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Many things are recently going on in my mind, but I guess it’s just part of that process called aging. I’m having that feeling that I still have so many things to do and learn (Kenny G. is playing in the background) but the time left is not enough. Despite this and the fact that I’m not that fast as a developer as before - never been a 10x though… more a 2x :smile: - I’m still enjoying writing in that bizarre language called “code” and share my small achievements in blog posts, even though I realized that I have to write when I feel too and not with a predefined routine. This is what I am and I think I’m not going to change much… Anyway I enjoy writing with my usual editor (Neovim or Lunarvim) but I don’t enjoy copy pasting things around. More I was in the process of learning how to use the Thor gem so I said to myself that probably the best thing to do learn how it works is building something wih it. It took me less than one hour to build an alpha version of my personal blogpost generator and you can find the code here. More, I already have in my mind some improvements: Add some validations to the name and date passed as arguments Add the possibility to set up a customisable path for saving the file. I’m just thinking about how to organise posts e.g. by category Maybe add a file path to a template as a /a/ameter. In this way I could potentially change the structure of my posts and make the generator more general.]]></summary></entry><entry><title type="html">Thoughts in random order</title><link href="https://alainmauri.eu/2024/08/26/random-thoughts/" rel="alternate" type="text/html" title="Thoughts in random order" /><published>2024-08-26T00:00:00+01:00</published><updated>2024-08-26T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/08/26/random-thoughts</id><content type="html" xml:base="https://alainmauri.eu/2024/08/26/random-thoughts/"><![CDATA[<p>AI-generated images are a problem, no more or less than “natural” ones. Can we determine whether an image is authentic or not? If someone claims an image is fake - e.g., Trump regarding a Kamala Harris rally -
 can we produce documentation to prove its authenticity? And if so, will others be willing to accept the truth, or will they continue to believe what suits them best?
 Italian researcher Walter Quattrociocchi, in an article for the financial newspaper <a href="https://www.ilsole24ore.com/art/armarsi-contro-fake-news-strumenti-il-prebunking-e-debunking-AGTHB8W">Il Sole 24 ore</a>, explains that debunking doesn’t work, mostly because people stick to their mental models
 even when confronted with the truth. This is where prebunking becomes useful.
@@ -489,49 +531,4 @@ Ganymede as seen from Juno - Nasa <a href="https://apod.nasa.gov/apod/">picture 
 
 <p>Publish (on your) Own Site, Syndicate Elsewhere <a href="https://indieweb.org/POSSE">POSSE</a></p>
 
-<p>Probably one of the most influential minicomputers of all times <a href="https://arstechnica.com/gadgets/2022/03/a-brief-tour-of-the-pdp-11-the-most-influential-minicomputer-of-all-time/">PDP11</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Recently I started reading about the Indie Web movement, which is a people-focused alternative to the corporate owned one, and it really struck a chord. Principles like owning your content and being in control of what gets published are the things that got me started trying to understand how to build websites and to become a web developer. And after many years trying to use different platforms such as Wordpress, Medium, Dev etc. I went back to the most simple stuff: HTML, CSS and a simple RSS Feed - Atom to be honest.]]></summary></entry><entry><title type="html">1991 What a Year!</title><link href="https://alainmauri.eu/2023/11/18/what-a-year/" rel="alternate" type="text/html" title="1991 What a Year!" /><published>2023-11-18T00:00:00+00:00</published><updated>2023-11-18T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/11/18/what-a-year</id><content type="html" xml:base="https://alainmauri.eu/2023/11/18/what-a-year/"><![CDATA[<p>Personally it was quite an ordinary year, I didn’t have much time to study for the university because I was playing in a band and I didn’t have much time left. Honestly I was enjoying my time and not thinking too much about studying, but still doing a bit of programming on my C64c and exploring the UNIX mainframe of the University of Trieste IT department.</p>
-
-<p>Rock Music was mainstream and big names - Metallica, Nirvana, REM, Extreme, Pearl Jam  where battling for number ones. So many good albums have been released that year from artists like Nirvana <a href="https://en.wikipedia.org/wiki/Nevermind">Nevermind</a>, Metallica <a href="https://en.wikipedia.org/wiki/Metallica_(album)">“Black Album”</a>, R.E.M. <a href="https://en.wikipedia.org/wiki/Out_of_Time_(album)">Out of Time</a>, Guns’n’Roses <a href="https://en.wikipedia.org/wiki/Use_Your_Illusion_I">Use your Illusion I</a>  and <a href="https://en.wikipedia.org/wiki/Use_Your_Illusion_II">Use your Illusion II</a>, Pearl Jam <a href="https://en.wikipedia.org/wiki/Ten_(Pearl_Jam_album)">Ten</a>, RHCP <a href="https://en.wikipedia.org/wiki/Blood_Sugar_Sex_Magik">Blood Sugar Sex Magik</a> and many others - e.g. Soundgarden, Stone Temple Pilots, Alice in chains etc.</p>
-
-<h5 id="on-the-tech-side"><b>On the tech side</b></h5>
-<p>On the 6th of August 1991 the first website <a href="http://info.cern.ch">info.cern.ch</a> ever was published by the Cern in Geneva and hosted on Tim Berners Lee’s NEXT computer and if I’m here throwing random words out in the wild is because of him and his work that changed the life of so many people around the world.</p>
-
-<p>Linus Torvalds released the Linux Kernel to several Usenet Groups <a href="https://en.wikipedia.org/wiki/History_of_Linux">Wikipedia</a></p>
-
-<p>Apple <a href="https://en.wikipedia.org/wiki/PowerBook">PowerBook</a> series of laptop was introduced to the market</p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>I do love all Beatles albums but my favourite one is <a href="https://album.link/i/1441164604">Sgt. Pepper’s Lonely Heart Club Band</a>
-<br />
-The Cray 1 supercomputer: Unfortunately I couldn’t use it but the Maths department of my university had it and I’ve been able to see it displayed in a room after its operational period was over. What a cool design it had!
-<br />
-<img src="/images/Cray1.jpg" alt="image of a Cray1 supercomputer in a red color in a room" class="post-image" />
-<br />
-<br />
-<br />
-Nasa celebrates astronaut’s Alan Shepard’s 100th birthday with the <a href="https://www.nasa.gov/image-detail/s63-02082orig/">picture of the week</a>
-<br />
-<img src="/images/alan-shepard.jpg" alt="image of astronaut Alan Shepard in a space suit" class="post-image" />
-<br />
-<br />
-<br />
-A picture I took in October 2016 in <a href="https://www.cividale.com/uk/santuario_di_castelmonte#">Castelmonte</a>
-<br />
-<img src="/images/castelmonte_october_2016.jpeg" alt="image of part of the walls of Castelmonte sanctuary taken in october 2016 with ivy turning red" class="post-image" /></p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>On Apple music <a href="https://music.apple.com/gb/playlist/rock-hits-1991/pl.0248cb21232d4f12bb823f234e2961e5">Rock Hits: 1991</a></p>
-
-<p>From the CERN website <a href="https://home.web.cern.ch/science/computing/birth-web">The Birth of the Web</a></p>
-
-<p>A nice article about <b>POSSE</b> - <i>Publish (on your) Own Site, Syndicate Elsewhere</i> from <a href="https://indieweb.org/POSSE?utm_source=ownyourweb&amp;utm_medium=email&amp;utm_campaign=issue-02">David Pierce</a></p>
-
-<p><b>Own your web</b> newsletter <a href="https://buttondown.email/ownyourweb">subscribe page</a></p>
-
-<p>Naomi Klein on why wellness culture is embracing far-right theories: From the <a href="https://www.theguardian.com/books/2023/nov/15/naomi-klein-interview-wellness-culture-far-right">Guardian</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Personally it was quite an ordinary year, I didn’t have much time to study for the university because I was playing in a band and I didn’t have much time left. Honestly I was enjoying my time and not thinking too much about studying, but still doing a bit of programming on my C64c and exploring the UNIX mainframe of the University of Trieste IT department.]]></summary></entry></feed>
+<p>Probably one of the most influential minicomputers of all times <a href="https://arstechnica.com/gadgets/2022/03/a-brief-tour-of-the-pdp-11-the-most-influential-minicomputer-of-all-time/">PDP11</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Recently I started reading about the Indie Web movement, which is a people-focused alternative to the corporate owned one, and it really struck a chord. Principles like owning your content and being in control of what gets published are the things that got me started trying to understand how to build websites and to become a web developer. And after many years trying to use different platforms such as Wordpress, Medium, Dev etc. I went back to the most simple stuff: HTML, CSS and a simple RSS Feed - Atom to be honest.]]></summary></entry></feed>
