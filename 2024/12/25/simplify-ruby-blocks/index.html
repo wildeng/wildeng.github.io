@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta charset="utf-8">
+
+  <title>Alain Mauri - Wildeng</title>
+  <meta name="author" content="Alain Mauri">
+  <meta name="description" content="Alain Mauri Senior Software Engineer and Team Leader in Sheffield - UK">
+  <meta name="keywords" content="Software Engineer, Team Leader, Ruby, Kanban,Startups, Agile, Pair Programming, Web Development, Javascript, CSS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed for alainmauri.eu" href="/feed.xml" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+  <body>
+    <div class="post-main">
+      <div class="blog-content">
+          
+  <h1>Simplify Ruby Blocks</h1>
+
+<p class="post-author"><u>25 Dec 2024 - Wildeng</u></p>
+
+<p><p>I didn’t plan to write anything on Christmas, and honestly, I haven’t been great at blogging. But here we are, another 25th of December and another Ruby release!<br />
+This time, Ruby 3.4 brings an array of fantastic features, including Prism as the default parser, improved performance, reduced memory usage for YJIT, and much more. I highly encourage you to explore all the updates.
+What caught my attention the most, though is the introduction of the <code class="language-plaintext highlighter-rouge">it</code> parameter. Back in Ruby 2.7 the shorthand <code class="language-plaintext highlighter-rouge">_1</code> block parameter was introduced allowing developers to write more concise
+and elegant blocks. This enhancement made code more readable and intuitive.
+The traditional approach is to use the <code class="language-plaintext highlighter-rouge">|</code> symbol in a block, something like:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>the <code class="language-plaintext highlighter-rouge">_1</code> (and <code class="language-plaintext highlighter-rouge">_2, _3</code>) parameters removes the need to explicit the block variable explicitely and so, the above code could be written as:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">map</span> <span class="p">{</span> <span class="n">_1</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">}</span>  <span class="c1"># _1 refers to each element in the array</span>
+</code></pre></div></div>
+<p>Let’s take a look at another example:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]].</span><span class="nf">map</span> <span class="p">{</span> <span class="n">_1</span> <span class="o">+</span> <span class="n">_2</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>In this case <code class="language-plaintext highlighter-rouge">_1</code> refers to the first element of the array, <code class="language-plaintext highlighter-rouge">_2</code> to the second and so on. Ruby supports an unlimited number of block parameters allowing you to use <code class="language-plaintext highlighter-rouge">_1,_2,_3</code> and so
+on, depending on the number of arguments passed to the block.<br />
+Ruby <code class="language-plaintext highlighter-rouge">3.4</code>, released today, introduced <code class="language-plaintext highlighter-rouge">it</code> as a reference to a block parameter with no variable name and it’s especially useful in the case of one parameter only or when the block operation is straightforward providing a more readable alternative
+to <code class="language-plaintext highlighter-rouge">_1</code> for developers unfamiliar with <code class="language-plaintext highlighter-rouge">_1</code>.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">map</span> <span class="p">{</span> <span class="n">it</span> <span class="o">*</span> <span class="mi">2</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>These approaches are particularly useful in situations where block variables have no semantic meaning, such as simple transformations or operations. However, in complex blocks or scenarios where parameter names add clarity, traditional syntax remains preferable.<br />
+In conclusion, these block parameters are a useful tool to write more concise and readable block.</p>
+
+<p>I think is enough writing for Christmas day, happy coding!</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>I love the colours of this sunrise I caught a week ago from my window.
+<br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/9da63c77d-bc90ba/kxkzDdkmcZuY/Bcbk4cuQtHWulxSy9fN3lg5jUdMsp7vLVHORk0JJ.jpg" alt="Sunrise from my window in Sheffield" class="post-image" />
+<br /></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>A Christmas Cartoon from the <a href="https://www.newyorker.com/cartoons/daily-cartoon/wednesday-december-25th-worth-it?utm_source=nl&amp;utm_brand=tny&amp;utm_mailing=TNY_Humor_122524&amp;utm_campaign=aud-dev&amp;utm_medium=email&amp;bxid=63cda847194f293410074e42&amp;cndid=72627383&amp;esrc=subscribe-page&amp;utm_term=TNY_Humor">New Yorker</a><br />
+The 20 most read stories on <a href="https://arstechnica.com/staff/2024/12/the-20-most-read-stories-of-2024-on-ars-technica/">Ars Technica</a><br />
+A complete guide for linting <a href="https://freshman.tech/linting-golang/">Go programs</a> <br />
+Rails 8 <a href="https://rubyonrails.org/2024/11/7/rails-8-no-paas-required">No PaaS Required</a></p>
+
+</p>
+
+      </div>
+      <footer>
+          <hr>
+
+<div>
+  <a href="/index.html" >Home</a>
+  <a href="/blog" >Posts</a>
+  <a href="/digital_garden.html" >Digital Garden</a>
+  <a href="/blogroll/" >Blogroll</a>
+</div>
+<hr>
+<p class="copyright">&copy; 1971-2024 <b>Alain Mauri</b>.
+<br>rev 737bc693724647ccc3b06203f76fe7c46628eb09 - 2024.12.25</p>
+<br/><p class="copyright">Subscribe to my <a href="/feed.xml" title="RSS Feed for the blog">RSS Feed</a></p>
+
+ 
+      </footer>
+    </div>
+  </body>
+</html>
