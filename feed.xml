@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2024-12-25T20:49:57+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Simplify Ruby Blocks</title><link href="https://alainmauri.eu/2024/12/25/simplify-ruby-blocks/" rel="alternate" type="text/html" title="Simplify Ruby Blocks" /><published>2024-12-25T00:00:00+00:00</published><updated>2024-12-25T00:00:00+00:00</updated><id>https://alainmauri.eu/2024/12/25/simplify-ruby-blocks</id><content type="html" xml:base="https://alainmauri.eu/2024/12/25/simplify-ruby-blocks/"><![CDATA[<p>I didn’t plan to write anything on Christmas, and honestly, I haven’t been great at blogging. But here we are, another 25th of December and another Ruby release!<br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2025-03-17T22:10:39+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Coding as art</title><link href="https://alainmauri.eu/2025/03/17/coding-as-art/" rel="alternate" type="text/html" title="Coding as art" /><published>2025-03-17T00:00:00+00:00</published><updated>2025-03-17T00:00:00+00:00</updated><id>https://alainmauri.eu/2025/03/17/coding-as-art</id><content type="html" xml:base="https://alainmauri.eu/2025/03/17/coding-as-art/"><![CDATA[<p>I graduated in electronic engineering — a practical, structured subject where precision matters and creativity often takes a back seat. But long before that, two things shaped how I see the world: playing the guitar and coding on a C64.</p>
+
+<p>I was 12 when I got my hands on that C64. My first coding projects were practical — I even wrote a program to try to win the <em>Totocalcio</em> (Italy’s football pool). It didn’t work, but the thrill of making the machine do what I wanted stuck with me. I also experimented with sprites and graphics, discovering the creative side of code.</p>
+
+<p>At the same time, I was studying classical guitar while trying to replicate the sounds of Hendrix, Clapton, BB King, and Led Zeppelin by ear. Coding and music seemed like opposites — one technical, the other emotional — but over time, I realized they weren’t so different. Both require structure and creativity, precision and expression.</p>
+
+<p>Around my thirties, I tried to get into film photography — this was around 2003 — but it didn’t click. Maybe I didn’t have the right information or the right mindset. So I stopped. Then about a year ago, I picked up digital photography more seriously, and now I’m back to film too. This time it feels different — partly because I’ve found some great people on Pixelfed who’ve shared the right suggestions at the right time.</p>
+
+<p>That’s why, even now as a software engineer, I feel the need to do something artistic. Creativity and logic aren’t opposites — they feed each other and need each other. That’s why I’m sure many software engineers out there are doing some kind of creative work. It’s not just a balance — it’s part of what makes us good at both.</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+<p><br />
+A picture of the river Don that I’ve taken with my film camera in Kelham Island - Sheffield<br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/549719332-a3f277/AaNJwLe0PGhh/q3TKHXpeg1uv9FoAMbEQdlxMcGyHBBh6JCe4Vcya.jpg" alt="the picture shows the river don in Kelham Island Sheffield. On the right side some old red brick industrial buildings are reflecting in the river's water which has a brownish colour. On the left leafless trees and bushes. In the middle of the picture two tall modern buildings can be seen  on the background while in the foreground there are other red brick old industrial ones, some ducks are floating on the water" class="post-image" />
+<br />
+<br />
+I like this one that I took with my digital camera. A sweet moment during the Chinese New Year festival in Sheffield<br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/758e75a50-ddd61a/ZwroLPxfuxzj/uP9TE7jfRdxxSzugBccrE6FK4LNKw264X6DVlF93.jpg" alt="A man is putting a lion head made of inflated balloons on the head of a toddler. The picture tries to show the happiness of the moment. The shot has been taken during Chinese new year celebrations" class="post-image" />
+<br />
+<br /></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+<p>Ruby debugging <a href="https://railsatscale.com/2025-03-14-ruby-debugging-tips-and-recommendations-2025/">tips</a><br />
+Stories from US Federal employees <a href="https://www.wethebuilders.org/">We are the builders</a><br />
+Wizardzines - Implement DNS in a <a href="https://implement-dns.wizardzines.com/">weekend</a><br />
+You will love this: <a href="https://github.com/Jaennaet/pISSStream">pISSStream</a> a menu bar app that shows you how full the urine tank of the ISS is.</p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[I graduated in electronic engineering — a practical, structured subject where precision matters and creativity often takes a back seat. But long before that, two things shaped how I see the world: playing the guitar and coding on a C64.]]></summary></entry><entry><title type="html">Simplify Ruby Blocks</title><link href="https://alainmauri.eu/2024/12/25/simplify-ruby-blocks/" rel="alternate" type="text/html" title="Simplify Ruby Blocks" /><published>2024-12-25T00:00:00+00:00</published><updated>2024-12-25T00:00:00+00:00</updated><id>https://alainmauri.eu/2024/12/25/simplify-ruby-blocks</id><content type="html" xml:base="https://alainmauri.eu/2024/12/25/simplify-ruby-blocks/"><![CDATA[<p>I didn’t plan to write anything on Christmas, and honestly, I haven’t been great at blogging. But here we are, another 25th of December and another Ruby release!<br />
 This time, Ruby 3.4 brings an array of fantastic features, including Prism as the default parser, improved performance, reduced memory usage for YJIT, and much more. I highly encourage you to explore all the updates.
 What caught my attention the most, though is the introduction of the <code class="language-plaintext highlighter-rouge">it</code> parameter. Back in Ruby 2.7 the shorthand <code class="language-plaintext highlighter-rouge">_1</code> block parameter was introduced allowing developers to write more concise
 and elegant blocks. This enhancement made code more readable and intuitive.
@@ -472,53 +501,4 @@ The Acorn BBC Micro<br />
 
 <p>The Most Important Unsolved Problem in Computer Science <a href="https://www.scientificamerican.com/article/the-most-important-unsolved-problem-in-computer-science/">Scientific American</a></p>
 
-<p>Good news you didn’t hear about <a href="https://futurecrunch.com/goodnews2023/">Futurecrunch</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Ruby has three types of anonymous functions: Blocks, Procs and Lambdas.]]></summary></entry><entry><title type="html">The Sacred Graal of Editors</title><link href="https://alainmauri.eu/2023/12/23/editor-sacred-graal/" rel="alternate" type="text/html" title="The Sacred Graal of Editors" /><published>2023-12-23T00:00:00+00:00</published><updated>2023-12-23T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/12/23/editor-sacred-graal</id><content type="html" xml:base="https://alainmauri.eu/2023/12/23/editor-sacred-graal/"><![CDATA[<p>In my last post I said that I wanted to be more technical and so be it. But in a different way and not “so technical”: I won’t talk about classes, methods, modules, mixin or some other Ruby related stuff. I’m going to write about my journey in search of my “almost perfect” editor.</p>
-
-<p><img align="left" src="https://twobithistory.org/images/c64_startup.png" class="post-image align-post-image" alt="a commodore 64 shell" />  When I started doing some programming there wasn’t much of a choice. The C64 was offering one type of editing mode and nothing more so I didn’t bother much about it and the
-same happened while in high school, <a href="https://en.wikipedia.org/wiki/Olivetti_M24">Olivetti M24</a> and <a href="https://classic.technology/wp-content/uploads/2021/10/olivettim240german.pdf">Olivetti M240</a> had some really simple text editors not that different from C64 shell. In the end I got used to it and this probably why
-I still find myself comfortable using the command line.
-Not much to say about university years. I was studying electronics and not coding much. I also didn’t have a computer at home so I was using whatever was present on the University computers, from <a href="https://en.wikipedia.org/wiki/JBuilder">JBuilder</a> to Notepad or <a href="https://en.wikipedia.org/wiki/Notepad%2B%2B">Notepad++</a>.</p>
-
-<p>When I started professionally as a web developer, the first company I worked for was using ASP and provided me a desktop equipped with <a href="https://en.wikipedia.org/wiki/Visual_InterDev">VisualInterDev</a>. The company then went bankrupt and I moved to another one where I really learned web development from scratch. Starting out with HTML/CSS and then, at the time, the next natural step was PHP. I then started developing with Java so I moved from <a href="https://en.wikipedia.org/wiki/PHPEdit">PHPEdit</a> to <a href="https://www.eclipse.org/downloads/">Eclipse</a> that became my preferred choice for both languages. Given the type of work required by the company, I also started getting used to FreeBSD servers and <a href="https://www.vim.org">Vim</a> as an editor for configuration files and small shell scripts.<br />
-At that time I was freelancing and sometimes I had to code with programming languages chosen by the customer and thus the IDE choice by was not under my control. The list is long and I won’t mention all of them, just that that I had to use Delphi and PL/SQL :sweat:</p>
-
-<p>The real change happened when I did two things after I’ve started working with a company building a web application using Ruby on Rails: I adopted Ubuntu as-my-day to day OS and started using <a href="https://github.com/aptana/studio3">Aptana RadRails</a>. Being that a small startup we also had to do some system administration on Ubuntu servers so Vim was the standard choice. However, those early version of Ubuntu weren’t that “user friendly” so I had frequently to use the command line and edit files. Constantly switching between editors became tiresome so I started looking for a more flexible alternative and while reading a book about early open source movement contributors, I’ve noticed that many of them were using <a href="https://en.wikipedia.org/wiki/Emacs">Emacs</a>, so I’ve installed it and started using it.
-The beginning was hard, I had to learn all the basic concepts, how to navigate and edit files and more how to configure it for my purposes. But once I digested all this preliminary information and started getting used to it, the experience was highly satisfactory. I also discovered <a href="https://github.com/tmuxinator/tmuxinator">Tmuxinator</a>, a Ruby Gem that makes <a href="https://en.wikipedia.org/wiki/Tmux">Tmux</a> session management easier, and using it together with Emacs was absolutely dope! I was finally able to configure my development environment in such a way that I could have different Tmux sessions opened for different projects with all that I need already in place.</p>
-
-<p>That should have been my sweet spot; however, since I was still doing some sysadmin work, most of the times Vim was the only available editor and I then decided after 4 years of Emacs to finally move to <a href="https://www.lunarvim.org">Lunarvim</a>, a <a href="https://neovim.io">Neovim</a> based editor which comes by default with a lot of nice features. The only thing I had to configure was the code completion and the Golang support.</p>
-
-<p>The search for my ‘Sacred Graal of Editors’ has been driven by my inherent laziness. I don’t want to change much some of my daily routines and constantly switching between IDEs while using different programming languages and while editing configuration files on some remote server was making me less productive. At the end what we need is a well ingrained muscle memory that keeps us productive and helps us getting the job done. Vim is ubiquitous and can be found in all Unix-like systems which means that I can just sit down and start coding.</p>
-
-<p>At the end what makes difference is how comfortable are with your tools. If you prefer a comprehensive IDE that takes care of all the aspects of a developer’s workflow, just use it. IDEs will continue to improve, but I will persist with my tools, which may appear antiquated to some, but if you’re still trying to find your preferred editor, give Vim or Emacs a try, you won’t regret it.</p>
-
-<p>Note: This post has been entirely written and edited on Lunarvim <img src="/images/downhand.gif" alt="a gif of a hand pointing down" /></p>
-
-<p><img src="/images/lunarvim.png" class="post-image" alt="lunarvim welcome screen" /></p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>Perseverance’s 360 view from Airey Hill - Original <a href="https://mars.nasa.gov/resources/27844/perseverances-360-degree-view-from-airey-hill/?utm_source=iContact&amp;utm_medium=email&amp;utm_campaign=nasas-mars-public-engagement-team&amp;utm_content=20231220-MarsNewsletter-A">here</a>
-<br />
-<img src="/images/perseverance-airey-hill.jpg" alt="a 360 degrees of airey hill taken from perseverance mars rover" class="post-image" />
-<br />
-<br />
-My Christmas tree - picture taken using one of Hipstamatic lenses 
-<br />
-<img src="/images/christmas-tree.jpeg" alt="the christmas tree in my living room with a instant camera filter" class="post-image" />
-<br /></p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>Apple explores A.I. deals with some news publishers <a href="https://www.nytimes.com/2023/12/22/technology/apple-ai-news-publishers.html">N.Y. Times</a></p>
-
-<p>Britain is an ‘omni-surveillance society’ <a href="https://www.theguardian.com/uk-news/2023/oct/29/britain-omni-surveillance-society-watchdog-warns?utm_term=658531d6070054b93415af41a0313739&amp;utm_campaign=FirstEdition&amp;utm_source=esp&amp;utm_medium=Email&amp;CMP=firstedition_email">The Guardian</a></p>
-
-<p>Police to be able to run <a href="https://www.theguardian.com/technology/2023/dec/20/police-to-be-able-to-run-face-recognition-searches-on-50m-driving-licence-holders">facial recognition</a></p>
-
-<p>Building Future Mars <a href="https://mars.nasa.gov/news/9513/nasa-uses-two-worlds-to-test-future-mars-helicopter-designs/">Helicopters</a></p>
-
-<p>Introducing Solid Queue - A DB-based queuing <a href="https://dev.37signals.com/introducing-solid-queue/">backend</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[In my last post I said that I wanted to be more technical and so be it. But in a different way and not “so technical”: I won’t talk about classes, methods, modules, mixin or some other Ruby related stuff. I’m going to write about my journey in search of my “almost perfect” editor.]]></summary></entry></feed>
+<p>Good news you didn’t hear about <a href="https://futurecrunch.com/goodnews2023/">Futurecrunch</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Ruby has three types of anonymous functions: Blocks, Procs and Lambdas.]]></summary></entry></feed>
