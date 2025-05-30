@@ -1,4 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2025-03-17T22:10:39+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Coding as art</title><link href="https://alainmauri.eu/2025/03/17/coding-as-art/" rel="alternate" type="text/html" title="Coding as art" /><published>2025-03-17T00:00:00+00:00</published><updated>2025-03-17T00:00:00+00:00</updated><id>https://alainmauri.eu/2025/03/17/coding-as-art</id><content type="html" xml:base="https://alainmauri.eu/2025/03/17/coding-as-art/"><![CDATA[<p>I graduated in electronic engineering — a practical, structured subject where precision matters and creativity often takes a back seat. But long before that, two things shaped how I see the world: playing the guitar and coding on a C64.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2025-05-30T22:16:29+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">The Magic World of Browser’s Privacy</title><link href="https://alainmauri.eu/2025/05/30/search-improved-and-specs/" rel="alternate" type="text/html" title="The Magic World of Browser’s Privacy" /><published>2025-05-30T00:00:00+01:00</published><updated>2025-05-30T00:00:00+01:00</updated><id>https://alainmauri.eu/2025/05/30/search-improved-and-specs</id><content type="html" xml:base="https://alainmauri.eu/2025/05/30/search-improved-and-specs/"><![CDATA[<p>While researching for a guide on how to properly write RSpec tests and avoid flaky specs, I once again ran into the growing frustration of modern web searches — cluttered with SEO spam, AI junk, and irrelevant results.
+That experience led me to reflect not just on search engines, but also on the browsers we rely on daily. I realized how many of the popular ones are no longer user-friendly — especially when it comes to respecting our privacy and security.
+Curious, I dove into the world of alternative browsers. Beyond the better-known options like Brave, DuckDuckGo, and Vivaldi, I discovered lesser-known but powerful tools like the Mullvad Browser — each with its own strengths and trade-offs.<br />
+In the link section you will find some of the source I’ve used for this.
+Here’s a comparison of these privacy-focused browsers to help you choose the one that fits your needs:</p>
+
+<h4 id="-1-mullvad-browser">🥇 1. Mullvad Browser</h4>
+<p>Pros:
+Maximal privacy — no telemetry or fingerprinting.
+Based on Tor Browser (without the Tor network).
+Comes with uBlock Origin preinstalled.
+Built for anonymity and security.</p>
+
+<p>Cons:
+Not beginner-friendly.
+Lacks sync, bookmarks, and convenience features.</p>
+
+<h4 id="-2-brave">🥈 2. Brave</h4>
+<p>Pros:
+Built-in tracker and ad blocker.
+Fingerprinting protection.
+Supports Tor in private windows.
+Fast and easy to use.</p>
+
+<p>Cons
+Promotes its own crypto features.
+Past controversy: affiliate link injections (2019).</p>
+
+<h4 id="-3-firefox">🥉 3. Firefox</h4>
+<p>Pros:
+Open source and independent.
+Strong Enhanced Tracking Protection.
+Supports uBlock Origin and privacy extensions.</p>
+
+<p>Cons:
+Needs some customization for maximum privacy.
+Slightly heavier on system resources.</p>
+
+<h4 id="4-vivaldi">4. Vivaldi</h4>
+<p>Pros:
+Built-in ad/tracker blocker.
+Highly customizable interface.
+No telemetry without consent.</p>
+
+<p>Cons:
+Not fully open source.
+Based on Chromium.</p>
+
+<h4 id="5-safari">5. Safari</h4>
+<p>Pros:
+Intelligent Tracking Prevention (ITP).
+Optimized for battery and performance on Apple devices.
+Good privacy defaults.</p>
+
+<p>Cons:
+Limited extension ecosystem.
+Locked into Apple ecosystem.</p>
+
+<h4 id="6-arc">6. Arc</h4>
+<p>Pros:
+Innovative UI with useful features.
+Ad/tracker blocking supported via extensions.
+Clean, distraction-free design.</p>
+
+<p>Cons:
+Closed source and cloud-based account required.
+Limited transparency on privacy practices.</p>
+
+<h4 id="7-opera">7. Opera</h4>
+<p>Pros:
+Built-in ad blocker and free VPN (proxy).
+Feature-rich and user-friendly.</p>
+
+<p>Cons:
+Owned by a Chinese consortium (privacy concerns).
+VPN is not truly private.
+Previous involvement in shady Android loan apps.</p>
+
+<h4 id="8-microsoft-edge">8. Microsoft Edge</h4>
+<p>Pros:
+Integration with Windows security features.
+Defender SmartScreen protects against phishing/malware.</p>
+
+<p>Cons:
+Heavy telemetry and data collection.
+Aggressively pushes Microsoft services.
+Can override user settings.</p>
+
+<h4 id="9-chromium-vanilla">9. Chromium (Vanilla)</h4>
+<p>Pros:
+Open source, no proprietary Google code.
+More private than Chrome by default.
+Customizable for developers.</p>
+
+<p>Cons:
+No auto updates or media codecs by default.
+Still leaks some data to Google domains (unless patched).</p>
+
+<h4 id="10-google-chrome">10. Google Chrome</h4>
+<p>Pros:
+Fast, stable, and widely supported.
+Excellent extension ecosystem.</p>
+
+<p>Cons:
+Heavy telemetry and user tracking.
+No built-in tracker or ad blocking.
+Designed around Google’s ad business.</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>A Monochrome picture I’ve taken in Bologna at the Certosa, the monumental cemetery.
+<br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/208209554-471e9e/FalbuZnVHjH2/eV059QJNaIZqLcrb5tZZUEwUNA0cqyQsXU36gnoJ.jpg" loading="lazy" alt="The photograph is a black and white image depicting a long, covered colonnade, similar to a hallway with columns on either side.  The colonnade is quite long, extending into the distance where it appears to darken and become less distinct.  The columns are tall and slender, classical in style, with bases and capitals.  Between the columns, there are walls with what appear to be stone or marble plaques or memorials, possibly tombstones, set into them.  Small floral arrangements are visible in some of these niches.  The floor of the colonnade is paved, and the shadows of the columns are cast long and distinctly on the ground, indicating a strong light source from one side.  A small, rectangular object, possibly a drain cover, is visible in the center of the foreground.  A person is visible in the far distance, adding a sense of scale and depth to the image. The overall impression is one of quiet solemnity and architectural grandeur." class="post-image" />
+<br />
+<br />
+The last intact cementation furnace in Britain it’s in <a href="https://en.wikipedia.org/wiki/Cementation_furnace,_Sheffield">Sheffield</a>
+<br />
+<img data-v-46f39310="" src="https://pxscdn.com/public/m/_v2/424813098022428933/208209554-471e9e/lmrB8K9vBDTo/O5H6e64G6Bv2twAJ4nsxz3nm90y3kfV7uIbbCAN2.jpg" loading="lazy" alt="A large, conical brick tower stands prominently in a sunny urban landscape. The tower, once used for cementation in steel production, is dark reddish-brown with weathered bricks and a faded, patchy surface. A modern white metal structure is mounted at its top. Behind it are several mid-rise buildings with red, grey, and white facades, reflecting contemporary architecture. In the foreground lies a rough, dusty area with rubble, overgrown weeds, and metal fencing. The sky is clear and deep blue, casting strong, sharp shadows. The scene contrasts industrial heritage with urban development." class="post-image" />
+<br />
+<br />
+All the pictures I usually post here are also available in my <a href="https://pixelfed.social/wildeng">Pixelfed Ptofile</a></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<ul>
+  <li><a href="https://coveryourtracks.eff.org/">EFF Cover Your Tracks</a></li>
+  <li><a href="https://mullvad.net/en/browser">Mullvad Browser – Official Site</a></li>
+  <li><a href="https://brave.com/privacy/">Brave Privacy Features</a></li>
+  <li><a href="https://support.mozilla.org/en-US/products/firefox/privacy-and-security">Firefox Privacy &amp; Security Help</a></li>
+  <li><a href="https://spreadprivacy.com/">DuckDuckGo Tracker Blocking</a></li>
+  <li><a href="https://vivaldi.com/privacy/browser/">Vivaldi Browser Privacy</a></li>
+  <li><a href="https://www.apple.com/privacy/features/">Safari Features – Apple</a></li>
+  <li><a href="https://www.opera.com/privacy">Opera Privacy Policy</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/microsoft-edge/privacy-whitepaper/">Microsoft Edge Privacy Whitepaper</a></li>
+  <li><a href="https://www.google.com/chrome/privacy/whitepaper.html">Chrome Privacy Whitepaper</a></li>
+  <li><a href="https://cyberinsider.com/browser/secure/">RestorePrivacy Browser Comparison</a></li>
+  <li><a href="https://www.spacebar.news/stop-using-opera-browser/">Stop Using Opera Browser</a></li>
+</ul>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[While researching for a guide on how to properly write RSpec tests and avoid flaky specs, I once again ran into the growing frustration of modern web searches — cluttered with SEO spam, AI junk, and irrelevant results. That experience led me to reflect not just on search engines, but also on the browsers we rely on daily. I realized how many of the popular ones are no longer user-friendly — especially when it comes to respecting our privacy and security. Curious, I dove into the world of alternative browsers. Beyond the better-known options like Brave, DuckDuckGo, and Vivaldi, I discovered lesser-known but powerful tools like the Mullvad Browser — each with its own strengths and trade-offs. In the link section you will find some of the source I’ve used for this. Here’s a comparison of these privacy-focused browsers to help you choose the one that fits your needs:]]></summary></entry><entry><title type="html">Coding as art</title><link href="https://alainmauri.eu/2025/03/17/coding-as-art/" rel="alternate" type="text/html" title="Coding as art" /><published>2025-03-17T00:00:00+00:00</published><updated>2025-03-17T00:00:00+00:00</updated><id>https://alainmauri.eu/2025/03/17/coding-as-art</id><content type="html" xml:base="https://alainmauri.eu/2025/03/17/coding-as-art/"><![CDATA[<p>I graduated in electronic engineering — a practical, structured subject where precision matters and creativity often takes a back seat. But long before that, two things shaped how I see the world: playing the guitar and coding on a C64.</p>
 
 <p>I was 12 when I got my hands on that C64. My first coding projects were practical — I even wrote a program to try to win the <em>Totocalcio</em> (Italy’s football pool). It didn’t work, but the thrill of making the machine do what I wanted stuck with me. I also experimented with sprites and graphics, discovering the creative side of code.</p>
 
@@ -386,119 +527,4 @@ Talking about languages I’ve also enrolled in a <a href="https://en.wikipedia.
 
 <p>The Boeing’s plug door <a href="https://slate.com/technology/2024/01/boeing-737-max-9-plug-door-alaska-airlines.html">fiasco</a></p>
 
-<p>A Github repository about principles and patterns for software developers <a href="https://github.com/dwmkerr/hacker-laws">Hacker Laws</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[While reading the Advent of Prism about the new Ruby parser that’s now been integrated into runtimes and tooling I came across something that I had overlooked: Numbers such as 010 are treated by Ruby as Octal by default]]></summary></entry><entry><title type="html">Blocks Procs and Lambdas</title><link href="https://alainmauri.eu/2023/12/28/blocks-procs-and-lambdas/" rel="alternate" type="text/html" title="Blocks Procs and Lambdas" /><published>2023-12-28T00:00:00+00:00</published><updated>2023-12-28T00:00:00+00:00</updated><id>https://alainmauri.eu/2023/12/28/blocks-procs-and-lambdas</id><content type="html" xml:base="https://alainmauri.eu/2023/12/28/blocks-procs-and-lambdas/"><![CDATA[<p>Ruby has three types of anonymous functions: Blocks, Procs and Lambdas.</p>
-
-<h5 id="-block-">====== Block ======</h5>
-
-<p>Blocks are anonymous pieces of code that are not objects but can be passed to methods for execution. An example is the <code class="language-plaintext highlighter-rouge">map</code> method from the <a href="https://ruby-doc.org/core-3.0.2/Enumerable.html#method-i-map">Enumerable mixin</a>, which accepts and executes a block of code:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">*</span> <span class="mi">2</span> <span class="p">}</span>
-</code></pre></div></div>
-
-<p>Methods explicitly or implicitly accept blocks:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">method_implicit</span>
-  <span class="nb">puts</span> <span class="s2">"Starting the method"</span>
-  <span class="k">yield</span> <span class="k">if</span> <span class="nb">block_given?</span>
-  <span class="nb">puts</span> <span class="s2">"ending"</span>
-<span class="k">end</span>
-
-<span class="k">def</span> <span class="nf">method_explicit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Starting explicit"</span>
-  <span class="n">block</span><span class="p">.</span><span class="nf">call</span>
-  <span class="nb">puts</span> <span class="s2">"ending explicit"</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<p>In the first case, the method uses <code class="language-plaintext highlighter-rouge">yield</code> to execute the block if provided. In the second case, the <code class="language-plaintext highlighter-rouge">&amp;block</code> syntax indicates that the method expects a block as an argument.
-One more thing to remember is that when the block is executed the control passes to it and returns to the method when the block has finished its execution.</p>
-
-<h5 id="-proc-">====== Proc ======</h5>
-
-<p>Unlike blocks, Proc - from the <a href="https://ruby-doc.org/3.3.0/Proc.html">Ruby docs</a> - are objects which encapsulate blocks of code. They can be stored in a variable, passed to a method or to other Procs. Proc are closures,meaning they remember and can use the entire context in which they were created. For instance:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pow_two</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="p">}</span>
-<span class="n">pow_two</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># Output: 9</span>
-</code></pre></div></div>
-
-<p>Procs retain access to variables in their creation context:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create_proc</span>
-  <span class="n">local_variable</span> <span class="o">=</span> <span class="s2">"I am from the original scope"</span>
-  <span class="nb">proc</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span>
-    <span class="nb">puts</span> <span class="n">local_variable</span>
-  <span class="k">end</span>
-  <span class="nb">proc</span>
-<span class="k">end</span>
-
-<span class="c1"># Create a Proc in one scope</span>
-<span class="n">my_proc</span> <span class="o">=</span> <span class="n">create_proc</span>
-
-<span class="c1"># Call the Proc in a different scope</span>
-<span class="n">my_proc</span><span class="p">.</span><span class="nf">call</span> <span class="c1"># Output: I'm from the original scope</span>
-</code></pre></div></div>
-<p>It’s worth mentioning that this could potentially lead to troubles if the creation context is not available anymore or has changed such in the case of serialization/deserialization or if used in a different object or class context.</p>
-
-<p>Consider now this example:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">another_proc</span>
-  <span class="n">local_var</span> <span class="o">=</span> <span class="s2">"I'm local"</span>
-  <span class="nb">proc</span> <span class="o">=</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="k">return</span> <span class="n">local_var</span> <span class="p">}</span>
-  <span class="nb">proc</span><span class="p">.</span><span class="nf">call</span>
-  <span class="k">return</span> <span class="s2">"another one"</span>
-<span class="k">end</span>
-
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">053</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="nb">puts</span> <span class="n">another_proc</span>
-<span class="no">I</span><span class="err">'</span><span class="n">m</span> <span class="n">local</span>
-</code></pre></div></div>
-
-<p>Procs do not pass back control to the calling method but immediately return.  <br />
-They are generous about accepting arguments. Missing ones will be fit with <code class="language-plaintext highlighter-rouge">nil</code>, single Array will be deconstructed if having multiple arguments and no errors will be raised on extra ones.</p>
-
-<h5 id="-lambda-">====== Lambda ======</h5>
-
-<p>Lambdas are objects of the Proc class created using the <a href="https://ruby-doc.org/3.3.0/Kernel.html#method-i-lambda">kernel#lambda</a> semantics. They are stricter with passed arguments compared to regular Procs. Notably, <code class="language-plaintext highlighter-rouge">return</code> and <code class="language-plaintext highlighter-rouge">break</code> in a lambda exits the lambda and returns control to the calling function:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">lambda_method</span>
-  <span class="n">local</span> <span class="o">=</span> <span class="s2">"I'm local"</span>
-  <span class="n">lam</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span><span class="k">return</span> <span class="n">local</span> <span class="p">}</span>
-  <span class="nb">puts</span> <span class="n">lam</span><span class="p">.</span><span class="nf">call</span>
-  <span class="nb">puts</span> <span class="s2">"end"</span>
-<span class="k">end</span>
-
-<span class="n">lambda_method</span> <span class="c1"># Output: I'm local end</span>
-</code></pre></div></div>
-<p>Understanding when to employ each of these constructs is crucial for writing clean and efficient Ruby code. Blocks are excellent for short, one-off operations, Procs offer encapsulation and context retention, while Lambdas provide a balance of strict argument handling and the familiarity of Proc behavior.</p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>The Astronomy Picture of the Day is something beautiful: <a href="https://apod.nasa.gov/apod/ap231225.html">Cathedral, Mountain, Moon</a></p>
-
-<p>Probably a lot of people started using a computer with Windows installed - a stock <a href="https://archive.org/details/win3_stock">Windows 3.1</a> on the Internet Archive</p>
-
-<p>What an extraordinary historical archive: <a href="https://clp.bbcrewind.co.uk/">BBC Computer Literacy Project 1980 - 1989</a></p>
-
-<p><br />
-The Acorn BBC Micro<br />
-<br />
-<img src="/images/acorn-bbc-micro.jpg" alt="the acorn bbc micro computer" class="post-image" />
-<br />
-<br /></p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<blockquote>
-  <p>They say that electronic mail tends to be informal in style (as opposed to written mail) and makes people bolder. This encourages those who wouldn’t dare to say something direct to your face (and who don’t have anything serious enough to say to commit it to a formal, written memo) to send you “brazen” messages.</p>
-</blockquote>
-
-<p>Sounds familiar? An old article about email and conventional post - 1983 <a href="https://www.theguardian.com/technology/2023/dec/01/could-email-undermine-conventional-post-1983">Could electronic mail undermine conventional post?</a></p>
-
-<p><a href="https://www.ruby-lang.org/en/news/2023/12/25/ruby-3-3-0-released/">Ruby 3.3</a> has been released with some really interesting additions to the language</p>
-
-<p>The Most Important Unsolved Problem in Computer Science <a href="https://www.scientificamerican.com/article/the-most-important-unsolved-problem-in-computer-science/">Scientific American</a></p>
-
-<p>Good news you didn’t hear about <a href="https://futurecrunch.com/goodnews2023/">Futurecrunch</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Ruby has three types of anonymous functions: Blocks, Procs and Lambdas.]]></summary></entry></feed>
+<p>A Github repository about principles and patterns for software developers <a href="https://github.com/dwmkerr/hacker-laws">Hacker Laws</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[While reading the Advent of Prism about the new Ruby parser that’s now been integrated into runtimes and tooling I came across something that I had overlooked: Numbers such as 010 are treated by Ruby as Octal by default]]></summary></entry></feed>
