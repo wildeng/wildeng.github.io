@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2025-05-30T23:26:16+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">The Magic World of Browser’s Privacy</title><link href="https://alainmauri.eu/2025/05/30/search-improved-and-specs/" rel="alternate" type="text/html" title="The Magic World of Browser’s Privacy" /><published>2025-05-30T00:00:00+01:00</published><updated>2025-05-30T00:00:00+01:00</updated><id>https://alainmauri.eu/2025/05/30/search-improved-and-specs</id><content type="html" xml:base="https://alainmauri.eu/2025/05/30/search-improved-and-specs/"><![CDATA[<p>While researching for a guide on how to properly write RSpec tests and avoid flaky specs, I once again ran into the growing frustration of modern web searches — cluttered with SEO spam, AI junk, and irrelevant results.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2025-06-05T08:25:56+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Local ai code assistant</title><link href="https://alainmauri.eu/2025/06/05/local-ai-code-assistant/" rel="alternate" type="text/html" title="Local ai code assistant" /><published>2025-06-05T00:00:00+01:00</published><updated>2025-06-05T00:00:00+01:00</updated><id>https://alainmauri.eu/2025/06/05/local-ai-code-assistant</id><content type="html" xml:base="https://alainmauri.eu/2025/06/05/local-ai-code-assistant/"><![CDATA[<h4 id="disclaimer-because-the-readme-file-of-this-project-is-good-i-decided-to-duplicate-it-here-too">Disclaimer: Because the README file of this project is good, I decided to duplicate it here too.</h4>
+
+<h2 id="build-your-personal-code-assistant">Build your personal code assistant</h2>
+
+<p>This is a personal experiment to explore whether it’s possible to build a local, offline-first code assistant on top of an open-source language model.</p>
+
+<p>The assistant maintains context in a <code class="language-plaintext highlighter-rouge">JSON</code> file, which is updated with each interaction — allowing the model to pick up where it left off.</p>
+
+<h2 id="problem-context">Problem Context</h2>
+
+<p>This started because I didn’t want to rely on commercial products like GitHub Copilot, nor be dependent on an internet connection. I wanted something that works even on a train or plane.
+The second constraint is about my development environment. I’m a <a href="https://www.lunarvim.org">Lunarvim</a> user and occasionally use <a href="https://neovim.io">Neovim</a>, so my goal was to first create something pluggable in <code class="language-plaintext highlighter-rouge">Lunarvim</code> and then adapt it for use in plain <code class="language-plaintext highlighter-rouge">Neovim</code>.
+The third constraint was focusing on the programming language. I’m mainly <code class="language-plaintext highlighter-rouge">Ruby</code> developer and occasionally <code class="language-plaintext highlighter-rouge">Python</code> so I’ve started by focusing on these two only.</p>
+
+<h2 id="how-it-works-high-level">How it Works (High-level)</h2>
+
+<ul>
+  <li>Lua plugin captures code context from the buffer</li>
+  <li>Lua calls Python script, passing selected code (or surrounding context)</li>
+  <li>Python script prompts the model via Ollama and returns code suggestions</li>
+  <li>Suggestions are rendered in a floating window (markdown) or inline (ghost text)</li>
+</ul>
+
+<h2 id="draft-implementation">Draft Implementation</h2>
+
+<p>To make the agent run I had to do two things first:</p>
+
+<ul>
+  <li>Install <a href="https://github.com/ollama/ollama">Ollama</a> and pull my model of choice <a href="https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-instruct">Deepseek Coder 1.3b</a>. The code is general enough to be used with other models, depending on your machine available resources.</li>
+  <li>To keep stuff segregated I created a <code class="language-plaintext highlighter-rouge">Python</code> environment where all the libraries should be installed. It’s not strictly necessary though.</li>
+</ul>
+
+<p>The first iteration is the <code class="language-plaintext highlighter-rouge">get_suggestions.py</code> and <code class="language-plaintext highlighter-rouge">ai_assistant.lua</code>. These two work together as follows:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ai_assistant.lua</code> digests what’s been selected in the current buffer and passed to it. It then calls <code class="language-plaintext highlighter-rouge">get_suggestions.py</code> which returns a markdown formatted suggestion for the selected code and displays everything in a floating window.</li>
+  <li>I then added some line to my <code class="language-plaintext highlighter-rouge">Lunarvim</code> configuration file to trigger the process:</li>
+</ul>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Keymap to trigger the AI assistant</span>
+<span class="n">lvim</span><span class="p">.</span><span class="n">keys</span><span class="p">.</span><span class="n">visual_mode</span><span class="p">[</span><span class="s2">"&lt;leader&gt;ai"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">":&lt;C-U&gt;lua require('ai.ai_assistant').run_code_assistant()&lt;CR&gt;"</span>
+</code></pre></div></div>
+
+<p>The second iteration is more close to what I had in mind and is made up by two other files <code class="language-plaintext highlighter-rouge">inline_suggest.lua</code> and <code class="language-plaintext highlighter-rouge">get_inline_suggestions.py</code>.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">inline_suggest.lua</code> gets the position of the cursor and the context around it by going back 100 lines and forward 20. It then calls the <code class="language-plaintext highlighter-rouge">get_inline_suggestions.py</code> and displays the results using “virtual text” or “ghost text”.</li>
+  <li><code class="language-plaintext highlighter-rouge">get_inline_suggestions.py</code> is much simpler than the previous one and tries to instruct the model by using a prompt  designed to keep the model concise and avoid excessive commentary. What I need is the code only, without comments or other kind of suggestions.</li>
+</ul>
+
+<p>To call this last bit I added to my config the following lines</p>
+
+<div class="language-lua highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vim</span><span class="p">.</span><span class="n">o</span><span class="p">.</span><span class="n">updatetime</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1">-- 500 ms (you can tweak this)</span>
+<span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">"CursorHold"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="n">pattern</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">"*"</span> <span class="p">},</span>
+  <span class="n">callback</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+    <span class="nb">require</span><span class="p">(</span><span class="s2">"ai.inline_suggest"</span><span class="p">).</span><span class="n">run</span><span class="p">()</span>
+  <span class="k">end</span><span class="p">,</span>
+<span class="p">})</span>
+</code></pre></div></div>
+<p>This creates an auto command that triggers when the cursor is idle for 500ms and interrogates the model.</p>
+
+<p>This is just a basic idea and a work in progress. My hope is to finally have a product that works well enough for my purposes and that can let me use these new technologies without being to0 dependent on the big corporations.</p>
+
+<h2 id="whats-next">What’s Next</h2>
+<ul>
+  <li>Support for more languages</li>
+  <li>Configurable context window size?</li>
+  <li>Automatic memory/context trimming?</li>
+  <li>Model fine-tuning (eventually?)</li>
+</ul>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>Experimenting with colours:
+<br />
+<img class="post-image" src="https://pxscdn.com/public/m/_v2/424813098022428933/4f692c7f1-e20d1b/uGQzULFTPkrW/F6CAF7vfAQMVvObfZIc4eNbfogHxTTR6YODmYhn2.jpg" loading="lazy" alt="The image captures a quiet urban scene on a bright day. In the foreground, delicate cherry blossoms frame the view, their pale petals glowing warmly in the light. A white car is parked in an almost empty lot, while a cyclist wearing a helmet rides along a path beside the trees. Behind them, tall buildings rise — a red brick one to the left and a modern glass tower to the right. The sky is striking, a surreal mix of turquoise and violet tones, adding a dreamlike mood. The street is calm, evoking a peaceful, almost cinematic pause in the city." />
+<br />
+<br />
+Experimenting with cinematic style:
+<br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/4f692c7f1-e20d1b/8lMIcI8Kc88G/2mYqpFXjqPEPYodAmWVyVJ5OYWfq7q0ZnA05xx2W.jpg" loading="lazy" alt="A young person in dark clothing crosses a quiet city street beneath a pale, overcast sky. To the left, a brick building marked &quot;BBC Radio Sheffield&quot; stands beside a street sign and a tall clock. Straight ahead, a faded beige building is covered in graffiti, with bare trees and empty benches nearby. Traffic lights show green, but only a few people are visible—two figures walking away on the right pavement, and a few distant cars. The scene feels still and contemplative, with muted colors and cinematic black bars above and below, adding a sense of framing and introspective distance." width="1770" height="1080" onerror="this.onerror=null;this.src='/storage/no-preview.png'" class="post-image" />
+<br /></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>Nintendo Switch 2 is the upgrade of my dreams <a href="https://www.theguardian.com/games/2025/jun/03/nintendo-switch-2-release-mario-kart-world">The Guardian</a></p>
+
+<p>As usual corporate greed is at the base of this race to deploy AI agents:</p>
+
+<blockquote>
+  <p>Make no mistake: We’ve talked to scores of CEOs at companies of various sizes and across many industries.
+Every single one of them is working furiously to figure out when and how agents or other AI technology can displace human workers at scale.
+The second these technologies can operate at a human efficacy level, which could be six months to several years from now, companies will shift from humans to machines.</p>
+</blockquote>
+
+<p>Dario Amodei on the future of AI and the job market <a href="https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic">Behind the Curtain: A white-collar bloodbath</a></p>
+
+<p>20 years ago <a href="https://www.postcrossing.com/20years/meetups">Postcrossing</a> was started. You should get into it, it’s fun!!</p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Disclaimer: Because the README file of this project is good, I decided to duplicate it here too.]]></summary></entry><entry><title type="html">The Magic World of Browser’s Privacy</title><link href="https://alainmauri.eu/2025/05/30/search-improved-and-specs/" rel="alternate" type="text/html" title="The Magic World of Browser’s Privacy" /><published>2025-05-30T00:00:00+01:00</published><updated>2025-05-30T00:00:00+01:00</updated><id>https://alainmauri.eu/2025/05/30/search-improved-and-specs</id><content type="html" xml:base="https://alainmauri.eu/2025/05/30/search-improved-and-specs/"><![CDATA[<p>While researching for a guide on how to properly write RSpec tests and avoid flaky specs, I once again ran into the growing frustration of modern web searches — cluttered with SEO spam, AI junk, and irrelevant results.
 That experience led me to reflect not just on search engines, but also on the browsers we rely on daily. I realized how many of the popular ones are no longer user-friendly — especially when it comes to respecting our privacy and security.
 Curious, I dove into the world of alternative browsers. Beyond the better-known options like Brave, DuckDuckGo, and Vivaldi, I discovered lesser-known but powerful tools like the Mullvad Browser — each with its own strengths and trade-offs.<br />
 In the link section you will find some of the source I’ve used for this.
@@ -485,47 +587,4 @@ This is a picture I took during the last snowstorm<br />
 mruby 3.3.0 has been released and supports the <a href="https://mruby.org/releases/2024/02/14/mruby-3.3.0-released.html">Nintendo Wii</a> <br />
 The Apple Macintosh turned 40 this past January, here is <a href="https://techcrunch.com/2024/01/24/apple-mac-man/">Mr. Macintosh</a> <br />
 The writer goes to an annual tech conference and he left with mixed feelings <a href="https://www.rollingstone.com/culture/culture-features/ai-companies-advocates-cult-1234954528/">The Cult of AI</a><br />
-The Sega <a href="https://www.smspower.org/SegaAI/Index">AI Computer</a> was released in 1986. The company promised that natural language processing was available through their Prolog interpreter.</p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Despite my best efforts to consistently publish blog posts, I’ve found it challenging to maintain the required level of commitment. Opting for the latter, I’ve decided to write a post whenever inspiration strikes, sharing thoughts that hold personal meaning rather than aiming solely for a wide audience. Writing is an enjoyable endeavor for me, serving as a way to capture discoveries, experiences, and thoughts in a cohesive order.]]></summary></entry><entry><title type="html">Ruby Insights, Learning Journey, and Cultural Exploration</title><link href="https://alainmauri.eu/2024/01/19/ruby-learning-cultural-exploration/" rel="alternate" type="text/html" title="Ruby Insights, Learning Journey, and Cultural Exploration" /><published>2024-01-19T00:00:00+00:00</published><updated>2024-01-19T00:00:00+00:00</updated><id>https://alainmauri.eu/2024/01/19/ruby-learning-cultural-exploration</id><content type="html" xml:base="https://alainmauri.eu/2024/01/19/ruby-learning-cultural-exploration/"><![CDATA[<p>While reading the <a href="https://kddnewton.com/2023/11/30/advent-of-prism-part-0">Advent of Prism</a> about the new Ruby parser that’s now been integrated into runtimes and tooling I came across something that I had overlooked:</p>
-
-<p><code class="language-plaintext highlighter-rouge">Numbers such as 010 are treated by Ruby as Octal by default</code></p>
-
-<p>I completely forgot about this, mainly because I don’t often use octals - honestly never - so I did a small research about it and the reason behind this can be traced back to the C programming language and according to this Stack Overflow <a href="https://stackoverflow.com/questions/11483216/why-are-leading-zeroes-used-to-represent-octal-numbers#11483339">post</a> it’s a convention that’s been introduce by [B Programming language](https://en.wikipedia.org/wiki/B_(programming_language)
- The historical reason behind treating numbers with a leading 0 as octal in some programming languages, including Ruby, can be traced back to the influence of the C programming language.</p>
-
-<p>In the C programming language, a numeric literal with a leading 0 is treated as an octal constant. This behavior was likely introduced to provide a convenient way to represent octal values directly in the source code. For example, in C:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int octalNumber = 0123;  // This represents the octal value of 83
-</code></pre></div></div>
-<p>a similar behaviour can be found in C++. C#, Java, JavaScript.</p>
-
-<p>I’ve started learning touch typing, so far it’s been quite challenging and it needs a lot of practice and discipline. I’m honestly enjoying it and is likely one of those skills that could boost my self confidence. I’m following the free lessons at <a href="https://www.edclub.com/sportal/program-3.game">Typing Club</a></p>
-
-<p>I’m making progress in my French studies on Duolingo and I’ve noticed that I’m now able to understand most of the material I’m reading as an aid to my lessons. Obviously I’m still at a beginner level and mainly using present tense. The journey is still long, but so far it’s been really interesting.
-Talking about languages I’ve also enrolled in a <a href="https://en.wikipedia.org/wiki/Friulian_language">Friulian</a> course. It’s a minority language spoken in the Italian region I’m from and even if I can understand it, like most of the people living there, I can’t speak it properly. Now is the time to fill this gap. It’s part of my culture and in some way it had influenced who I currently am, so definitely worth learning it.</p>
-
-<p>I find the new iPhone journal app quite nice. It prompts some cool suggestions and it’s a way to keep track what you’ve done during the day or more than one if you’re not using it daily. I believe journalling is something than can help organise your thoughts and reflections at a moment in time.</p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>If you’re looking for a definition of beauty here it is:</p>
-
-<p><a href="https://en.wikipedia.org/wiki/Pietà_(Michelangelo)">Pietà di Michelangelo</a>
-<br />
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Michelangelo's_Pieta_5450.jpg" alt="a picture of michelangelo pieta" class="post-image" />
-<br />
-<br /></p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>Why all the coffee shops looks the same on <a href="https://www.theguardian.com/news/2024/jan/16/the-tyranny-of-the-algorithm-why-every-coffee-shop-looks-the-same">The Guardian</a></p>
-
-<p>Why more Brits feel unhappy at work <a href="https://www.mirror.co.uk/news/uk-news/blue-monday-here-more-brits-31850068">Blue Monday</a></p>
-
-<p>OpenAI changes policy to allow <a href="https://techcrunch.com/2024/01/12/openai-changes-policy-to-allow-military-applications/">military operations</a></p>
-
-<p>The Boeing’s plug door <a href="https://slate.com/technology/2024/01/boeing-737-max-9-plug-door-alaska-airlines.html">fiasco</a></p>
-
-<p>A Github repository about principles and patterns for software developers <a href="https://github.com/dwmkerr/hacker-laws">Hacker Laws</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[While reading the Advent of Prism about the new Ruby parser that’s now been integrated into runtimes and tooling I came across something that I had overlooked: Numbers such as 010 are treated by Ruby as Octal by default]]></summary></entry></feed>
+The Sega <a href="https://www.smspower.org/SegaAI/Index">AI Computer</a> was released in 1986. The company promised that natural language processing was available through their Prolog interpreter.</p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Despite my best efforts to consistently publish blog posts, I’ve found it challenging to maintain the required level of commitment. Opting for the latter, I’ve decided to write a post whenever inspiration strikes, sharing thoughts that hold personal meaning rather than aiming solely for a wide audience. Writing is an enjoyable endeavor for me, serving as a way to capture discoveries, experiences, and thoughts in a cohesive order.]]></summary></entry></feed>
