@@ -1,5 +1,5 @@
 .garden-content {
-  padding: 2rem;
+  padding: var(--spacing-md);
 }
 .garden-main {
   display: flex;
@@ -8,7 +8,7 @@
 @media (max-width: 666px){
   .garden-grid {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: var(--spacing-md);
     grid-template-columns: 1fr;
     margin-left: auto;
     margin-right: auto;
@@ -18,7 +18,7 @@
 @media (min-width: 667px){
   .garden-grid {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: var(--spacing-sm);
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -28,27 +28,27 @@
 }
 
 .garden-item {
-  box-shadow: 0px 4px 3px 1px rgba(255, 255, 255, 0.4);
-  transition: 0.3s;
-  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  padding: var(--spacing-md);
   text-align: center;
-  border-radius: 4px;
+  border-radius: var(--border-radius-sm);
   width: 95%;
 }
 
 .garden-item-borders {
-  border-top: 1px solid #0BC;
-  border-right: 1px solid rgba(255, 255, 255, 0.4);
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: var(--border-width) solid #0BC;
+  border-right: var(--border-width) solid rgba(255, 255, 255, 0.4);
+  border-left: var(--border-width) solid rgba(255, 255, 255, 0.4);
+  border-bottom: var(--border-width) solid rgba(255, 255, 255, 0.4);
 }
 
 .garden-item-borders:hover {
-  border-top: 1px solid #00CC29;
+  border-top: var(--border-width) solid #00CC29;
 }
 
 .garden-item:hover {
-  box-shadow: 0px 8px 6px 2px rgba(255, 255, 255, 0.4);
+  box-shadow: var(--shadow-md);
 }
 
 .garden-motivation {

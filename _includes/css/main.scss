@@ -1,7 +1,7 @@
 body {
-  font-family: Inconsolata, monospace;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   color: #CCC;
 }
 
@@ -16,18 +16,24 @@ a:visited {
   text-decoration: underline;
 }
 
+a:hover,
+a:focus-visible {
+  color: #8c52ff;
+  text-decoration: none;
+}
+
 .main-container {
   background-color: {{ site.mytheme.vibrant.mainpage }};
   display: grid;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "head head head"
     "left title right"
     "left whoiam right";
-  grid-gap: 10px;
+  grid-gap: var(--spacing-sm);
 }
 
 
@@ -35,37 +41,37 @@ a:visited {
   grid-area: title;
   color: #FFF;
   font-style: normal;
-  font-size: 20vmin;
+  font-size: clamp(2rem, 5vw, 4rem);
   text-align: center;
-  margin: 1vw 0 1vw 0;
+  margin: var(--spacing-sm) 0;
   line-height: 100%;
 }
 
 .subtitle {
   color: #FFF;
-  font-family: Source Sans Pro;
-  font-size: 2vmin;
+  font-family: var(--font-secondary);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   text-align: center;
-  margin-top: 0.5vmin;
+  margin-top: var(--spacing-xxs);
   line-height: normal;
 }
 
 .subtitle hr {
   width: 90%;
-  height: 0.5vmin;
+  height: var(--border-width);
   margin-left: auto;
   margin-right: auto;
   background-color: #FFF;
   border: 0 none;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .copyright {
   grid-area: whoiam;
-  font-family: Source Sans Pro;
-  font-size: 15px;
-  line-height: 18px;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
   color: #FFF;
 }
 
@@ -73,9 +79,9 @@ a:visited {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: Source Sans Pro;
-  font-size: 18px;
-  line-height: 18px;
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-tight);
   color: #8c52ff;
   margin: auto;
   align-self: center;
@@ -83,10 +89,12 @@ a:visited {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 footer {
-  padding: 2rem;
+  padding: var(--spacing-md);
 }
 
 footer div {
@@ -96,24 +104,24 @@ footer div {
 
 @media (max-width: 666px){
   footer {
-    font-size: 2.5vmin;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     .copyright {
-      font-size: 2.5vmin;
+      font-size: clamp(0.875rem, 2.5vw, 1.25rem);
     }
   }
   footer a {
-    font-size: 6vmin;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
   }
 }
 
 @media (min-width: 667px){
   footer {
-    font-size: 1.5vmin;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
     .copyright {
-      font-size: 1.5vmin;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
     }
   }
   footer a {
-    font-size: 3vmin;
+    font-size: clamp(1rem, 3vw, 2rem);
   }
 }

@@ -13,11 +13,11 @@ permalink: /garden-pages/it-content/directory
 
 #### [Enumeration in Ruby](https://blog.appsignal.com/2019/05/28/ruby-magic-enumeration.html?utm_source=boostedblogpost&utm_medium=twitter&utm_campaign=2020-05-13-ICYMI-inside-enumeration) inside enumeration in Ruby
 
-#### [Pattern matching](https://blog.saeloun.com/2020/08/17/find-pattern-in-pattern-matching.htm#l) pattern matching has been introduced in Ruby
+#### [Pattern matching](https://docs.ruby-lang.org/en/master/syntax/pattern_matching_rdoc.html) pattern matching has been introduced in Ruby
 
 #### How to fix [slow code](https://engineering.shopify.com/blogs/engineering/how-fix-slow-code-ruby) in Ruby
 
-#### Everything you need to know about Ruby Operators [Ruby Guides](https://www.rubyguides.com/2018/07/ruby-operators/) 
+#### Everything you need to know about Ruby Operators [Ruby Docs](https://docs.ruby-lang.org/en/master/syntax/operators_rdoc.html) 
 
 #### Ruby [ractors](https://gist.github.com/joeywang2023/fb5576ae680da697dc78a8c2b05ef287)
 

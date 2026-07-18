@@ -17,7 +17,7 @@ well sort of... :smile:
 [MinutesToMidnight](https://minutestomidnight.co.uk/blog/)  
 [Rubenerd](https://rubenerd.com)  
 [BrainBaking](https://brainbaking.com)  
-[Baldur Bjarnason](https://www.baldurbjarnason.com/archive/)  
+[Baldur Bjarnason](https://www.baldurbjarnason.com/notes/)  
 [The School of Life](https://www.theschooloflife.com)   
 [Once a maintainer](https://onceamaintainer.substack.com)
 

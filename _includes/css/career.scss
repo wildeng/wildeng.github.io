@@ -179,17 +179,18 @@ suffix: '、';
 }
 
 .container a:link {
-  color: #000080;
+  color: var(--color-accent-dark);
   text-decoration: none;
 }
 
-.container a:hover {
-  color: #8DFF1A;
+.container a:hover,
+.container a:focus-visible {
+  color: var(--color-accent-hover);
   text-decoration: none;
 }
 
 .container a:visited {
-  color: #ff8;
+  color: var(--color-accent);
   text-decoration: underline;
 }
 
@@ -212,7 +213,7 @@ suffix: '、';
 }
 
 .container {
-  padding: 10px 40px;
+  padding: var(--spacing-xs) var(--spacing-md);
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -248,7 +249,7 @@ suffix: '、';
   border-color: transparent transparent transparent #0BC; 
 }
 .right {
- left: 25%; 
+  left: 25%; 
 }
 
 .right::before {
@@ -285,7 +286,7 @@ suffix: '、';
   .container {
     width: 100%;
     padding-left: 70px;
-    padding-right: 25px;
+    padding-right: var(--spacing-sm);
   }
 
 /* Make sure that all arrows are pointing leftwards */

@@ -44,7 +44,7 @@ A picture I took in October 2016 in [Castelmonte](https://www.cividale.com/uk/sa
 
 On Apple music [Rock Hits: 1991](https://music.apple.com/gb/playlist/rock-hits-1991/pl.0248cb21232d4f12bb823f234e2961e5)    
 
-From the CERN website [The Birth of the Web](https://home.web.cern.ch/science/computing/birth-web)  
+From the CERN website [The Birth of the Web](https://home.cern/science/computing/the-birth-of-the-web/)  
 
 A nice article about <b>POSSE</b> - <i>Publish (on your) Own Site, Syndicate Elsewhere</I> from [David Pierce](https://indieweb.org/POSSE?utm_source=ownyourweb&utm_medium=email&utm_campaign=issue-02)  
 

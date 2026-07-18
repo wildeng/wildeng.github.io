@@ -3,8 +3,8 @@
     background-color: {{ site.mytheme.vibrant.contact }};
     //background-image: url('images/90s-background.png');
     display: grid;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
@@ -12,19 +12,20 @@
       "left text right"
       "left pic right"
       "footer footer footer";
-    grid-row-gap: 20px;
+    grid-row-gap: var(--spacing-sm);
   }
 
   .contact-pic-container {
     position: relative;
     display: inline-block;
-    margin: 20px;
+    margin: var(--spacing-sm);
     grid-area: pic;
   }
 
   .contact-pic-container img {
-    width: 300px;
-    height: 300px;
+    width: clamp(200px, 30vw, 300px);
+    height: clamp(200px, 30vw, 300px);
+    max-width: 90%;
   }
 
   .contact-text-container {
@@ -38,27 +39,28 @@
     background-color: {{ site.mytheme.vibrant.contact }};
     //background-image: url('images/90s-background.png');
     display: grid;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "head head"
       "text pic"
       "footer footer";
-    grid-column-gap: 20px;
+    grid-column-gap: var(--spacing-sm);
   }
 
   .contact-pic-container {
     position: relative;
     display: inline-block;
-    margin: 20px;
+    margin: var(--spacing-sm);
     grid-area: pic;
   }
 
   .contact-pic-container img {
-    width: 300px;
-    height: 300px;
+    width: clamp(200px, 25vw, 300px);
+    height: clamp(200px, 25vw, 300px);
+    max-width: 90%;
   }
 
   .contact-text-container {
@@ -72,34 +74,35 @@
     background-color: {{ site.mytheme.vibrant.contact }};
     //background-image: url('images/90s-background.png');
     display: grid;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "head head"
       "pic text"
       "footer footer";
-    grid-column-gap: 20px;
+    grid-column-gap: var(--spacing-sm);
   }
 
   .contact-pic-container {
     grid-area: pic;
     position: relative;
     display: inline-block;
-    margin: 20px;
-    //padding: 20px;
+    margin: var(--spacing-sm);
+    //padding: var(--spacing-sm);
   }
 
   .contact-pic-container img {
-    width: 300px;
-    height: 300px;
+    width: clamp(200px, 25vw, 300px);
+    height: clamp(200px, 25vw, 300px);
+    max-width: 90%;
   }
 
   .contact-text-container {
     grid-area: text;
     color: white;
-    padding: 80px;
+    padding: var(--spacing-xl);
   }
 }
 
@@ -108,33 +111,34 @@
     background-color: {{ site.mytheme.vibrant.contact }};
     //background-image: url('images/90s-background.png');
     display: grid;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "head head head head"
       "left pic text text"
       "footer footer footer footer";
-    grid-column-gap: 30px;
+    grid-column-gap: var(--spacing-md);
   }
 
   .contact-pic-container {
     position: relative;
     display: inline-block;
-    margin: 20px;
+    margin: var(--spacing-sm);
     grid-area: pic;
   }
 
   .contact-pic-container img {
-    width: 400px;
-    height: 400px;
+    width: clamp(250px, 20vw, 400px);
+    height: clamp(250px, 20vw, 400px);
+    max-width: 90%;
   }
 
   .contact-text-container {
     grid-area: text;
     color: white;
-    padding-right: 80px;
+    padding-right: var(--spacing-xl);
   }
 }
 
@@ -155,33 +159,35 @@
 
 .contact-title {
   color: white;
-  font-size: 5vmin;
+  font-size: clamp(2rem, 5vw, 4rem);
   text-align: left;
-  margin-bottom: 1vmin;
+  margin-bottom: var(--spacing-sm);
   line-height: 100%;
-  max-width: 20vmin;
+  max-width: clamp(10rem, 20vw, 15rem);
 }
 
 .contact-text-container hr {
   width: 100%;
-  height: 0.2vw;
+  height: var(--border-width);
   margin-left: auto;
   margin-right: auto;
-  background-color:#fff;
+  background-color: #fff;
   border: 0 none;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .contact-text-container a {
-  font-size: 10vmin;
+  font-size: clamp(2rem, 10vw, 4rem);
   text-decoration: none;
   color: #0BC;
 }
 
-.contact-text-container > a:focus,
+.contact-text-container > a:focus-visible,
 .contact-text-container > a:hover {
   color: #8c52ff;
+  outline: 2px solid #0BC;
+  outline-offset: 2px;
 }
 
 @keyframes rotation {

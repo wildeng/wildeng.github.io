@@ -1,6 +1,7 @@
 ---
 ---
 
+{% include css/variables.scss %}
 {% include css/menu.scss %}
 {% include css/main.scss %}
 {% include css/about.scss %}
@@ -10,10 +11,31 @@
 {% include css/garden_content.scss %}
 {% include css/post.scss %}
 {{ content }}
-{{ content }}
 body {
   height: 100%;
   overflow-x: hidden;
+}
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0BC;
+  color: #000;
+  padding: var(--spacing-sm);
+  z-index: 100;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Global focus styles */
+*:focus-visible {
+  outline: 2px solid #0BC;
+  outline-offset: 2px;
 }
 
 .main {
@@ -36,15 +58,15 @@ body {
 .error-container {
   background-color: {{ site.mytheme.highcontrast.mainpage }};
   display: grid;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "head head head"
     "left title right"
     "left whoiam right";
-  grid-gap: 10px;
+  grid-gap: var(--spacing-sm);
   background-image: url("images/not_found.png");
 }
 
@@ -53,22 +75,26 @@ body {
   text-decoration: underline;
 }
 
+.error-container a:hover,
+.error-container a:focus-visible {
+  color: #8c52ff;
+}
+
 .not-found {
   grid-area: title;
   color: white;
   text-align: center;
-  margin: 1vw 0 1vw 0;
+  margin: var(--spacing-sm) 0;
   font-style: normal;
   font-weight: 900;
 }
 
-
 .not-found-title {
-  font-family: Oswald;
-  font-size: 6vmin;
+  font-family: Oswald, var(--font-secondary);
+  font-size: clamp(2rem, 6vw, 4rem);
 }
 
 .not-found-text {
-  font-family: Source Sans Pro;
-  font-size: 3vmin;
+  font-family: var(--font-secondary);
+  font-size: clamp(1rem, 3vw, 2rem);
 }
