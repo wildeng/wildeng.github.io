@@ -1,4 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2026-04-30T08:53:11+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Myself and AI, a complex relationship</title><link href="https://alainmauri.eu/2026/04/30/myself-and-ai-a-complex-relationship/" rel="alternate" type="text/html" title="Myself and AI, a complex relationship" /><published>2026-04-30T00:00:00+01:00</published><updated>2026-04-30T00:00:00+01:00</updated><id>https://alainmauri.eu/2026/04/30/myself-and-ai-a-complex-relationship</id><content type="html" xml:base="https://alainmauri.eu/2026/04/30/myself-and-ai-a-complex-relationship/"><![CDATA[<p>Hi all,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2026-07-20T09:20:12+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Ruby Hidden Gems</title><link href="https://alainmauri.eu/2026/07/20/ruby-unknown-facts/" rel="alternate" type="text/html" title="Ruby Hidden Gems" /><published>2026-07-20T00:00:00+01:00</published><updated>2026-07-20T00:00:00+01:00</updated><id>https://alainmauri.eu/2026/07/20/ruby-unknown-facts</id><content type="html" xml:base="https://alainmauri.eu/2026/07/20/ruby-unknown-facts/"><![CDATA[<p>Ruby is a beautiful and expressive language that gives developers a great deal of flexibility. Along with that flexibility come a number of lesser-known language features that can sometimes produce surprising results.</p>
+
+<p>Let’s have a look at some of them:</p>
+
+<h2 id="operators-precedence">Operators Precedence</h2>
+
+<p>Ruby operators precedence can sometimes lead to some unexpected behaviour, especially when comparing <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> and <code class="language-plaintext highlighter-rouge">and</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = true &amp;&amp; false
+b = true and false
+</code></pre></div></div>
+<p>One would expect that <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> and <code class="language-plaintext highlighter-rouge">and</code> are two spellings of same operator, so you might expect a and b to have
+the same value, <code class="language-plaintext highlighter-rouge">true</code>.</p>
+
+<p>They don’t</p>
+
+<p>Ruby evaluates the two expressions in a different way because of operator precedence:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = true &amp;&amp; false # a =&gt; false   
+# parsed as a=(true &amp;&amp; false)
+
+b = true and false # b =&gt; true
+# parsed as (b=true) and false
+</code></pre></div></div>
+<p>The assignment operator (<code class="language-plaintext highlighter-rouge">=</code>) has a lower precedence than <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>, but a higher precedence than <code class="language-plaintext highlighter-rouge">and</code>. This is why <code class="language-plaintext highlighter-rouge">and</code> and <code class="language-plaintext highlighter-rouge">or</code> are commonly used for control flow, while <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> and <code class="language-plaintext highlighter-rouge">||</code> are preferred for boolean expressions.</p>
+
+<p>For example, this common Rails idiom:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">redirect_to</span><span class="p">(</span><span class="n">root_path</span><span class="p">)</span> <span class="ow">and</span> <span class="k">return</span>
+</code></pre></div></div>
+
+<p>works exactly because <code class="language-plaintext highlighter-rouge">and</code> has a lower precedence than the method call and <code class="language-plaintext highlighter-rouge">return</code>, making it read almost like natural language.</p>
+
+<h3 id="defined-is-special"><code class="language-plaintext highlighter-rouge">defined?</code> is… special</h3>
+
+<p>Ruby also has a keyword called <code class="language-plaintext highlighter-rouge">defined?</code>, and it’s one of the most unusual constructs in the language.</p>
+
+<p>Consider the following example:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="kp">nil</span>
+
+<span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span> <span class="k">if</span> <span class="k">defined?</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>At first glance this looks harmless. Since <code class="language-plaintext highlighter-rouge">defined?(c)</code> checks whether <code class="language-plaintext highlighter-rouge">c</code> exists, you might expect the expression to be skipped if <code class="language-plaintext highlighter-rouge">c</code> is <code class="language-plaintext highlighter-rouge">nil</code>.</p>
+
+<p>Instead, Ruby raises:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>undefined method `+' for nil:NilClass
+</code></pre></div></div>
+
+<p>Why?</p>
+
+<p>The expression is parsed as:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="k">defined?</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The condition is evaluated first.</p>
+
+<p>The important detail is that <code class="language-plaintext highlighter-rouge">defined?</code> does <strong>not</strong> inspect the value of <code class="language-plaintext highlighter-rouge">c</code>. Instead, it asks the parser/runtime environment whether the expression exists.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="kp">nil</span>
+
+<span class="k">defined?</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="c1"># =&gt; "local-variable"</span>
+</code></pre></div></div>
+
+<p>Since <code class="language-plaintext highlighter-rouge">"local-variable"</code> is a truthy value, Ruby executes:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>which becomes:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+<p>and <code class="language-plaintext highlighter-rouge">nil + 1</code> raises a <code class="language-plaintext highlighter-rouge">NoMethodError</code>.</p>
+
+<p>So <code class="language-plaintext highlighter-rouge">defined?(c)</code> can be truthy even when <code class="language-plaintext highlighter-rouge">c</code> is <code class="language-plaintext highlighter-rouge">nil</code>.</p>
+
+<p>Now take a deep breath, because it’s time for something even stranger.</p>
+
+<h2 id="the-flip-flop-operator">The Flip-Flop operator</h2>
+
+<p>For some people, flip-flops are summer footwear.</p>
+
+<p>For others, they’re a fundamental electronic circuit.</p>
+
+<p>For Ruby, they’re an operator.</p>
+
+<p>Let’s briefly talk about the electronic <a href="https://en.wikipedia.org/wiki/Flip-flop_(electronics)">flip-flop</a>.
+A flip-flop is a bistable circuit capable of storing one bit of information. It has two stable states and changes state when one or more control inputs are activated.</p>
+
+<p>What does this have in common with Ruby’s flip-flop?</p>
+<ul>
+  <li>it has an input that turns it <strong>on</strong></li>
+  <li>it has an input that turns it <strong>off</strong></li>
+</ul>
+
+<p>Let’s look at an example:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Select the multiples of 7 and its immediate subsequent number</span>
+
+<span class="n">mults</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">100</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+ <span class="n">mults</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">7</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="o">..</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">mults</span>
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">63</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">84</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
+</code></pre></div></div>
+<p>Ruby’s expressiveness shines in this example, in just 4 lines of code we have an elegant solution. 
+The interesting part is this expression</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c1"># on the "if" right there's the flip-flop operator</span>
+ <span class="n">mults</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="o">..</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>  
+</code></pre></div></div>
+<p>like its electronic counterpart it does have an input that triggers the <code class="language-plaintext highlighter-rouge">on</code> state <code class="language-plaintext highlighter-rouge">(x % 7) == 0</code> and one that triggers the
+<code class="language-plaintext highlighter-rouge">off</code> state <code class="language-plaintext highlighter-rouge">( x % 7 ) == 1</code>. Once the left condition becomes true, the flip-flop remains active until the right condition becomes true, so the selected values are pushed into the array.</p>
+
+<p>Let’s look at another example</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ff</span> <span class="o">=</span> <span class="o">-&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span><span class="o">..</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="p">}</span>
+
+<span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">6</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span><span class="n">ff</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="mi">1</span><span class="p">:</span> <span class="kp">false</span><span class="o">..</span><span class="kp">false</span>
+<span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">13</span><span class="ss">:in</span> <span class="sb">`block in &lt;top (required)&gt;': bad value for range (ArgumentError)
+        from (irb):16:in `</span><span class="n">block</span> <span class="k">in</span> <span class="o">&lt;</span><span class="n">top</span> <span class="p">(</span><span class="n">required</span><span class="p">)</span><span class="o">&gt;</span><span class="s1">'
+        from (irb):15:in `each'</span>
+        <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">15</span><span class="ss">:in</span> <span class="sb">`&lt;main&gt;'
+        from &lt;internal:kernel&gt;:187:in `</span><span class="kp">loop</span><span class="s1">'
+        from /Users/alain.mauri/.rbenv/versions/3.3.1/lib/ruby/gems/3.3.0/gems/irb-1.11.0/exe/irb:9:in `&lt;top (required)&gt;'</span>
+        <span class="n">from</span> <span class="sr">/Users/</span><span class="n">alain</span><span class="p">.</span><span class="nf">mauri</span><span class="o">/</span><span class="p">.</span><span class="nf">rbenv</span><span class="o">/</span><span class="n">versions</span><span class="o">/</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">irb</span><span class="p">:</span><span class="mi">25</span><span class="ss">:in</span> <span class="sb">`load'
+        from /Users/alain.mauri/.rbenv/versions/3.3.1/bin/irb:25:in `</span><span class="o">&lt;</span><span class="n">main</span><span class="o">&gt;</span><span class="err">'</span>
+</code></pre></div></div>
+<p>This throws an exception, but I’ve used the same syntax! Well, it turns out that to be a flip-flop operator it must be used in a 
+conditional expression otherwise it would be treated as a <code class="language-plaintext highlighter-rouge">range</code> operator and fail like in this case.
+The corrected example is</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ff</span> <span class="o">=</span> <span class="o">-&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="o">..</span><span class="n">x</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">}</span>
+
+<span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">6</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s2">"</span><span class="si">#{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">#{</span> <span class="n">ff</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="mi">1</span><span class="p">:</span>
+<span class="mi">2</span><span class="p">:</span> <span class="mi">2</span>
+<span class="mi">3</span><span class="p">:</span> <span class="mi">3</span>
+<span class="mi">4</span><span class="p">:</span> <span class="mi">4</span>
+<span class="mi">5</span><span class="p">:</span>
+<span class="mi">6</span><span class="p">:</span>
+</code></pre></div></div>
+<p>Notice what’s happening:</p>
+
+<ul>
+  <li>x = 1 → flip-flop is OFF</li>
+  <li>x = 2 → left condition becomes true → flip-flop turns ON → returns 2</li>
+  <li>x = 3 → stays ON → returns 3</li>
+  <li>x = 4 → right condition becomes true → still returns 4, then turns OFF</li>
+  <li>x = 5 → OFF</li>
+  <li>x = 6 → OFF</li>
+</ul>
+
+<p>The flip-flop operator’s state persists across lambda calls. This tells us that the state is not tied to the value of x, but to that particular flip-flop expression. Ruby keeps one hidden bit of state associated with that piece of code, remarkably similar to its electronic counterpart.</p>
+
+<h4 id="throw---catch">Throw - Catch</h4>
+
+<p>Come on, everyone know <code class="language-plaintext highlighter-rouge">throw/catch</code>, almost every language implement them. They are a way to handle exceptions! Well, not in Ruby,
+that’s <code class="language-plaintext highlighter-rouge">begin/rescue</code>.<br />
+In Ruby these operators are used to control the execution flow, more precisely, as the Ruby Guide <a href="https://docs.ruby-lang.org/en/master/syntax/control_expressions_rdoc.html#throwcatch">says</a></p>
+<blockquote>
+  <p>throw and catch are used to implement non-local control flow in Ruby. They operate similarly to exceptions, allowing control to pass directly from the
+place where throw is called to the place where the matching catch is called. The main difference between throw/catch and the use of exceptions is that
+throw/catch are designed for expected non-local control flow, while exceptions are designed for exceptional control flow situations, such as handling
+unexpected errors.</p>
+</blockquote>
+
+<p>Here is a simple example:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="kp">throw</span> <span class="ss">:bar</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">baz</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="n">n</span> <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+  <span class="n">foo</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+  <span class="kp">catch</span> <span class="ss">:bar</span> <span class="k">do</span>
+    <span class="n">baz</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Results are</span>
+<span class="mi">3</span>
+<span class="mi">6</span>
+<span class="mi">9</span>
+</code></pre></div></div>
+<p>henever n is even, foo throws :bar, immediately transferring control to the matching catch block and skipping the remainder of the current execution path.
+A more practical example is breaking out of nested loops:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="kp">catch</span><span class="p">(</span><span class="ss">:found</span><span class="p">)</span> <span class="k">do</span>
+  <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">30</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+    <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">20</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">y</span><span class="o">|</span>
+       <span class="k">if</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">==</span> <span class="mi">25</span>
+        <span class="kp">throw</span> <span class="ss">:found</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span>
+       <span class="k">end</span>
+     <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># Result is</span>
+<span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></div>
+<p>Without the throw, exiting nested loops would have required flags, extra conditions or extracting the logic into a separate method.
+Using <code class="language-plaintext highlighter-rouge">throw</code> and <code class="language-plaintext highlighter-rouge">catch</code> makes the intent more explicit: as soon as the desired value is found, execution jumps to the matching <code class="language-plaintext highlighter-rouge">catch</code>.</p>
+
+<h2 id="there-are-many-ways-to-solve-the-same-problem">There are many ways to solve the same problem</h2>
+
+<p>None of these features are things you’ll necessarily use every day, and some of them you’ll probably never use in production code. But they reveal something important about Ruby’s philosophy. Ruby isn’t a language that tries to force a single “correct” way of writing code. Instead, it gives developers a rich vocabulary, trusting them to choose the level of expressiveness that best fits the problem at hand.</p>
+
+<p>I think that’s enough Ruby hidden gems for today. I hope this brief journey has shown how Ruby has always valued expressiveness over rigidity. Perhaps that’s one of the reasons so many of us enjoy writing it: every now and then, it still manages to surprise us.</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>Summer is the perfect time for a challenge. I consider myself an avid reader, so I decided to try something different. I challenged my wife to choose a romance novel for me to read, while I would pick one of my favourite science books for her.</p>
+
+<p>She chose Ali Hazelwood’s <em><a href="https://alihazelwood.com/two-can-play/">Two Can Play</a></em>, and, honestly, the time flew by. It turned out to be a surprisingly relaxing read. Not that my wife has converted me to romance novels—I probably wouldn’t buy one myself—but it’s well written and genuinely entertaining.</p>
+
+<p>Did I pass the challenge? I think so.</p>
+
+<p>Anyway check Oriana’s - my wife - website, she’s a novelist too <a href="https://orianawrites.eu/en/">Oriana</a></p>
+
+<p>Some pictures I recently took in London and Brighton</p>
+
+<p><br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/4c90d8e69-c5a1c2/6LiFwiyd14K5/FFc9817nys8vCSVHlaHErswAHIXbM0Tn1QuB2s12.jpg" alt="A bright blue vintage-style fish and chips van stands beneath a wooden canopy in a busy London public space. Large illuminated letters spelling “FISH &amp; CHIPS” crown the stall, while menus and hand-painted signs decorate its sides. Three customers wait at the serving hatch: one young man in a pale T-shirt, another partially hidden beside him, and a man in a pink shirt carrying a striped tote bag as he receives his order" class="post-image" />
+<br />
+<br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/4c90d8e69-c5a1c2/EzYBBJEDsLyi/y2HCJXUb0JF4O0sTWNrbwPqaqXTRR7V6HmTmZWPB.jpg" alt="A wide pebble beach stretches across the foreground, leading to a calm blue-grey sea beneath a pale, hazy sky. Near the centre, two traditional blue-and-white striped deckchairs face the horizon. One is occupied by a person in a white sunhat, while another person reclines beside them, mostly hidden from view. Between the chairs sits a cream tote bag with a large red heart, alongside a woven straw beach bag. To the right, another pair of empty deckchairs stands alone, separated by open space." class="post-image" />
+<br />
+<br /></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>Naomi Klein <a href="https://naomiklein.substack.com/p/season-of-smoke">Season of Smoke</a><br />
+Langdon Winner <a href="https://www.jstor.org/stable/pdf/20024652">Do Artifacts Have Politics?</a><br />
+Cory Doctorow <a href="https://pluralistic.net/2026/07/16/lucky-orifices/#invisible-hands">Deranged billionaires and their syndromes</a><br />
+Futurism <a href="https://futurism.com/artificial-intelligence/hacker-ai-music-suno-copyright">Suno stole decades worth of copyrighted music</a> 
+Wired <a href="https://www.wired.com/story/madison-square-garden-jim-dolan-surveillance-machine/">Madison Square Surveillance Machine</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Ruby is a beautiful and expressive language that gives developers a great deal of flexibility. Along with that flexibility come a number of lesser-known language features that can sometimes produce surprising results.]]></summary></entry><entry><title type="html">Myself and AI, a complex relationship</title><link href="https://alainmauri.eu/2026/04/30/myself-and-ai-a-complex-relationship/" rel="alternate" type="text/html" title="Myself and AI, a complex relationship" /><published>2026-04-30T00:00:00+01:00</published><updated>2026-04-30T00:00:00+01:00</updated><id>https://alainmauri.eu/2026/04/30/myself-and-ai-a-complex-relationship</id><content type="html" xml:base="https://alainmauri.eu/2026/04/30/myself-and-ai-a-complex-relationship/"><![CDATA[<p>Hi all,
 a lot has happened since I last wrote in this space. I haven’t been the best host and I’ve neglected my little corner of the web. I’ve personally been through a lot and sought help for my mental health; perhaps  I’ll talk about that in the future. For now, please know that if you need help, there are people and places available to support you.</p>
 
 <p>Let’s get to the main topic, my complex relationship with LLMs. When ChatGPT first launched, I was a bit skeptical, and frankly, unimpressed. But being curious by nature, I started digging into the theory behind the technology. To be fair I found it quite clever and intriguing.</p>
@@ -618,35 +876,4 @@ accountable for any kind of damage their activity can cause.</p>
 
 <p>An Introduction to ractors in Ruby on <a href="https://blog.appsignal.com/2022/08/24/an-introduction-to-ractors-in-ruby.html">Appsignal</a></p>
 
-<p>Slack users horrified to discover messages used for AI training <a href="https://arstechnica.com/tech-policy/2024/05/slack-defends-default-opt-in-for-ai-training-on-chats-amid-user-outrage/">Ars Technica</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding. This is something I’m hoping to create more space for in the coming weeks. But even with a busy schedule, I’ve been able to find moments to move forward with my French and Friulian studies, mostly during the evenings.]]></summary></entry><entry><title type="html">Rise of the machines, are software engineers next?</title><link href="https://alainmauri.eu/2024/04/09/ai-big-replacement/" rel="alternate" type="text/html" title="Rise of the machines, are software engineers next?" /><published>2024-04-09T00:00:00+01:00</published><updated>2024-04-09T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/04/09/ai-big-replacement</id><content type="html" xml:base="https://alainmauri.eu/2024/04/09/ai-big-replacement/"><![CDATA[<p>Watching the rise of different tools that “can function as a fully autonomous software engineer”(<a href="https://easywithai.com/ai-developer-tools/devin/">Devin Introduction</a>) I’ve started thinking about the future of my job as a software engineer and obviously one big question came into my mind:</p>
-
-<p>Will my job be replaced by LLMs or is this simply a new tool to learn and improve my daily workflow? <br />
-I’m honestly worried about this and I started researching a bit around the argument and what I’ve found is not so encouraging at all.<br />
-Take a look at what Jensen Huang Nvidia CEO <a href="https://twitter.com/Carnage4Life/status/1761483377365152234">said</a>. Now, should we stop teaching Computer Science because AI will generate all the code we want by using natural language? Honestly, should we take the word of someone with a vested financial interest? I don’t think so, however his words are outlining a common trend that’s well explained in this post by <a href="https://www.baldurbjarnason.com/2024/the-one-about-the-web-developer-job-market/">Baldur Bjarnason</a> which is a long one to summarize but let me put it in plain and simple words:<br />
-As software engineers we are well paid and this, in the modern tech - and not only - corporate world is something that needs to be fixed with every means, and honestly this is what management believes: Read this <a href="https://www.reddit.com/r/cscareerquestions/comments/1axlbub/executive_leadership_believes_llms_will_replace/">Reddit</a> thread quoted in Bjarnason’s post, among other things.</p>
-
-<p>The most positive approach I found so far is this by <a href="https://thenewstack.io/code-in-context-how-ai-can-help-improve-our-documentation/">Jon Udell</a> he thinks that LLms will help us understanding existing code rather than writing it, because of their “ability” to recognise patterns and summarise the findings. In his eyes this should improve the quality of the documentation and the overall quality of the code itself, that will for sure still be written by humans.</p>
-
-<p>Now what should I do? Well, before moving to the Uk I was freelancing and I never put my eggs in one basket so I will try to diversify my knowledge again. By diversifying my skills with languages like Rust and Crystal, honing my writing abilities, and pursuing scrum master training - my company required it. What I do hope though is that human expertise in problem-solving and creative thinking will continue to be valuable in this field, despite the push to automate everything.</p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>I honestly love my second hand Canon EOS 100D because I’m finally able to experiment with photography in a proper way, learning what different settings are doing and boosting my creativity. Digital photography for sure helped photographers and not replaced them and this is what tech innovation means to me.<br />
-Here are two pictures that I took with it:
-<br />
-<br />
-<img src="/images/burned-car-carcass.jpg" alt="a burned car carcass found in a park in sheffield" class="post-image" />
-<br />
-<br />
-<img src="/images/grass-blades.jpg" alt="grass blades in the wind" class="post-image" />
-<br /></p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>The uncanny music of Slack Huddles on <a href="https://www.wired.com/story/slack-huddle-hold-music-secret-history/">Wired</a><br />
-Texas is replacing human graders with AI <a href="https://www.theverge.com/2024/4/10/24126206/texas-staar-exam-graders-ai-automated-scoring-engine">The Verge</a>
-Own Your Web <a href="https://buttondown.email/ownyourweb/archive/issue-13/">Issue 13</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Watching the rise of different tools that “can function as a fully autonomous software engineer”(Devin Introduction) I’ve started thinking about the future of my job as a software engineer and obviously one big question came into my mind:]]></summary></entry></feed>
+<p>Slack users horrified to discover messages used for AI training <a href="https://arstechnica.com/tech-policy/2024/05/slack-defends-default-opt-in-for-ai-training-on-chats-amid-user-outrage/">Ars Technica</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding. This is something I’m hoping to create more space for in the coming weeks. But even with a busy schedule, I’ve been able to find moments to move forward with my French and Friulian studies, mostly during the evenings.]]></summary></entry></feed>
