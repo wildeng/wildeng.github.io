@@ -246,11 +246,21 @@ I think that's enough Ruby hidden gems for today. I hope this brief journey has 
 
 #### Things I like - in random order ####
 
+Summer is the perfect time for a challenge. I consider myself an avid reader, so I decided to try something different. I challenged my wife to choose a romance novel for me to read, while I would pick one of my favourite science books for her.
+
+She chose Ali Hazelwood's *[Two Can Play](https://alihazelwood.com/two-can-play/)*, and, honestly, the time flew by. It turned out to be a surprisingly relaxing read. Not that my wife has converted me to romance novels—I probably wouldn't buy one myself—but it's well written and genuinely entertaining.
+
+Did I pass the challenge? I think so.
+
+Anyway check Oriana's - my wife - website, she's a novelist too [Oriana](https://orianawrites.eu/en/)
+
+Some pictures I recently took in London and Brighton
+
 <br/>
-<img src="" alt="" class="post-image"/>
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/4c90d8e69-c5a1c2/6LiFwiyd14K5/FFc9817nys8vCSVHlaHErswAHIXbM0Tn1QuB2s12.jpg" alt="A bright blue vintage-style fish and chips van stands beneath a wooden canopy in a busy London public space. Large illuminated letters spelling “FISH &amp; CHIPS” crown the stall, while menus and hand-painted signs decorate its sides. Three customers wait at the serving hatch: one young man in a pale T-shirt, another partially hidden beside him, and a man in a pink shirt carrying a striped tote bag as he receives his order" class="post-image"/>
 <br/>
 <br/>
-<img src="" alt="" class="post-image">
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/4c90d8e69-c5a1c2/EzYBBJEDsLyi/y2HCJXUb0JF4O0sTWNrbwPqaqXTRR7V6HmTmZWPB.jpg" alt="A wide pebble beach stretches across the foreground, leading to a calm blue-grey sea beneath a pale, hazy sky. Near the centre, two traditional blue-and-white striped deckchairs face the horizon. One is occupied by a person in a white sunhat, while another person reclines beside them, mostly hidden from view. Between the chairs sits a cream tote bag with a large red heart, alongside a woven straw beach bag. To the right, another pair of empty deckchairs stands alone, separated by open space." class="post-image">
 <br/>
 <br/>
 
@@ -261,5 +271,6 @@ I think that's enough Ruby hidden gems for today. I hope this brief journey has 
 Naomi Klein [Season of Smoke](https://naomiklein.substack.com/p/season-of-smoke)  
 Langdon Winner [Do Artifacts Have Politics?](https://www.jstor.org/stable/pdf/20024652)  
 Cory Doctorow [Deranged billionaires and their syndromes](https://pluralistic.net/2026/07/16/lucky-orifices/#invisible-hands)  
-Futurism [Suno stole decades worth of copyrighted music](https://futurism.com/artificial-intelligence/hacker-ai-music-suno-copyright)  
+Futurism [Suno stole decades worth of copyrighted music](https://futurism.com/artificial-intelligence/hacker-ai-music-suno-copyright) 
+Wired [Madison Square Surveillance Machine](https://www.wired.com/story/madison-square-garden-jim-dolan-surveillance-machine/)
 
