@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Wildeng
-2024: 2026-07-16
+2024: 2026-07-20
 title: Ruby Hidden Gems
 ---
 
@@ -242,10 +242,6 @@ None of these features are things you'll necessarily use every day, and some of 
 
 I think that's enough Ruby hidden gems for today. I hope this brief journey has shown how Ruby has always valued expressiveness over rigidity. Perhaps that's one of the reasons so many of us enjoy writing it: every now and then, it still manages to surprise us.
 
-
-
-
-
 ---
 
 #### Things I like - in random order ####
@@ -261,4 +257,9 @@ I think that's enough Ruby hidden gems for today. I hope this brief journey has 
 ---
 
 #### Today's Links ####
+
+Naomi Klein [Season of Smoke](https://naomiklein.substack.com/p/season-of-smoke)  
+Langdon Winner [Do Artifacts Have Politics?](https://www.jstor.org/stable/pdf/20024652)  
+Cory Doctorow [Deranged billionaires and their syndromes](https://pluralistic.net/2026/07/16/lucky-orifices/#invisible-hands)  
+Futurism [Suno stole decades worth of copyrighted music](https://futurism.com/artificial-intelligence/hacker-ai-music-suno-copyright)  
 
