@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2026-07-20T09:20:12+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Ruby Hidden Gems</title><link href="https://alainmauri.eu/2026/07/20/ruby-unknown-facts/" rel="alternate" type="text/html" title="Ruby Hidden Gems" /><published>2026-07-20T00:00:00+01:00</published><updated>2026-07-20T00:00:00+01:00</updated><id>https://alainmauri.eu/2026/07/20/ruby-unknown-facts</id><content type="html" xml:base="https://alainmauri.eu/2026/07/20/ruby-unknown-facts/"><![CDATA[<p>Ruby is a beautiful and expressive language that gives developers a great deal of flexibility. Along with that flexibility come a number of lesser-known language features that can sometimes produce surprising results.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2026-09-20T16:20:52+01:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Creative languages</title><link href="https://alainmauri.eu/2026/09/20/creative-languages/" rel="alternate" type="text/html" title="Creative languages" /><published>2026-09-20T00:00:00+01:00</published><updated>2026-09-20T00:00:00+01:00</updated><id>https://alainmauri.eu/2026/09/20/creative-languages</id><content type="html" xml:base="https://alainmauri.eu/2026/09/20/creative-languages/"><![CDATA[<p>For a long time, I viewed programming and photography as two separate things—two completely different worlds.
+One made of logic and computers, the other of images, perceptions, and sensory stimuli.<br />
+Then I realised that the creative processes underlying both activities are very similar.</p>
+
+<p>In the beginning, it’s an idea, which is then brought to life—in one case by using a programming language to instruct a computer to
+perform a series of actions, and in the other by “manipulating” the available settings on a camera.
+Ultimately, both operations lead to the creation of an artefact that previously existed only in the mind of the person who conceived the idea.
+A programme, like a photograph, initially exists only as a mental model that must then be then translated into something tangible, something real.
+The programmer uses syntax, algorithms, data structures, and architecture. The photographer, meanwhile, uses composition, light, timing, depth of field, and colour.
+Yet both also work within limitations: the programmer deals with the constraints of language and hardware, 
+while the photographer deals with those of the camera, the light, and the medium; ultimately they are doing something similar:
+translating an idea into a form that others can understand.</p>
+
+<p>It seems like a bold comparison, doesn’t it?
+The parallel doesn’t stop there.
+Taking a photograph or creating a software involves a whole range of challenges that must be sorted out through a creative process, albeit one that employs
+techniques governed by precise rules. For instance, how do I ensure the exposure is exactly what I want?<br />
+I start with the basic rules of the exposure triangle and adjust them as I see fit until I achieve the desired result for a specific situation.<br />
+Or, how do I create a software that compresses a file optimally without significant data loss? I start with basic algorithms that I can then modify to achieve the specific type of compression I want.
+In short, both activities require the programmer—or photographer—to use a range of techniques acquired over time to bring to life a result that faithfully reflects their original vision.</p>
+
+<p>When I first thought about it, I was completely confused; it seemed like such a strange idea. Yet, when I pieced together everything I had done up to that point, it felt entirely natural.
+In the end, whether it involves analogue or digital photography, technique and art have always gone hand in hand.<br />
+These two worlds eventually began to influence one another. I used photography to learn new programming languages by creating small scripts that allowed me to apply unique filters to my photos. 
+Conversely, programming drove me to approach the “photographic” problems I encountered in a systematic way, sometimes trying to bypass the limitations of the camera or post-processing software, wherever possible, in a true hacking spirit.
+At other times, I simply applied a philosophy akin to TDD (Test-Driven Development—writing tests before the software that verifies them) to analogue photography: I would take digital shots first to gauge the composition, 
+and then, once I knew what I wanted, I would shoot using analogue film. Photography, on the other hand, has taught me patience—not pursuing a result (often a mediocre one) as quickly as possible, but to wait and reflect, 
+just as one does when waiting for the right light; to observe the world and its problems from a different perspective, while awaiting the precise moment.<br />
+Ultimately, both have taught me the same thing: the value lies not only in the final result but also in the process of creating it.</p>
+
+<p>This post appeared in the first issue of <a href="#todays-links">RogueLight</a> (<em>in Italian</em>)</p>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order--usually-my-pictures-smirk">Things I like - in random order ( Usually my pictures :smirk:)</h4>
+
+<p>I sent this picture to LensCulture for their <a href="https://www.lensculture.com/photo-competitions/black-and-white-photography-awards">Blanck and White Photography Awards 2026</a> and it’s been accepted :smile:</p>
+
+<p><br />
+<img src="https://pxscdn.com/public/m/_v2/424813098022428933/f0975049d-79c41a/AMNWKhee5kHU/g0y2MxrFJSO3Kx1QWmUw6rBv5u2VkUFgXBwzO57D.jpg" alt="A black-and-white photograph shows two mushrooms growing from dark, textured woodland soil. The larger mushroom stands on the right, its broad, rounded cap rising above a thick, slightly curved stem. Its pale surface is marked with irregular dark patches, stains, and fine texture, giving it a weathered appearance. A smaller mushroom emerges in the lower centre, partially hidden by the surrounding earth and vegetation." class="post-image" />
+<br />
+<br />
+<br />
+I found this during one of my walks around Sheffield and instantly I imagined it in monochrome</p>
+
+<p><img src="https://pxscdn.com/public/m/_v2/424813098022428933/f0975049d-79c41a/fLTSxV85KOus/MUlmprGmNxwfW2rCAbe6dxrPLzTZ72s2h2A2CF09.jpg" alt="A black and white photograph of a used leather sofa placed outside an industrial building. The sofa is on the lower left side of the picture, on a concrete pavement which stretches through the lower part of the picture. Behind the sofa there’s a tall corrugated metal wall and on the left side of it a large dark roller shutter" class="post-image" />
+<br />
+<br /></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>The first number of <a href="https://drive.proton.me/urls/4K3TMTE214#CTXKiUNmH0gG">Rogue Light</a> an Italian photozine I collaborate with.</p>
+
+<p>Ethan Mollick <em>Use your deep knowledge, wide knowledge, taste and agency</em> <a href="https://open.substack.com/pub/oneusefulthing/p/the-overhang?utm_campaign=post-expanded-share&amp;utm_medium=web">The Overhang</a></p>
+
+<p>Ted Gioia <em>An Oscar for the worst performance by an actress?</em> <a href="https://open.substack.com/pub/tedgioia/p/ai-generated-movie-star-has-a-total?r=1yyus2&amp;utm_campaign=post-expanded-share&amp;utm_medium=post%20viewer">AI-Generated Movie Star Has a Total Meltdown on TV</a></p>
+
+<p>Tressie McMillan Cottom <em>tech’s most powerful soothsayers are begging one another to pump the brakes on this whole thing</em> <a href="https://www.nytimes.com/2026/09/19/opinion/ai-hugging-face-big-tech-danger.html?unlocked_article_code=1.ClE.tKs_.fBOvayJrnDfY&amp;smid=url-share">A.I. Is a Threat, but Not in the Way You Think</a></p>
+
+<p>Naomi Klein <em>and</em> Astra Taylor an excerpt from their latest book <a href="https://www.theguardian.com/us-news/ng-interactive/2026/sep/13/end-times-fascists-essay?CMP=share_btn_url">End Times Fascism</a></p>
+
+<p>Aperture <a href="https://aperture.org/editorial/photobooks/">photobooks</a> are always worth someone’s time</p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[For a long time, I viewed programming and photography as two separate things—two completely different worlds. One made of logic and computers, the other of images, perceptions, and sensory stimuli. Then I realised that the creative processes underlying both activities are very similar.]]></summary></entry><entry><title type="html">Ruby Hidden Gems</title><link href="https://alainmauri.eu/2026/07/20/ruby-unknown-facts/" rel="alternate" type="text/html" title="Ruby Hidden Gems" /><published>2026-07-20T00:00:00+01:00</published><updated>2026-07-20T00:00:00+01:00</updated><id>https://alainmauri.eu/2026/07/20/ruby-unknown-facts</id><content type="html" xml:base="https://alainmauri.eu/2026/07/20/ruby-unknown-facts/"><![CDATA[<p>Ruby is a beautiful and expressive language that gives developers a great deal of flexibility. Along with that flexibility come a number of lesser-known language features that can sometimes produce surprising results.</p>
 
 <p>Let’s have a look at some of them:</p>
 
@@ -819,61 +882,4 @@ the algorithms used to parse the code, and generally all the internal mechanisms
 
 <p>Who uses LLM <a href="https://www.theregister.com/2024/08/13/who_uses_llm_prompt_injection/">prompt injection?</a></p>
 
-<p>The Obamas’ <a href="https://slate.com/news-and-politics/2024/08/barack-obama-crowd-size-michelle-obama-black-jobs-dnc-speech.html">real superpower</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[AI-generated images are a problem, no more or less than “natural” ones. Can we determine whether an image is authentic or not? If someone claims an image is fake - e.g., Trump regarding a Kamala Harris rally - can we produce documentation to prove its authenticity? And if so, will others be willing to accept the truth, or will they continue to believe what suits them best? Italian researcher Walter Quattrociocchi, in an article for the financial newspaper Il Sole 24 ore, explains that debunking doesn’t work, mostly because people stick to their mental models even when confronted with the truth. This is where prebunking becomes useful. Prebunking, also known as inoculation theory in communication studies, is a proactive approach to combating misinformation. The goal of prebunking is to equip people with the skills to spot false and misleading information online before they encounter it, thereby preempting manipulation. This method works by exposing individuals to weakened forms of misinformation and teaching them how to identify and counter deceptive tactics.]]></summary></entry><entry><title type="html">Busy Bee, balancing work, life and photography</title><link href="https://alainmauri.eu/2024/05/27/what-i-am-doing/" rel="alternate" type="text/html" title="Busy Bee, balancing work, life and photography" /><published>2024-05-27T00:00:00+01:00</published><updated>2024-05-27T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/05/27/what-i-am-doing</id><content type="html" xml:base="https://alainmauri.eu/2024/05/27/what-i-am-doing/"><![CDATA[<p>In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding.
-This is something I’m hoping to create more space for in the coming weeks. But even with a busy schedule,
-I’ve been able to find moments to move forward with my French and Friulian studies, mostly during the evenings.</p>
-
-<p>I’ve also gotten into the habit of carrying my camera whenever I walk somewhere. 
-There’s always something worth capturing, and it’s a great way to experiment and improve my photography skills.
-Whether it’s mastering camera settings or post-processing with Procreate,
-I’m constantly learning. Speaking of Procreate, it’s been a blast playing around with adding color to black and white photos.
-It’s taken me to some unexpected places creatively, like this one I’ve posted on my Pixelfed account:<br />
-<br />
-<img src="https://pxscdn.com/public/m/_v2/424813098022428933/7321b8e85-c3df53/HeUeZiWYek2E/VNrIqj84Yh1xAsvQkCLioMehh53ywjH3IZ6o56Im.jpg" alt="some houses in crookes road sheffield black and white picture" class="post-image" />
-<br /></p>
-
-<p>On the developer side of things, Brighton Ruby is approaching and I’m lucky enough to have a ticket!<br />
-Thanks again to <a href="https://www.linkedin.com/in/salwan-shimoun-43a0b8228">Sawan</a>.
-It looks like a fantastic year for the conference, with so many interesting speakers.
-I’m particularly looking forward to hearing from Nadia Odunayio, the developer behind The Story Graph (a fantastic alternative to Goodreads!), 
-and Chris Oliver, the mind behind Go Rails. I’m also eager to learn more about Ruby Ractors from Daniel Vartanov’s talk. 
-Having some experience with Goroutines, I’m curious about the similarities between the two for parallel processing.</p>
-
-<h4 id="my-relation-with-llms">My relation with LLMs</h4>
-
-<p>So far I’ve developed a cautios relationship with LLMs, sometimes I use them but I’ve got in the habit of checking the information provided, given the
-frequent hallucinations they have. Still, although they are sometimes useful, I don’t feel that scraping the Internet to feed them without paying anything to
-the people that crafted all that content is fair. In my eyes these companies just another wave of capitalists that are trying to make money by literally
-stealing someone else’s work. Gary Marcus on <a href="https://x.com/GaryMarcus/status/1744362345403392510">X - Twitter</a> said it well, talking about OpenAI call for
-copyright exemption to “save” ChatGPT:</p>
-
-<blockquote>
-  <p>Rough Translation: We won’t get fabulously rich if you don’t let us steal, so please don’t make stealing a crime!</p>
-</blockquote>
-
-<p>I think that’s the right time to put some regulation in place, we cannot let these people do whatever they want without any kind of rule, they need to be
-accountable for any kind of damage their activity can cause.</p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>This time I just want to post some pictures I’m really proud of:</p>
-
-<p><br />
-<img src="https://pxscdn.com/public/m/_v2/424813098022428933/7321b8e85-c3df53/nBzo0vhN1wlg/6NuzDIkzXbxXxXOZ2LqfcFTL2jDh2qEFUobiQIdd.jpg" alt="barkers pool in sheffield, photo taken at dusk with the camera sitting on a marble bench reflecting some images" class="post-image" />
-<br />
-<br />
-<img src="https://pxscdn.com/public/m/_v2/424813098022428933/7321b8e85-c3df53/nssuu91hRBMz/H0sZD3ddVokltUyezlFZ828tijHGQV3pni6R79Wu.jpg" class="post-image" /></p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>How far Trump <a href="https://time.com/6972021/donald-trump-2024-election-interview/">would go</a></p>
-
-<p>Open AI will use Reddit Post to train ChatGPT <a href="https://arstechnica.com/ai/2024/05/openai-will-use-reddit-posts-to-train-chatgpt-under-new-deal/">Ars Tehcnica</a></p>
-
-<p>An Introduction to ractors in Ruby on <a href="https://blog.appsignal.com/2022/08/24/an-introduction-to-ractors-in-ruby.html">Appsignal</a></p>
-
-<p>Slack users horrified to discover messages used for AI training <a href="https://arstechnica.com/tech-policy/2024/05/slack-defends-default-opt-in-for-ai-training-on-chats-amid-user-outrage/">Ars Technica</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[In these past weeks, I haven’t had as much time to write as I’d like, given that work has been really demanding. This is something I’m hoping to create more space for in the coming weeks. But even with a busy schedule, I’ve been able to find moments to move forward with my French and Friulian studies, mostly during the evenings.]]></summary></entry></feed>
+<p>The Obamas’ <a href="https://slate.com/news-and-politics/2024/08/barack-obama-crowd-size-michelle-obama-black-jobs-dnc-speech.html">real superpower</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[AI-generated images are a problem, no more or less than “natural” ones. Can we determine whether an image is authentic or not? If someone claims an image is fake - e.g., Trump regarding a Kamala Harris rally - can we produce documentation to prove its authenticity? And if so, will others be willing to accept the truth, or will they continue to believe what suits them best? Italian researcher Walter Quattrociocchi, in an article for the financial newspaper Il Sole 24 ore, explains that debunking doesn’t work, mostly because people stick to their mental models even when confronted with the truth. This is where prebunking becomes useful. Prebunking, also known as inoculation theory in communication studies, is a proactive approach to combating misinformation. The goal of prebunking is to equip people with the skills to spot false and misleading information online before they encounter it, thereby preempting manipulation. This method works by exposing individuals to weakened forms of misinformation and teaching them how to identify and counter deceptive tactics.]]></summary></entry></feed>
