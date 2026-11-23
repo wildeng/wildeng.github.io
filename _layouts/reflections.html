@@ -1,0 +1,48 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign exhibition = site.data.exhibitions[page.exhibition] %}
+  <meta name="description"
+        content="{{ page.description | default: exhibition.introduction | escape }}">
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/reflections.css' | relative_url }}">
+</head>
+<body>
+  {% assign exhibition = site.data.exhibitions[page.exhibition] %}
+  <main class="exhibition" id="top">
+    <header class="exhibition-header">
+      <p class="exhibition-kicker">A photographic exhibition</p>
+      <h1>{{ exhibition.title | escape }}</h1>
+      <p class="exhibition-intro">{{ exhibition.introduction | escape }}</p>
+    </header>
+
+    {% for photo in exhibition.photos %}
+      <figure class="photo" id="photo-{{ forloop.index }}">
+      <img
+        src="{{ photo.file | prepend: '/assets/photography/reflections/' | relative_url }}"
+        alt="{{ photo.alt | escape }}"
+        {% if photo.width and photo.height %}
+          width="{{ photo.width }}"
+          height="{{ photo.height }}"
+        {% endif %}
+        loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+        decoding="async">
+        <figcaption>
+          <span class="photo-title">{{ photo.title | escape }}</span>
+          {% if photo.meta %}<span class="photo-meta">{{ photo.meta | escape }}</span>{% endif %}
+          {% if photo.caption %}<p class="photo-note">{{ photo.caption | escape }}</p>{% endif %}
+        </figcaption>
+      </figure>
+    {% endfor %}
+
+    <footer class="exhibition-footer">
+      <span>© {{ site.time | date: '%Y' }} {{ site.title | escape }}</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </main>
+</body>
+</html>

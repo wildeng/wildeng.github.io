@@ -1,0 +1,82 @@
+
+reflections:
+  title: "Reflections"
+  introduction: "A small study of shop windows, objects and the streets of Sheffield reflected in glass."
+  photos:
+    - file: "ghosts.jpg"
+      title: "Ghosts"
+      alt: "Three ghost-like figures dressed in white behind a shop window, their faces covered by different masks, with buildings and the street reflected across the glass."
+      meta: "Canon EOS 80D / Canon EF 40mm / Digital"
+      width: 5488
+      height: 3660
+
+    - file: "zebra.jpg"
+      title: "Zen"
+      alt: "A striped ceramic zebra among household objects behind a shop window, with faint street reflections across the glass."
+      meta: "Canon EOS 300V / Canon EF 50mm / Agfa APX 400"
+      width: 3130
+      height: 2075
+
+    - file: "mannequins.jpg"
+      title: "Together"
+      alt: "Two mannequins in colourful clothes and hats behind glass, overlaid with reflections of buildings and red street lights."
+      meta: "Canon EOS 300V / Canon EF 50mm / Expired Fujifilm Superia X-TRA 400"
+      width: 3130
+      height: 2075
+
+    - file: "typewriter.jpg"
+      title: "Writing Stories"
+      alt: "An old typewriter sitting on top of two vintage leather suitcases, with floral arrangements beside it."
+      meta: "Canon EOS 300V / Canon EF 50mm / Agfa APX 400"
+      width: 3130
+      height: 2075
+
+    - file: "bus_stop.jpg"
+      title: "Through the Glass"
+      alt: "Shop windows visible through the glass of a bus stop, which is decorated with yellow dots."
+      meta: "Canon EOS 300V / Canon EF 50mm / Expired Fujifilm Superia X-TRA 400"
+      width: 3130
+      height: 2075
+
+    - file: "waiting_for.jpg"
+      title: "Waiting for..."
+      alt: "A woman sitting at a bus stop, seen through the glass, with her back reflected in another glass panel."
+      meta: "Canon EOS 300V / Canon EF 50mm / Agfa APX 400"
+      width: 1694
+      height: 2556
+
+    - file: "marriage.jpeg"
+      title: "The Bride and Groom"
+      alt: "Two mannequins dressed as a bride and groom behind a shop window, with a street, buildings, cars and traffic lights reflected across the glass."
+      meta: "Pentax ME Super / Pentax-M 50mm / Expired Fujifilm Superia X-TRA 400"
+      width: 3130
+      height: 2075
+
+    - file: "cuddling.jpg"
+      title: "Cuddling"
+      alt: "A mannequin wearing pyjamas and a hat, cuddling a plastic doll behind glass."
+      meta: "Canon EOS 300V / Canon EF 50mm / Expired Fujifilm Superia X-TRA 400"
+      width: 2075
+      height: 3130
+
+    - file: "yellow_chair.jpeg"
+      title: "On the Yellow Chair"
+      alt: "Two stacked yellow plastic chairs on a table behind glass, with a passer-by reflected in the window."
+      meta: "Canon EOS 80D / Canon EF 40mm / Digital"
+      width: 3759
+      height: 5617
+
+    - file: "books.jpg"
+      title: "Among the Books"
+      alt: "Books on a table behind a shop window, overlaid with reflections of buildings and cars."
+      meta: "Canon EOS 300V / Canon EF 50mm / Expired Fujifilm Superia X-TRA 400"
+      width: 3130
+      height: 2075
+
+    - file: "flower_shop.jpg"
+      title: "Flowers and Lights"
+      alt: "A dried flower behind glass, overlaid with reflections of blue and red street lights."
+      meta: "Canon EOS 80D / Canon EF 50mm / Digital"
+      width: 3669
+      height: 5500
+
