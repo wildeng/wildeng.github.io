@@ -10,10 +10,15 @@
 {% include css/basecamp_content.scss %}
 {% include css/garden_content.scss %}
 {% include css/post.scss %}
-{{ content }}
+{% include css/syntax.scss %}
 body {
   height: 100%;
   overflow-x: hidden;
+}
+
+#page-top {
+  height: auto;
+  overflow-x: visible;
 }
 
 /* Skip link for keyboard navigation */

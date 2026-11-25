@@ -1,3 +1,22 @@
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+@media (width < 768px) {
+  .navbar-default .navbar-toggle {
+    display: block;
+    border-color: var(--color-accent);
+  }
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: var(--color-accent);
+  }
+}
+
 .navbar-default {
   color: #FFF;
   background-color: {{ site.mytheme.vibrant.mainmenu }};

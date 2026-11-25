@@ -194,6 +194,10 @@ suffix: '、';
   text-decoration: underline;
 }
 
+#career {
+  overflow-x: clip;
+}
+
 .timeline {
   position: relative;
   max-width: 1200px;

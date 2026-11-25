@@ -215,3 +215,4 @@ For anyone interested in rediscovering the language, talking to fellow enthusias
 
 Keza MacDonald [GTA VI Review](https://www.theguardian.com/games/2026/nov/18/grand-theft-auto-vi-gta-6-review-playstation-rockstar?CMP=share_btn_url)
 
+New York Times 100 notable [books of 2026](https://www.nytimes.com/2026/11/23/books/review/notable-books.html?unlocked_article_code=1.TFE.Ds3w.RhMDLWb3-wFD&smid=url-share)

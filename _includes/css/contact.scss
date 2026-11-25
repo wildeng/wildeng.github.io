@@ -1,47 +1,37 @@
-@media (max-width: 666px) {
-  .contact-container {
-    background-color: {{ site.mytheme.vibrant.contact }};
-    //background-image: url('images/90s-background.png');
-    display: grid;
-    width: 100dvw;
-    height: 100dvh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "head head head"
-      "left text right"
-      "left pic right"
-      "footer footer footer";
-    grid-row-gap: var(--spacing-sm);
-  }
+.contact-container {
+  background-color: {{ site.mytheme.vibrant.contact }};
+  display: grid;
+  min-height: 100dvh;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "text"
+    "pic";
+  align-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
 
-  .contact-pic-container {
-    position: relative;
-    display: inline-block;
-    margin: var(--spacing-sm);
-    grid-area: pic;
-  }
+.contact-pic-container {
+  grid-area: pic;
+  position: relative;
+}
 
-  .contact-pic-container img {
-    width: clamp(200px, 30vw, 300px);
-    height: clamp(200px, 30vw, 300px);
-    max-width: 90%;
-  }
+.contact-pic-container img {
+  width: clamp(200px, 30vw, 300px);
+  max-width: 100%;
+  height: auto;
+}
 
-  .contact-text-container {
-    grid-area: text;
-    color: white;
-  }
+.contact-text-container {
+  grid-area: text;
+  color: white;
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 667px) {
   .contact-container {
-    background-color: {{ site.mytheme.vibrant.contact }};
-    //background-image: url('images/90s-background.png');
-    display: grid;
-    width: 100dvw;
-    height: 100dvh;
-    grid-template-columns: 1fr 1fr;
+    align-content: stretch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "head head"
@@ -59,7 +49,6 @@
 
   .contact-pic-container img {
     width: clamp(200px, 25vw, 300px);
-    height: clamp(200px, 25vw, 300px);
     max-width: 90%;
   }
 
@@ -69,14 +58,10 @@
   }
 }
 
-@media (min-width: 767px) and (max-width: 991px){
+@media (min-width: 767px) {
   .contact-container {
-    background-color: {{ site.mytheme.vibrant.contact }};
-    //background-image: url('images/90s-background.png');
-    display: grid;
-    width: 100dvw;
-    height: 100dvh;
-    grid-template-columns: 1fr 1fr;
+    align-content: stretch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "head head"
@@ -95,7 +80,6 @@
 
   .contact-pic-container img {
     width: clamp(200px, 25vw, 300px);
-    height: clamp(200px, 25vw, 300px);
     max-width: 90%;
   }
 
@@ -108,11 +92,7 @@
 
 @media (min-width: 992px) {
   .contact-container {
-    background-color: {{ site.mytheme.vibrant.contact }};
-    //background-image: url('images/90s-background.png');
-    display: grid;
-    width: 100dvw;
-    height: 100dvh;
+    align-content: stretch;
     grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
@@ -131,7 +111,6 @@
 
   .contact-pic-container img {
     width: clamp(250px, 20vw, 400px);
-    height: clamp(250px, 20vw, 400px);
     max-width: 90%;
   }
 

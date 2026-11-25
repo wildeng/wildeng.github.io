@@ -26,7 +26,7 @@ At the end what makes difference is how comfortable are with your tools. If you 
 
 Note: This post has been entirely written and edited on Lunarvim <img src="/images/downhand.gif" alt="a gif of a hand pointing down" />
 
-<img src="/images/lunarvim.png" class="post-image" alt="lunarvim welcome screen" />
+<img src="/images/lunarvim.png" width="2880" height="1800" class="post-image post-image-wide" alt="lunarvim welcome screen" />
 
 ---
 

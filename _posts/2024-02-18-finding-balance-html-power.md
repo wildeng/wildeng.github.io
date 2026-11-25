@@ -16,10 +16,10 @@ HTML, a language I consider powerful, has granted countless individuals the abil
 
 Here are two examples from the book:  
 <br/>
-<img src="/images/how-the-web-works.png" alt="an infographic about how the web works with diagram and text"  class="post-image"/>
+<img src="/images/how-the-web-works.png" width="1214" height="748" alt="an infographic about how the web works with diagram and text"  class="post-image post-image-wide"/>
 <br/>
 <br/>
-<img src="/images/pages-structure.png" alt="an image about how to structure a web page"  class="post-image"/>
+<img src="/images/pages-structure.png" width="1213" height="747" alt="an image about how to structure a web page"  class="post-image post-image-wide"/>
 <br/>
 <br/>
 

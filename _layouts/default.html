@@ -37,7 +37,11 @@
 
     <script type="text/javascript" src="js/wildeng.js"></script>
     <script>
-      AOS.init();
+      if (window.AOS) {
+        AOS.init({
+          disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        });
+      }
     </script>
   </body>
 </html>

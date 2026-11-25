@@ -1,44 +1,36 @@
-@media (max-width: 666px) {
-  .about-container {
-    background-color: {{ site.mytheme.vibrant.about }};
-    padding-top: calc(env(safe-area-inset-top) + var(--spacing-md));
-    display: grid;
-    width: 100dvw;
-    height: 100dvh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "head head head"
-      "left text right"
-      "left pic right"
-      "footer footer footer";
-    grid-row-gap: var(--spacing-sm);
-  }
+.about-container {
+  background-color: {{ site.mytheme.vibrant.about }};
+  display: grid;
+  min-height: 100dvh;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "text"
+    "pic";
+  align-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
 
-  .story-pic-container {
-    grid-area: pic;
-  }
+.story-pic-container {
+  grid-area: pic;
+}
 
-  .story-pic-container img {
-    width: clamp(200px, 30vw, 300px);
-    height: clamp(200px, 30vw, 300px);
-    align-self: center;
-    max-width: 90%;
-  }
+.story-pic-container img {
+  width: clamp(200px, 30vw, 300px);
+  max-width: 100%;
+  height: auto;
+}
 
-  .story-container {
-    grid-area: text;
-    color: white;
-  }
+.story-container {
+  grid-area: text;
+  color: white;
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 667px) {
   .about-container {
-    background-color: {{ site.mytheme.vibrant.about }};
-    display: grid;
-    width: 100dvw;
-    height: 100dvh;
-    grid-template-columns: 1fr 1fr;
+    align-content: stretch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "head head"
@@ -53,7 +45,6 @@
 
   .story-pic-container img {
     width: clamp(200px, 25vw, 300px);
-    height: clamp(200px, 25vw, 300px);
     align-self: center;
     max-width: 90%;
   }
@@ -64,13 +55,10 @@
   }
 }
 
-@media (min-width: 767px) and (max-width: 991px){
+@media (min-width: 767px) {
   .about-container {
-    background-color: {{ site.mytheme.vibrant.about }};
-    display: grid;
-    width: 100dvw;
-    height: 100dvh;
-    grid-template-columns: 1fr 1fr;
+    align-content: stretch;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "head head"
@@ -86,7 +74,6 @@
 
   .story-pic-container img {
     width: clamp(200px, 25vw, 300px);
-    height: clamp(200px, 25vw, 300px);
     align-self: center;
     max-width: 90%;
   }
@@ -100,10 +87,7 @@
 
 @media (min-width: 992px) {
   .about-container {
-    background-color: {{ site.mytheme.vibrant.about }};
-    display: grid;
-    width: 100dvw;
-    height: 100dvh;
+    align-content: stretch;
     grid-template-columns: 1fr 2fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
@@ -119,7 +103,6 @@
 
   .story-pic-container img {
     width: clamp(250px, 20vw, 400px);
-    height: clamp(250px, 20vw, 400px);
     align-self: center;
     max-width: 90%;
   }
@@ -143,7 +126,7 @@
 .subtitle-story {
   color: white;
   font-size: clamp(1rem, 3vw, 2rem);
-  text-align: justify;
+  text-align: left;
   margin-top: var(--spacing-sm);
 }
 
