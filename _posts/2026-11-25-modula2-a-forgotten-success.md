@@ -201,18 +201,15 @@ For anyone interested in rediscovering the language, talking to fellow enthusias
 
 #### Things I like - in random order ####
 
-<br/>
-<img src="" alt="" class="post-image"/>
-<br/>
-<br/>
-<img src="" alt="" class="post-image">
-<br/>
-<br/>
+This time, if you wish, check out my virtual photographic exhibition about [reflections](/exhibitions/reflections/) 
+
 
 ---
 
 #### Today's Links ####
 
-Keza MacDonald [GTA VI Review](https://www.theguardian.com/games/2026/nov/18/grand-theft-auto-vi-gta-6-review-playstation-rockstar?CMP=share_btn_url)
+Keza MacDonald [GTA VI Review](https://www.theguardian.com/games/2026/nov/18/grand-theft-auto-vi-gta-6-review-playstation-rockstar?CMP=share_btn_url)  
+New York Times 100 notable [books of 2026](https://www.nytimes.com/2026/11/23/books/review/notable-books.html?unlocked_article_code=1.TFE.Ds3w.RhMDLWb3-wFD&smid=url-share)  
+True Crime community inspiring [violent crimes](https://www.wired.com/story/the-true-crime-community-is-inspiring-violent-attacks-through-tiktok/)  
+Funny news of the day, shameless Palantir CEO says that their products are [progressive...](https://www.theregister.com/software/2026/11/12/palantirs-karp-takes-a-sharp-left-turn-says-he-and-the-companys-products-are-actually-progressive/5309441)
 
-New York Times 100 notable [books of 2026](https://www.nytimes.com/2026/11/23/books/review/notable-books.html?unlocked_article_code=1.TFE.Ds3w.RhMDLWb3-wFD&smid=url-share)
