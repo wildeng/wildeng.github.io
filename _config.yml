@@ -14,6 +14,13 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-paginate-v2
+# Default post language
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      locale: en
 pages:
   permalink: /:path/:basename
 # Pagination Settings
