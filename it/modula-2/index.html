@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <meta charset="utf-8">
+
+  <title>Alain Mauri - Wildeng</title>
+  <meta name="author" content="Alain Mauri">
+  <meta name="description" content="Alain Mauri Senior Software Engineer and Team Leader in Sheffield - UK">
+  <meta name="keywords" content="Software Engineer, Team Leader, Ruby, Kanban,Startups, Agile, Pair Programming, Web Development, Javascript, CSS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed for alainmauri.eu" href="/feed.xml" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+  <body>
+    <div class="post-main">
+      <div class="blog-content">
+          
+  <h1>Modula-2: un successo mancato?</h1>
+
+<p class="post-author"><u>25 Nov 2026 - Wildeng</u></p>
+
+<p>Mentre leggevo alcuni vecchi numeri di BYTE in cui si parlava di programmazione a oggetti e Smalltalk, mi sono ricordato di un linguaggio imparato ai tempi, ormai lontani, dell’università, di cui ricordavo principalmente il nome e poche altre cose.</p>
+
+<p>Ho così iniziato a documentarmi ed ecco qui i risultati.</p>
+
+<h4 id="le-origini-di-modula-2">Le origini di Modula-2</h4>
+
+<p>Modula-2 fu sviluppato da Niklaus Wirth, lo stesso che in precedenza aveva ideato Pascal (linguaggio che ho amato e utilizzato durante la scuola superiore), con l’obiettivo di superare alcune delle limitazioni del suo predecessore.</p>
+
+<p>Tra il 1976 e il 1977 Wirth trascorse un anno sabbatico allo Xerox PARC, dove venne in contatto con due progetti:</p>
+
+<ul>
+  <li><strong>Xerox Alto</strong>, una workstation dotata di interfaccia grafica.</li>
+  <li><strong>Mesa</strong>, un linguaggio di programmazione che supportava la modularità, la separazione tra interfaccia e implementazione e la compilazione separata.</li>
+</ul>
+
+<p>Al suo ritorno all’ETH di Zurigo, Wirth iniziò a sviluppare una propria workstation, Lilith, con l’ambizione di utilizzare un unico linguaggio di programmazione per realizzarne l’intero ambiente software.</p>
+
+<p>Agli occhi di Wirth, Pascal era sufficientemente semplice ma non adeguato al compito, mentre Mesa era troppo complicato.</p>
+
+<p>Le principali limitazioni del Pascal originale riguardavano la mancanza di un sistema di moduli e di un meccanismo standard per compilare separatamente i vari componenti di un programma. Nello sviluppo di sistemi complessi, questo comportava alcuni problemi:</p>
+
+<ul>
+  <li>Tempi di compilazione lunghi.</li>
+  <li>Difficoltà nel suddividere il lavoro tra diversi gruppi di sviluppo.</li>
+  <li>Difficoltà nel riutilizzare componenti software.</li>
+  <li>Maggiore complessità nella gestione delle dipendenze tra le diverse parti del sistema.</li>
+</ul>
+
+<p>Wirth riprese quindi anche alcune idee di Modula, un linguaggio sperimentale che aveva sviluppato negli anni precedenti, dando vita a Modula-2 nel 1978.</p>
+
+<p>Il compilatore, inizialmente realizzato su un PDP-11 e successivamente portato su Lilith, consentiva la compilazione indipendente dei moduli e il loro successivo collegamento, preservando al contempo il controllo statico dei tipi anche tra moduli compilati separatamente.</p>
+
+<p>Le caratteristiche e i vantaggi di Modula-2 si rivelarono particolarmente evidenti durante lo sviluppo del software per Lilith: sistema operativo, driver, editor di testo, compilatore e così via.</p>
+
+<p>Il progetto dimostrò che utilizzare un unico linguaggio di programmazione per lo sviluppo dell’intero ambiente software non era soltanto possibile, ma anche vantaggioso.</p>
+
+<h4 id="le-caratteristiche-del-linguaggio">Le caratteristiche del linguaggio</h4>
+
+<p>Ma quali sono le caratteristiche principali di Modula-2?</p>
+
+<ul>
+  <li>Possibilità di suddividere i programmi in moduli (da cui il nome), compilabili separatamente.</li>
+  <li>Importazione esplicita degli identificatori ed esposizione dell’interfaccia pubblica attraverso il modulo di definizione. La separazione tra interfaccia e implementazione permette di nascondere i dettagli implementativi dei moduli a chi li utilizza (<em>information hiding</em>).</li>
+  <li>Coroutine come meccanismo di base per la gestione di processi concorrenti.</li>
+  <li>Tipizzazione statica e forte.</li>
+  <li>Distinzione tra lettere maiuscole e minuscole (<em>case sensitivity</em>) e parole chiave scritte interamente in maiuscolo.</li>
+  <li>Accesso a risorse di basso livello e specifiche dell’hardware attraverso il modulo <code class="language-plaintext highlighter-rouge">SYSTEM</code>.</li>
+</ul>
+
+<p>Molte di queste caratteristiche ci sono familiari perché presenti anche nei linguaggi di programmazione moderni. Pensiamo, ad esempio, ai meccanismi di importazione utilizzati da Go e Python.</p>
+
+<p>Modula-2, inoltre, non era stato concepito principalmente come linguaggio didattico, ma come strumento di programmazione di sistema. Come Wirth stesso raccontò in <a href="https://www.modula2.org/modula2-history.php">A Brief History of Modula and Lilith</a>, il linguaggio era, in un certo senso, un sottoprodotto dello sviluppo di Lilith:</p>
+
+<p><em>“It is evident that our primary concern was not a language satisfying all wishes of all programmers, but the creation of a sufficiently powerful tool for implementing an entire software system in a short time with the limited manpower at hand. Modula-2 was, so to speak, a subordinate goal, a means to an end.”</em></p>
+
+<p>Vediamo un semplice esempio di programma, tratto da un <a href="https://www.modula2.org/tutor/chapter3.php">tutorial sul linguaggio</a>:</p>
+
+<pre><code class="language-modula2">MODULE IntVar;
+
+FROM Terminal2 IMPORT WriteLn, WriteString, WriteInt;
+
+VAR Count : INTEGER;  (* The sum of two variables *)
+    x,y   : INTEGER;  (* The two variables to add *)
+
+BEGIN
+
+   x := 12;
+   y := 13;
+   Count := x + y;
+
+          (* Assignments complete, now display the results *)
+
+   WriteString("The value of x  =");
+   WriteInt(x,3);
+   WriteLn;
+   WriteString("The value of y  =");
+   WriteInt(y,4);
+   WriteLn;
+   WriteString("The sum of them =");
+   WriteInt(Count,6);
+   WriteLn;
+
+   x := 0FFH;   (* This is the way to assign a hexadecimal number *)
+   y := 177B;   (* This is the way to assign an octal number      *)
+
+END IntVar.
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Terminal2</code> è un modulo di supporto utilizzato dal tutorial per le operazioni di input/output.</p>
+
+<p>Il programma inizia con la dichiarazione del nome del modulo, seguita dall’importazione di alcune procedure (con una sintassi molto simile a quella di Python), dalla dichiarazione delle variabili e, infine, dal corpo del programma, racchiuso tra le parole chiave <code class="language-plaintext highlighter-rouge">BEGIN</code> ed <code class="language-plaintext highlighter-rouge">END</code>, quest’ultima seguita dal nome del modulo.</p>
+
+<p>Si può osservare come il tipo delle variabili venga esplicitamente dichiarato prima del loro utilizzo.</p>
+
+<p>Un’altra cosa da notare è che diversi elementi della sintassi sono stati ereditati da Pascal: le parole chiave <code class="language-plaintext highlighter-rouge">BEGIN</code> ed <code class="language-plaintext highlighter-rouge">END</code>, l’operatore di assegnazione <code class="language-plaintext highlighter-rouge">:=</code>, il punto e virgola come separatore delle istruzioni e persino la sintassi dei commenti.</p>
+
+<p>Quasi a ribadire che, nell’evoluzione di un linguaggio, non è necessario cambiare ciò che già funziona bene.</p>
+
+<h4 id="la-programmazione-modulare">La programmazione modulare</h4>
+
+<p>Meritano un cenno particolare due costrutti relativi ai moduli:</p>
+
+<p><code class="language-plaintext highlighter-rouge">DEFINITION MODULE</code>, un costrutto concettualmente simile a un’<code class="language-plaintext highlighter-rouge">interface</code> di Java, sebbene possa esporre anche tipi, costanti e variabili. Definisce l’interfaccia pubblica del modulo, fornendo al compilatore le informazioni necessarie per effettuare il controllo dei tipi anche tra moduli compilati separatamente.</p>
+
+<p>La separazione tra interfaccia e implementazione è un concetto che ritroviamo in molti altri linguaggi di programmazione moderni, oltre al già citato Java.</p>
+
+<p>Vediamo un esempio tratto dal <a href="https://www.modula2.org/tutor/chapter12.php">tutorial sul linguaggio</a>:</p>
+
+<pre><code class="language-modula2">DEFINITION MODULE Circles;
+
+PROCEDURE AreaOfCircle(Radius : REAL; VAR Area : REAL);
+
+PROCEDURE PerimeterOfCircle(Radius : REAL; VAR Perim : REAL);
+
+END Circles.
+</code></pre>
+
+<p>Alla definizione dell’interfaccia segue l’implementazione vera e propria, ed è qui che entra in gioco <code class="language-plaintext highlighter-rouge">IMPLEMENTATION MODULE</code>.</p>
+
+<pre><code class="language-modula2">IMPLEMENTATION MODULE Circles;
+
+PROCEDURE GetPi(VAR Pi : REAL);
+BEGIN
+   Pi := 3.14159;
+END GetPi;
+
+PROCEDURE AreaOfCircle(Radius : REAL; VAR Area : REAL);
+VAR Pie : REAL;
+BEGIN
+   GetPi(Pie);
+   Area := Pie * Radius * Radius;
+END AreaOfCircle;
+
+PROCEDURE PerimeterOfCircle(Radius : REAL; VAR Perim : REAL);
+VAR Cake : REAL;
+BEGIN
+   GetPi(Cake);
+   Perim := 2.0 * Cake * Radius;
+END PerimeterOfCircle;
+
+BEGIN (* IMPLEMENTATION MODULE body, empty in this case *)
+END Circles.
+</code></pre>
+
+<p>Da notare che la procedura <code class="language-plaintext highlighter-rouge">GetPi</code>, non essendo dichiarata nel <code class="language-plaintext highlighter-rouge">DEFINITION MODULE</code>, è accessibile solamente all’interno del modulo stesso.</p>
+
+<p>In questo modo la definizione espone le informazioni pubbliche del modulo, nascondendo i dettagli implementativi che, nell’economia di un programma su larga scala, non sono necessari a chi utilizza il modulo.</p>
+
+<h4 id="perché-modula-2-è-rimasto-un-linguaggio-di-nicchia">Perché Modula-2 è rimasto un linguaggio di nicchia?</h4>
+
+<p>Nonostante il compilatore di Modula-2 sviluppato all’ETH fosse stato distribuito a diverse centinaia di università e aziende, come mai il linguaggio non ha raggiunto una massa critica tale da farlo diventare mainstream?</p>
+
+<p>Secondo quanto riportato da K.N. King in un <a href="https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9106/9106d/9106d.htm">articolo del 1991</a>, pubblicato sul Dr. Dobb’s Journal, Modula-2, pur essendo ormai considerato un linguaggio maturo, soffriva la concorrenza di linguaggi come Ada e C++ e rischiava addirittura di essere soppiantato dai suoi successori, Modula-3 e Oberon.</p>
+
+<p>Il numero di utilizzatori all’epoca era stimato da Rich Gogesch, di Stony Brook Software, in circa 150.000 a livello mondiale: un numero considerevole, ma comunque lontano da quello degli utilizzatori di Pascal e C. A questo si aggiungeva la scarsa disponibilità di librerie sviluppate da terze parti. King descriveva inoltre una situazione di stagnazione negli Stati Uniti, a fronte di una maggiore diffusione in Europa, in particolare nell’ambito dei sistemi embedded.</p>
+
+<p>Un altro ostacolo alla diffusione di Modula-2 era la lentezza del processo di standardizzazione, che portò alla pubblicazione del primo standard ISO nel 1996.</p>
+
+<p>Nel frattempo, altre implementazioni di Pascal, come Turbo Pascal, avevano introdotto alcune delle caratteristiche distintive di Modula-2, tra cui la compilazione separata attraverso le <em>unit</em>, introdotte in Turbo Pascal 4.0 nel 1987, con il vantaggio di estendere un linguaggio già conosciuto dagli sviluppatori.</p>
+
+<h4 id="ma-che-fine-ha-fatto">Ma che fine ha fatto?</h4>
+
+<p>A quasi cinquant’anni dalla sua nascita, Modula-2 non è scomparso. Nel 2023, con il rilascio di GCC 13, il compilatore GNU Modula-2 è entrato ufficialmente a far parte della <a href="https://gcc.gnu.org/pipermail/gcc-announce/2023/000175.html">GNU Compiler Collection</a> ed esiste ancora una comunità dedita allo sviluppo di software e strumenti legati a questo linguaggio.</p>
+
+<p>Nonostante la sua limitata diffusione commerciale, Modula-2 ha contribuito a diffondere idee che ritroviamo oggi, seppure in forme diverse, in linguaggi di programmazione di largo utilizzo come Java, Go, Python e Ruby. Queste analogie non implicano necessariamente una discendenza diretta da Modula-2.</p>
+
+<p>Ai miei occhi questo lo rende comunque un linguaggio di successo, perché il valore di un linguaggio di programmazione non si misura solamente dal numero dei suoi utilizzatori, ma anche dalla longevità delle idee che ha contribuito a diffondere.</p>
+
+<h4 id="se-tutto-questo-vi-ha-incuriosito">Se tutto questo vi ha incuriosito…</h4>
+
+<ul>
+  <li>Niklaus Wirth – <a href="https://people.inf.ethz.ch/wirth/projects.html">Summary of projects by N. Wirth, 1962–1999</a></li>
+  <li>Niklaus Wirth – <a href="https://www.modula2.org/modula2-history.php">A Brief History of Modula and Lilith</a>, 1995.</li>
+  <li>K.N. King – <a href="https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9106/9106d/9106d.htm">What’s New With Modula-2?</a>, Dr. Dobb’s Journal, giugno 1991.</li>
+  <li><a href="https://archive.psg.com/sc22wg13.htm">Modula-2 Standardization</a></li>
+  <li><a href="https://www.modula2.org/tutor/">Modula-2 Tutorial</a></li>
+  <li>Niklaus Wirth – <a href="https://freepages.modula2.org/report4/modula-2.html">The Programming Language Modula-2</a>.</li>
+  <li><a href="https://gcc.gnu.org/onlinedocs/gm2/">GNU Modula-2 Documentation</a></li>
+</ul>
+
+<h4 id="modula-2-oggi-comunità-e-discussioni">Modula-2 oggi: comunità e discussioni</h4>
+
+<p>Per chi volesse riscoprire il linguaggio, confrontarsi con altri appassionati o seguirne gli sviluppi:</p>
+
+<ul>
+  <li><a href="https://lists.nongnu.org/mailman/listinfo/gm2">GNU Modula-2 Mailing List</a></li>
+  <li><a href="https://groups.google.com/g/comp.lang.modula2">comp.lang.modula2 – Archivio Usenet</a></li>
+  <li><a href="https://freepages.modula2.org/">Free Modula-2 Pages</a></li>
+  <li><a href="https://www.reddit.com/r/programming/comments/1cuam2p/">Reddit – What ever happened to Modula-2?</a></li>
+  <li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/1uf8ouu/">Reddit – Portable Pragmas for Pascal, Modula-2 and Oberon</a></li>
+</ul>
+
+
+
+      </div>
+      <footer>
+          <hr>
+
+<div>
+  <a href="/index.html" >Home</a>
+  <a href="/blog" >Posts</a>
+  <a href="/digital_garden.html" >Digital Garden</a>
+  <a href="/blogroll/" >Blogroll</a>
+</div>
+<hr>
+<p class="copyright">&copy; 1971-2026 <b>Alain Mauri</b>.
+<br>rev dbf0ecdd70122260c6e884ca98029f788599b531 - 2026.11.26</p>
+<br/><p class="copyright">Subscribe to my <a href="/feed.xml" title="RSS Feed for the blog">RSS Feed</a></p>
+
+ 
+      </footer>
+    </div>
+  </body>
+</html>

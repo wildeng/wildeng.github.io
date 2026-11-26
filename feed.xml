@@ -1,4 +1,403 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2026-11-23T18:16:38+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Creative languages</title><link href="https://alainmauri.eu/2026/09/20/creative-languages/" rel="alternate" type="text/html" title="Creative languages" /><published>2026-09-20T00:00:00+01:00</published><updated>2026-09-20T00:00:00+01:00</updated><id>https://alainmauri.eu/2026/09/20/creative-languages</id><content type="html" xml:base="https://alainmauri.eu/2026/09/20/creative-languages/"><![CDATA[<p>For a long time, I viewed programming and photography as two separate things—two completely different worlds.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://alainmauri.eu/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alainmauri.eu/" rel="alternate" type="text/html" /><updated>2026-11-26T14:45:14+00:00</updated><id>https://alainmauri.eu/feed.xml</id><title type="html">Alain Mauri</title><subtitle>First draft of my new personal website</subtitle><entry><title type="html">Modula-2: un successo mancato?</title><link href="https://alainmauri.eu/it/modula-2/" rel="alternate" type="text/html" title="Modula-2: un successo mancato?" /><published>2026-11-25T00:00:00+00:00</published><updated>2026-11-25T00:00:00+00:00</updated><id>https://alainmauri.eu/it/modula2-un-successo-mancato</id><content type="html" xml:base="https://alainmauri.eu/it/modula-2/"><![CDATA[<p>Mentre leggevo alcuni vecchi numeri di BYTE in cui si parlava di programmazione a oggetti e Smalltalk, mi sono ricordato di un linguaggio imparato ai tempi, ormai lontani, dell’università, di cui ricordavo principalmente il nome e poche altre cose.</p>
+
+<p>Ho così iniziato a documentarmi ed ecco qui i risultati.</p>
+
+<h4 id="le-origini-di-modula-2">Le origini di Modula-2</h4>
+
+<p>Modula-2 fu sviluppato da Niklaus Wirth, lo stesso che in precedenza aveva ideato Pascal (linguaggio che ho amato e utilizzato durante la scuola superiore), con l’obiettivo di superare alcune delle limitazioni del suo predecessore.</p>
+
+<p>Tra il 1976 e il 1977 Wirth trascorse un anno sabbatico allo Xerox PARC, dove venne in contatto con due progetti:</p>
+
+<ul>
+  <li><strong>Xerox Alto</strong>, una workstation dotata di interfaccia grafica.</li>
+  <li><strong>Mesa</strong>, un linguaggio di programmazione che supportava la modularità, la separazione tra interfaccia e implementazione e la compilazione separata.</li>
+</ul>
+
+<p>Al suo ritorno all’ETH di Zurigo, Wirth iniziò a sviluppare una propria workstation, Lilith, con l’ambizione di utilizzare un unico linguaggio di programmazione per realizzarne l’intero ambiente software.</p>
+
+<p>Agli occhi di Wirth, Pascal era sufficientemente semplice ma non adeguato al compito, mentre Mesa era troppo complicato.</p>
+
+<p>Le principali limitazioni del Pascal originale riguardavano la mancanza di un sistema di moduli e di un meccanismo standard per compilare separatamente i vari componenti di un programma. Nello sviluppo di sistemi complessi, questo comportava alcuni problemi:</p>
+
+<ul>
+  <li>Tempi di compilazione lunghi.</li>
+  <li>Difficoltà nel suddividere il lavoro tra diversi gruppi di sviluppo.</li>
+  <li>Difficoltà nel riutilizzare componenti software.</li>
+  <li>Maggiore complessità nella gestione delle dipendenze tra le diverse parti del sistema.</li>
+</ul>
+
+<p>Wirth riprese quindi anche alcune idee di Modula, un linguaggio sperimentale che aveva sviluppato negli anni precedenti, dando vita a Modula-2 nel 1978.</p>
+
+<p>Il compilatore, inizialmente realizzato su un PDP-11 e successivamente portato su Lilith, consentiva la compilazione indipendente dei moduli e il loro successivo collegamento, preservando al contempo il controllo statico dei tipi anche tra moduli compilati separatamente.</p>
+
+<p>Le caratteristiche e i vantaggi di Modula-2 si rivelarono particolarmente evidenti durante lo sviluppo del software per Lilith: sistema operativo, driver, editor di testo, compilatore e così via.</p>
+
+<p>Il progetto dimostrò che utilizzare un unico linguaggio di programmazione per lo sviluppo dell’intero ambiente software non era soltanto possibile, ma anche vantaggioso.</p>
+
+<h4 id="le-caratteristiche-del-linguaggio">Le caratteristiche del linguaggio</h4>
+
+<p>Ma quali sono le caratteristiche principali di Modula-2?</p>
+
+<ul>
+  <li>Possibilità di suddividere i programmi in moduli (da cui il nome), compilabili separatamente.</li>
+  <li>Importazione esplicita degli identificatori ed esposizione dell’interfaccia pubblica attraverso il modulo di definizione. La separazione tra interfaccia e implementazione permette di nascondere i dettagli implementativi dei moduli a chi li utilizza (<em>information hiding</em>).</li>
+  <li>Coroutine come meccanismo di base per la gestione di processi concorrenti.</li>
+  <li>Tipizzazione statica e forte.</li>
+  <li>Distinzione tra lettere maiuscole e minuscole (<em>case sensitivity</em>) e parole chiave scritte interamente in maiuscolo.</li>
+  <li>Accesso a risorse di basso livello e specifiche dell’hardware attraverso il modulo <code class="language-plaintext highlighter-rouge">SYSTEM</code>.</li>
+</ul>
+
+<p>Molte di queste caratteristiche ci sono familiari perché presenti anche nei linguaggi di programmazione moderni. Pensiamo, ad esempio, ai meccanismi di importazione utilizzati da Go e Python.</p>
+
+<p>Modula-2, inoltre, non era stato concepito principalmente come linguaggio didattico, ma come strumento di programmazione di sistema. Come Wirth stesso raccontò in <a href="https://www.modula2.org/modula2-history.php">A Brief History of Modula and Lilith</a>, il linguaggio era, in un certo senso, un sottoprodotto dello sviluppo di Lilith:</p>
+
+<p><em>“It is evident that our primary concern was not a language satisfying all wishes of all programmers, but the creation of a sufficiently powerful tool for implementing an entire software system in a short time with the limited manpower at hand. Modula-2 was, so to speak, a subordinate goal, a means to an end.”</em></p>
+
+<p>Vediamo un semplice esempio di programma, tratto da un <a href="https://www.modula2.org/tutor/chapter3.php">tutorial sul linguaggio</a>:</p>
+
+<pre><code class="language-modula2">MODULE IntVar;
+
+FROM Terminal2 IMPORT WriteLn, WriteString, WriteInt;
+
+VAR Count : INTEGER;  (* The sum of two variables *)
+    x,y   : INTEGER;  (* The two variables to add *)
+
+BEGIN
+
+   x := 12;
+   y := 13;
+   Count := x + y;
+
+          (* Assignments complete, now display the results *)
+
+   WriteString("The value of x  =");
+   WriteInt(x,3);
+   WriteLn;
+   WriteString("The value of y  =");
+   WriteInt(y,4);
+   WriteLn;
+   WriteString("The sum of them =");
+   WriteInt(Count,6);
+   WriteLn;
+
+   x := 0FFH;   (* This is the way to assign a hexadecimal number *)
+   y := 177B;   (* This is the way to assign an octal number      *)
+
+END IntVar.
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Terminal2</code> è un modulo di supporto utilizzato dal tutorial per le operazioni di input/output.</p>
+
+<p>Il programma inizia con la dichiarazione del nome del modulo, seguita dall’importazione di alcune procedure (con una sintassi molto simile a quella di Python), dalla dichiarazione delle variabili e, infine, dal corpo del programma, racchiuso tra le parole chiave <code class="language-plaintext highlighter-rouge">BEGIN</code> ed <code class="language-plaintext highlighter-rouge">END</code>, quest’ultima seguita dal nome del modulo.</p>
+
+<p>Si può osservare come il tipo delle variabili venga esplicitamente dichiarato prima del loro utilizzo.</p>
+
+<p>Un’altra cosa da notare è che diversi elementi della sintassi sono stati ereditati da Pascal: le parole chiave <code class="language-plaintext highlighter-rouge">BEGIN</code> ed <code class="language-plaintext highlighter-rouge">END</code>, l’operatore di assegnazione <code class="language-plaintext highlighter-rouge">:=</code>, il punto e virgola come separatore delle istruzioni e persino la sintassi dei commenti.</p>
+
+<p>Quasi a ribadire che, nell’evoluzione di un linguaggio, non è necessario cambiare ciò che già funziona bene.</p>
+
+<h4 id="la-programmazione-modulare">La programmazione modulare</h4>
+
+<p>Meritano un cenno particolare due costrutti relativi ai moduli:</p>
+
+<p><code class="language-plaintext highlighter-rouge">DEFINITION MODULE</code>, un costrutto concettualmente simile a un’<code class="language-plaintext highlighter-rouge">interface</code> di Java, sebbene possa esporre anche tipi, costanti e variabili. Definisce l’interfaccia pubblica del modulo, fornendo al compilatore le informazioni necessarie per effettuare il controllo dei tipi anche tra moduli compilati separatamente.</p>
+
+<p>La separazione tra interfaccia e implementazione è un concetto che ritroviamo in molti altri linguaggi di programmazione moderni, oltre al già citato Java.</p>
+
+<p>Vediamo un esempio tratto dal <a href="https://www.modula2.org/tutor/chapter12.php">tutorial sul linguaggio</a>:</p>
+
+<pre><code class="language-modula2">DEFINITION MODULE Circles;
+
+PROCEDURE AreaOfCircle(Radius : REAL; VAR Area : REAL);
+
+PROCEDURE PerimeterOfCircle(Radius : REAL; VAR Perim : REAL);
+
+END Circles.
+</code></pre>
+
+<p>Alla definizione dell’interfaccia segue l’implementazione vera e propria, ed è qui che entra in gioco <code class="language-plaintext highlighter-rouge">IMPLEMENTATION MODULE</code>.</p>
+
+<pre><code class="language-modula2">IMPLEMENTATION MODULE Circles;
+
+PROCEDURE GetPi(VAR Pi : REAL);
+BEGIN
+   Pi := 3.14159;
+END GetPi;
+
+PROCEDURE AreaOfCircle(Radius : REAL; VAR Area : REAL);
+VAR Pie : REAL;
+BEGIN
+   GetPi(Pie);
+   Area := Pie * Radius * Radius;
+END AreaOfCircle;
+
+PROCEDURE PerimeterOfCircle(Radius : REAL; VAR Perim : REAL);
+VAR Cake : REAL;
+BEGIN
+   GetPi(Cake);
+   Perim := 2.0 * Cake * Radius;
+END PerimeterOfCircle;
+
+BEGIN (* IMPLEMENTATION MODULE body, empty in this case *)
+END Circles.
+</code></pre>
+
+<p>Da notare che la procedura <code class="language-plaintext highlighter-rouge">GetPi</code>, non essendo dichiarata nel <code class="language-plaintext highlighter-rouge">DEFINITION MODULE</code>, è accessibile solamente all’interno del modulo stesso.</p>
+
+<p>In questo modo la definizione espone le informazioni pubbliche del modulo, nascondendo i dettagli implementativi che, nell’economia di un programma su larga scala, non sono necessari a chi utilizza il modulo.</p>
+
+<h4 id="perché-modula-2-è-rimasto-un-linguaggio-di-nicchia">Perché Modula-2 è rimasto un linguaggio di nicchia?</h4>
+
+<p>Nonostante il compilatore di Modula-2 sviluppato all’ETH fosse stato distribuito a diverse centinaia di università e aziende, come mai il linguaggio non ha raggiunto una massa critica tale da farlo diventare mainstream?</p>
+
+<p>Secondo quanto riportato da K.N. King in un <a href="https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9106/9106d/9106d.htm">articolo del 1991</a>, pubblicato sul Dr. Dobb’s Journal, Modula-2, pur essendo ormai considerato un linguaggio maturo, soffriva la concorrenza di linguaggi come Ada e C++ e rischiava addirittura di essere soppiantato dai suoi successori, Modula-3 e Oberon.</p>
+
+<p>Il numero di utilizzatori all’epoca era stimato da Rich Gogesch, di Stony Brook Software, in circa 150.000 a livello mondiale: un numero considerevole, ma comunque lontano da quello degli utilizzatori di Pascal e C. A questo si aggiungeva la scarsa disponibilità di librerie sviluppate da terze parti. King descriveva inoltre una situazione di stagnazione negli Stati Uniti, a fronte di una maggiore diffusione in Europa, in particolare nell’ambito dei sistemi embedded.</p>
+
+<p>Un altro ostacolo alla diffusione di Modula-2 era la lentezza del processo di standardizzazione, che portò alla pubblicazione del primo standard ISO nel 1996.</p>
+
+<p>Nel frattempo, altre implementazioni di Pascal, come Turbo Pascal, avevano introdotto alcune delle caratteristiche distintive di Modula-2, tra cui la compilazione separata attraverso le <em>unit</em>, introdotte in Turbo Pascal 4.0 nel 1987, con il vantaggio di estendere un linguaggio già conosciuto dagli sviluppatori.</p>
+
+<h4 id="ma-che-fine-ha-fatto">Ma che fine ha fatto?</h4>
+
+<p>A quasi cinquant’anni dalla sua nascita, Modula-2 non è scomparso. Nel 2023, con il rilascio di GCC 13, il compilatore GNU Modula-2 è entrato ufficialmente a far parte della <a href="https://gcc.gnu.org/pipermail/gcc-announce/2023/000175.html">GNU Compiler Collection</a> ed esiste ancora una comunità dedita allo sviluppo di software e strumenti legati a questo linguaggio.</p>
+
+<p>Nonostante la sua limitata diffusione commerciale, Modula-2 ha contribuito a diffondere idee che ritroviamo oggi, seppure in forme diverse, in linguaggi di programmazione di largo utilizzo come Java, Go, Python e Ruby. Queste analogie non implicano necessariamente una discendenza diretta da Modula-2.</p>
+
+<p>Ai miei occhi questo lo rende comunque un linguaggio di successo, perché il valore di un linguaggio di programmazione non si misura solamente dal numero dei suoi utilizzatori, ma anche dalla longevità delle idee che ha contribuito a diffondere.</p>
+
+<h4 id="se-tutto-questo-vi-ha-incuriosito">Se tutto questo vi ha incuriosito…</h4>
+
+<ul>
+  <li>Niklaus Wirth – <a href="https://people.inf.ethz.ch/wirth/projects.html">Summary of projects by N. Wirth, 1962–1999</a></li>
+  <li>Niklaus Wirth – <a href="https://www.modula2.org/modula2-history.php">A Brief History of Modula and Lilith</a>, 1995.</li>
+  <li>K.N. King – <a href="https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9106/9106d/9106d.htm">What’s New With Modula-2?</a>, Dr. Dobb’s Journal, giugno 1991.</li>
+  <li><a href="https://archive.psg.com/sc22wg13.htm">Modula-2 Standardization</a></li>
+  <li><a href="https://www.modula2.org/tutor/">Modula-2 Tutorial</a></li>
+  <li>Niklaus Wirth – <a href="https://freepages.modula2.org/report4/modula-2.html">The Programming Language Modula-2</a>.</li>
+  <li><a href="https://gcc.gnu.org/onlinedocs/gm2/">GNU Modula-2 Documentation</a></li>
+</ul>
+
+<h4 id="modula-2-oggi-comunità-e-discussioni">Modula-2 oggi: comunità e discussioni</h4>
+
+<p>Per chi volesse riscoprire il linguaggio, confrontarsi con altri appassionati o seguirne gli sviluppi:</p>
+
+<ul>
+  <li><a href="https://lists.nongnu.org/mailman/listinfo/gm2">GNU Modula-2 Mailing List</a></li>
+  <li><a href="https://groups.google.com/g/comp.lang.modula2">comp.lang.modula2 – Archivio Usenet</a></li>
+  <li><a href="https://freepages.modula2.org/">Free Modula-2 Pages</a></li>
+  <li><a href="https://www.reddit.com/r/programming/comments/1cuam2p/">Reddit – What ever happened to Modula-2?</a></li>
+  <li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/1uf8ouu/">Reddit – Portable Pragmas for Pascal, Modula-2 and Oberon</a></li>
+</ul>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Mentre leggevo alcuni vecchi numeri di BYTE in cui si parlava di programmazione a oggetti e Smalltalk, mi sono ricordato di un linguaggio imparato ai tempi, ormai lontani, dell’università, di cui ricordavo principalmente il nome e poche altre cose.]]></summary></entry><entry><title type="html">Modula-2 a forgotten success?</title><link href="https://alainmauri.eu/2026/11/25/modula2-a-forgotten-success/" rel="alternate" type="text/html" title="Modula-2 a forgotten success?" /><published>2026-11-25T00:00:00+00:00</published><updated>2026-11-25T00:00:00+00:00</updated><id>https://alainmauri.eu/2026/11/25/modula2-a-forgotten-success</id><content type="html" xml:base="https://alainmauri.eu/2026/11/25/modula2-a-forgotten-success/"><![CDATA[<p>While reading some old issues of BYTE discussing object-oriented programming and Smalltalk, I was reminded of a programming language I had learnt back in my university days, now quite some time ago. I remembered little more than its name.</p>
+
+<p>So I decided to do a little research, and here is what I found.</p>
+
+<h4 id="the-origins-of-modula-2">The origins of Modula-2</h4>
+
+<p>Modula-2 was developed by Niklaus Wirth, who had previously designed Pascal (a language I loved and used during my secondary school years), with the aim of overcoming some of the limitations of its predecessor.</p>
+
+<p>Between 1976 and 1977, Wirth spent a sabbatical year at Xerox PARC, where he encountered two projects:</p>
+
+<ul>
+  <li><strong>Xerox Alto</strong>, a workstation with a graphical user interface.</li>
+  <li><strong>Mesa</strong>, a programming language that supported modularity, separation of interface from implementation, and separate compilation.</li>
+</ul>
+
+<p>Upon returning to ETH Zurich, Wirth began developing his own workstation, Lilith, with the ambition of using a single programming language to build its entire software environment.</p>
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Lilith-enter-museum.jpg"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Lilith-enter-museum.jpg/500px-Lilith-enter-museum.jpg" alt="The Lilith workstation on display at the Enter Museum" /></a></p>
+
+<p><em>The Lilith workstation. Photo: Enter Museum, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</em></p>
+
+<p>In Wirth’s view, Pascal was sufficiently simple but not suited to the task, whereas Mesa was too complicated.</p>
+
+<p>The main limitations of the original Pascal were the lack of a module system and of a standard mechanism for compiling individual program components separately. When developing complex systems, this presented several problems:</p>
+
+<ul>
+  <li>Long compilation times.</li>
+  <li>Difficulties in dividing the work among development teams.</li>
+  <li>Difficulties in reusing software components.</li>
+  <li>Greater complexity in managing dependencies between different parts of the system.</li>
+</ul>
+
+<p>Wirth also drew on ideas from Modula, an experimental language he had developed in the preceding years, giving rise to Modula-2 in 1978.</p>
+
+<p>The compiler, initially developed on a PDP-11 and later ported to Lilith, allowed modules to be compiled independently and subsequently linked together, while preserving static type checking across separately compiled modules.</p>
+
+<p>The features and advantages of Modula-2 became particularly apparent during the development of Lilith’s software: the operating system, drivers, text editors, compiler and so on.</p>
+
+<p>The project demonstrated that using a single programming language to develop an entire software environment was not only possible but also beneficial.</p>
+
+<h4 id="the-features-of-the-language">The features of the language</h4>
+
+<p>So, what are the main features of Modula-2?</p>
+
+<ul>
+  <li>The ability to divide programs into separately compilable modules (hence the name).</li>
+  <li>Explicit import of identifiers and exposure of the public interface through the definition module. Separating the interface from the implementation allows implementation details to be hidden from those using the module (<em>information hiding</em>).</li>
+  <li>Coroutines as a basic mechanism for managing concurrent processes.</li>
+  <li>Static and strong typing.</li>
+  <li>Case sensitivity, with keywords written entirely in uppercase.</li>
+  <li>Access to low-level and hardware-specific resources through the <code class="language-plaintext highlighter-rouge">SYSTEM</code> module.</li>
+</ul>
+
+<p>Many of these features are familiar to us because they are also found in modern programming languages. Think, for instance, of the import mechanisms used in Go and Python.</p>
+
+<p>Furthermore, Modula-2 was conceived not primarily as a teaching language but as a systems programming tool. As Wirth himself explained in <a href="https://www.modula2.org/modula2-history.php">A Brief History of Modula and Lilith</a>, the language was, in a sense, a by-product of the development of Lilith:</p>
+
+<p><em>“It is evident that our primary concern was not a language satisfying all wishes of all programmers, but the creation of a sufficiently powerful tool for implementing an entire software system in a short time with the limited manpower at hand. Modula-2 was, so to speak, a subordinate goal, a means to an end.”</em></p>
+
+<p>Let’s look at a simple example taken from a <a href="https://www.modula2.org/tutor/chapter3.php">tutorial on the language</a>:</p>
+
+<pre><code class="language-modula2">MODULE IntVar;
+
+FROM Terminal2 IMPORT WriteLn, WriteString, WriteInt;
+
+VAR Count : INTEGER;  (* The sum of two variables *)
+    x,y   : INTEGER;  (* The two variables to add *)
+
+BEGIN
+
+   x := 12;
+   y := 13;
+   Count := x + y;
+
+          (* Assignments complete, now display the results *)
+
+   WriteString("The value of x  =");
+   WriteInt(x,3);
+   WriteLn;
+   WriteString("The value of y  =");
+   WriteInt(y,4);
+   WriteLn;
+   WriteString("The sum of them =");
+   WriteInt(Count,6);
+   WriteLn;
+
+   x := 0FFH;   (* This is the way to assign a hexadecimal number *)
+   y := 177B;   (* This is the way to assign an octal number      *)
+
+END IntVar.
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">Terminal2</code> is a support module used by the tutorial for input/output operations.</p>
+
+<p>The program begins with the module declaration, followed by the import of several procedures (using syntax remarkably similar to Python’s), the variable declarations and, finally, the body of the program, enclosed between the keywords <code class="language-plaintext highlighter-rouge">BEGIN</code> and <code class="language-plaintext highlighter-rouge">END</code>, the latter followed by the module name.</p>
+
+<p>Notice how the types of the variables are explicitly declared before they are used.</p>
+
+<p>Another thing worth noting is how several elements of the syntax were inherited from Pascal: the keywords <code class="language-plaintext highlighter-rouge">BEGIN</code> and <code class="language-plaintext highlighter-rouge">END</code>, the assignment operator <code class="language-plaintext highlighter-rouge">:=</code>, the semicolon as a statement separator, and even the comment syntax.</p>
+
+<p>A reminder, perhaps, that when evolving a programming language, there is no need to change what already works well.</p>
+
+<h4 id="modular-programming">Modular programming</h4>
+
+<p>Two module-related constructs deserve particular mention.</p>
+
+<p><code class="language-plaintext highlighter-rouge">DEFINITION MODULE</code> is conceptually similar to an <code class="language-plaintext highlighter-rouge">interface</code> in Java, although it can also expose types, constants and variables. It defines the public interface of a module, providing the compiler with the information needed to perform type checking even across separately compiled modules.</p>
+
+<p>The separation of interface from implementation is a concept we find in many modern programming languages, not just Java.</p>
+
+<p>Here is an example taken from the same <a href="https://www.modula2.org/tutor/chapter12.php">tutorial</a>:</p>
+
+<pre><code class="language-modula2">DEFINITION MODULE Circles;
+
+PROCEDURE AreaOfCircle(Radius : REAL; VAR Area : REAL);
+
+PROCEDURE PerimeterOfCircle(Radius : REAL; VAR Perim : REAL);
+
+END Circles.
+</code></pre>
+
+<p>Once the interface has been defined, the actual implementation follows, and this is where <code class="language-plaintext highlighter-rouge">IMPLEMENTATION MODULE</code> comes into play.</p>
+
+<pre><code class="language-mGodula2">IMPLEMENTATION MODULE Circles;
+
+PROCEDURE GetPi(VAR Pi : REAL);
+BEGIN
+   Pi := 3.14159;
+END GetPi;
+
+PROCEDURE AreaOfCircle(Radius : REAL; VAR Area : REAL);
+VAR Pie : REAL;
+BEGIN
+   GetPi(Pie);
+   Area := Pie * Radius * Radius;
+END AreaOfCircle;
+
+PROCEDURE PerimeterOfCircle(Radius : REAL; VAR Perim : REAL);
+VAR Cake : REAL;
+BEGIN
+   GetPi(Cake);
+   Perim := 2.0 * Cake * Radius;
+END PerimeterOfCircle;
+
+BEGIN (* IMPLEMENTATION MODULE body, empty in this case *)
+END Circles.
+</code></pre>
+
+<p>Notice that the procedure <code class="language-plaintext highlighter-rouge">GetPi</code>, not being declared in the <code class="language-plaintext highlighter-rouge">DEFINITION MODULE</code>, is only accessible from within the module itself.</p>
+
+<p>In this way, the definition exposes the module’s public interface while hiding implementation details that, in the context of a large-scale software system, are not needed by those using the module.</p>
+
+<h4 id="why-did-modula-2-remain-a-niche-language">Why did Modula-2 remain a niche language?</h4>
+
+<p>Although the Modula-2 compiler developed at ETH Zurich had been distributed to several hundred universities and companies, why did the language never reach the critical mass needed to become mainstream?</p>
+
+<p>According to K.N. King, in a <a href="https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9106/9106d/9106d.htm">1991 article</a> published in Dr. Dobb’s Journal, Modula-2, despite being considered a mature language by then, faced competition from languages such as Ada and C++ and was even at risk of being superseded by its own successors, Modula-3 and Oberon.</p>
+
+<p>Rich Gogesch of Stony Brook Software estimated that there were around 150,000 users worldwide at the time: a considerable number, but still nowhere near the number of Pascal and C users. Added to this was the limited availability of third-party libraries. King also described a situation of stagnation in the United States, in contrast to wider adoption in Europe, particularly in embedded systems.</p>
+
+<p>Another obstacle to the adoption of Modula-2 was the slow standardisation process, which led to the publication of the first ISO standard in 1996.</p>
+
+<p>In the meantime, other Pascal implementations, such as Turbo Pascal, had introduced some of Modula-2’s distinctive features, including separate compilation through <em>units</em>, introduced in Turbo Pascal 4.0 in 1987, with the advantage of extending a language developers were already familiar with.</p>
+
+<h4 id="whatever-happened-to-modula-2">Whatever happened to Modula-2?</h4>
+
+<p>Nearly fifty years after its creation, Modula-2 has not disappeared. In 2023, with the release of GCC 13, the GNU Modula-2 compiler officially became part of the <a href="https://gcc.gnu.org/pipermail/gcc-announce/2023/000175.html">GNU Compiler Collection</a>, and there is still a community dedicated to developing software and tools related to the language.</p>
+
+<p>Despite its limited commercial adoption, Modula-2 helped popularise ideas that we now find, albeit in different forms, in widely used programming languages such as Java, Go, Python and Ruby. These similarities do not necessarily imply direct descent from Modula-2.</p>
+
+<p>In my eyes, this still makes it a successful language, because the value of a programming language is measured not only by the number of people using it but also by the longevity of the ideas it helped spread.</p>
+
+<h4 id="if-this-has-sparked-your-curiosity">If this has sparked your curiosity…</h4>
+
+<ul>
+  <li>Niklaus Wirth – <a href="https://people.inf.ethz.ch/wirth/projects.html">Summary of projects by N. Wirth, 1962–1999</a></li>
+  <li>Niklaus Wirth – <a href="https://www.modula2.org/modula2-history.php">A Brief History of Modula and Lilith</a>, 1995.</li>
+  <li>K.N. King – <a href="https://jacobfilipp.com/DrDobbs/articles/DDJ/1991/9106/9106d/9106d.htm">What’s New With Modula-2?</a>, Dr. Dobb’s Journal, June 1991.</li>
+  <li><a href="https://archive.psg.com/sc22wg13.htm">Modula-2 Standardization</a></li>
+  <li><a href="https://www.modula2.org/tutor/">Modula-2 Tutorial</a></li>
+  <li>Niklaus Wirth – <a href="https://freepages.modula2.org/report4/modula-2.html">The Programming Language Modula-2</a>.</li>
+  <li><a href="https://gcc.gnu.org/onlinedocs/gm2/">GNU Modula-2 Documentation</a></li>
+</ul>
+
+<h4 id="modula-2-today-communities-and-discussions">Modula-2 today: communities and discussions</h4>
+
+<p>For anyone interested in rediscovering the language, talking to fellow enthusiasts or following its development:</p>
+
+<ul>
+  <li><a href="https://lists.nongnu.org/mailman/listinfo/gm2">GNU Modula-2 Mailing List</a></li>
+  <li><a href="https://groups.google.com/g/comp.lang.modula2">comp.lang.modula2 – Usenet archive</a></li>
+  <li><a href="https://freepages.modula2.org/">Free Modula-2 Pages</a></li>
+  <li><a href="https://www.reddit.com/r/programming/comments/1cuam2p/">Reddit – What ever happened to Modula-2?</a></li>
+  <li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/1uf8ouu/">Reddit – Portable Pragmas for Pascal, Modula-2 and Oberon</a></li>
+</ul>
+
+<hr />
+
+<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
+
+<p>This time, if you wish, check out my virtual photographic exhibition about <a href="/exhibitions/reflections/">reflections</a></p>
+
+<hr />
+
+<h4 id="todays-links">Today’s Links</h4>
+
+<p>Keza MacDonald <a href="https://www.theguardian.com/games/2026/nov/18/grand-theft-auto-vi-gta-6-review-playstation-rockstar?CMP=share_btn_url">GTA VI Review</a><br />
+New York Times 100 notable <a href="https://www.nytimes.com/2026/11/23/books/review/notable-books.html?unlocked_article_code=1.TFE.Ds3w.RhMDLWb3-wFD&amp;smid=url-share">books of 2026</a><br />
+True Crime community inspiring <a href="https://www.wired.com/story/the-true-crime-community-is-inspiring-violent-attacks-through-tiktok/">violent crimes</a><br />
+Funny news of the day, shameless Palantir CEO says that their products are <a href="https://www.theregister.com/software/2026/11/12/palantirs-karp-takes-a-sharp-left-turn-says-he-and-the-companys-products-are-actually-progressive/5309441">progressive…</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[While reading some old issues of BYTE discussing object-oriented programming and Smalltalk, I was reminded of a programming language I had learnt back in my university days, now quite some time ago. I remembered little more than its name.]]></summary></entry><entry><title type="html">Creative languages</title><link href="https://alainmauri.eu/2026/09/20/creative-languages/" rel="alternate" type="text/html" title="Creative languages" /><published>2026-09-20T00:00:00+01:00</published><updated>2026-09-20T00:00:00+01:00</updated><id>https://alainmauri.eu/2026/09/20/creative-languages</id><content type="html" xml:base="https://alainmauri.eu/2026/09/20/creative-languages/"><![CDATA[<p>For a long time, I viewed programming and photography as two separate things—two completely different worlds.
 One made of logic and computers, the other of images, perceptions, and sensory stimuli.<br />
 Then I realised that the creative processes underlying both activities are very similar.</p>
 
@@ -778,108 +1177,4 @@ These small discoveries have made my work feel less routine and more meaningful 
 <p>How Telegram became the Underworld’s favourite app <a href="https://www.nytimes.com/2024/09/23/podcasts/the-daily/telegram-terrorism.html?action=click&amp;module=audio-series-bar&amp;region=header&amp;pgtype=Article">The Daily</a><br />
 The Real-World cost of AI <a href="https://www.theglobeandmail.com/podcasts/machines-like-us/article-the-real-world-costs-of-ai/">Machines like us podcast</a><br />
 Browsing the <a href="https://us20.campaign-archive.com/?e=8d1795a565&amp;u=38bd6154386f64fcd92204a25&amp;id=89d656bce5">Archive</a><br />
-Hacker’s Movie <a href="https://cybersecurityventures.com/movies-about-cybersecurity-and-hacking/">Guide</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[I’m quite proud of how my blogpost template generator is taking shape. While there are still some edge cases that I haven’t covered, and a few more improvements to be made, it’s coming along nicely. If you want to take a look, I linked the repository in a previous post. Here’s the permalink to the latest version of the script. Shifting gears, I’m finally working on something pretty interesting at my day job. It’s simple codewise, but the theory behind it has been engaging. I’ve been focusing on building predictors for young athletes. While these predictors aren’t complex from a technical perspective, they are quite powerful in terms of the insights they provide about athletic potential.]]></summary></entry><entry><title type="html">My Own Generator</title><link href="https://alainmauri.eu/2024/09/21/my-own-generator/" rel="alternate" type="text/html" title="My Own Generator" /><published>2024-09-21T00:00:00+01:00</published><updated>2024-09-21T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/09/21/my-own-generator</id><content type="html" xml:base="https://alainmauri.eu/2024/09/21/my-own-generator/"><![CDATA[<p>Many things are recently going on in my mind, but I guess it’s just part of that process called aging. I’m having that feeling that I still have so many things to do and learn (<a href="https://album.link/i/258622449">Kenny G.</a> is playing in the background) but the time left is not enough.
-Despite this and the fact that I’m not that fast as a developer as before - never been a 10x though… more a 2x :smile: - I’m still enjoying writing in that bizarre language called “code” and share my small achievements in blog posts, even though I realized
-that I have to write when I feel too and not with a predefined routine. This is what I am and I think I’m not going to change much… 
-Anyway I enjoy writing with my usual editor (Neovim or Lunarvim) but I don’t enjoy copy pasting things around. More I was in the process of learning how to use the <a href="http://whatisthor.com">Thor</a> gem so I said to myself that probably the best thing to do learn how it works is building something wih it. 
-It took me less than one hour to build an alpha version of my personal blogpost generator and you can find the code <a href="https://github.com/wildeng/wildeng.github.io/blob/55bac77ea91252e72c3c45f8b57593d20f3b0454/_scripts/blogpost.rb">here</a>. 
-<br />
-More, I already have in my mind some improvements:
-<br />
-Add some validations to the name and date passed as arguments 
-<br />
-Add the possibility to set up a customisable path for saving the file. I’m just thinking about how to organise posts e.g. by category 
-<br />
-Maybe add a file path to a template as a /a/ameter. In this way I could potentially change the structure of my posts and make the generator more general.</p>
-
-<p>I probably have many more improvements in my mind but the music is almost over and the beer is finished - It’s a Saturday evening so I can indulge a bit more with drinks!</p>
-
-<p>Cheers!
-<br />
-By the way, I also added some animation to my career page, check it out!</p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p><br /></p>
-
-<p>Look at the difference between the two! The Webb telescope is amazing! The original is <a href="https://www.flickr.com/photos/nasawebbtelescope/53969828422/in/album-72177720313923911">here</a> <br />
-<img src="https://live.staticflickr.com/65535/53969828422_e000c6a967_k.jpg" alt="Question Mark Galaxy - Hubble and Webb | by James Webb Space Telescope" class="post-image" />
-<br />
-<br />
-This one is called “Peeking into Perseus”, I love the colours… original <a href="https://www.flickr.com/photos/nasawebbtelescope/53951942710/in/album-72177720313923911">here</a><br />
-<img src="https://live.staticflickr.com/65535/53951942710_5f4cef91ce_b.jpg" alt="Webb Finds Early Galaxies Weren't Too Big for Their Britches After All | by James Webb Space Telescope" class="post-image" />
-<br />
-<br /></p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>Shady firm are already manipulating <a href="https://futurism.com/shady-firms-manipulating-chatbots">chatbots</a> <br />
-Where do music genres come from? <a href="https://www.honest-broker.com/p/where-do-music-genres-come-from">Ted Gioia</a> <br />
-Cards against humanity sues Space X <a href="https://arstechnica.com/tech-policy/2024/09/cards-against-humanity-sues-spacex-alleges-invasion-of-land-on-us-mexico-border/">Arstechnica</a><br />
-Secret calculator chat brings ChatGPT to TI-84 <a href="https://arstechnica.com/information-technology/2024/09/secret-calculator-hack-brings-chatgpt-to-the-ti-84-enabling-easy-cheating/">Arstechnica</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[Many things are recently going on in my mind, but I guess it’s just part of that process called aging. I’m having that feeling that I still have so many things to do and learn (Kenny G. is playing in the background) but the time left is not enough. Despite this and the fact that I’m not that fast as a developer as before - never been a 10x though… more a 2x :smile: - I’m still enjoying writing in that bizarre language called “code” and share my small achievements in blog posts, even though I realized that I have to write when I feel too and not with a predefined routine. This is what I am and I think I’m not going to change much… Anyway I enjoy writing with my usual editor (Neovim or Lunarvim) but I don’t enjoy copy pasting things around. More I was in the process of learning how to use the Thor gem so I said to myself that probably the best thing to do learn how it works is building something wih it. It took me less than one hour to build an alpha version of my personal blogpost generator and you can find the code here. More, I already have in my mind some improvements: Add some validations to the name and date passed as arguments Add the possibility to set up a customisable path for saving the file. I’m just thinking about how to organise posts e.g. by category Maybe add a file path to a template as a /a/ameter. In this way I could potentially change the structure of my posts and make the generator more general.]]></summary></entry><entry><title type="html">Thoughts in random order</title><link href="https://alainmauri.eu/2024/08/26/random-thoughts/" rel="alternate" type="text/html" title="Thoughts in random order" /><published>2024-08-26T00:00:00+01:00</published><updated>2024-08-26T00:00:00+01:00</updated><id>https://alainmauri.eu/2024/08/26/random-thoughts</id><content type="html" xml:base="https://alainmauri.eu/2024/08/26/random-thoughts/"><![CDATA[<p>AI-generated images are a problem, no more or less than “natural” ones. Can we determine whether an image is authentic or not? If someone claims an image is fake - e.g., Trump regarding a Kamala Harris rally -
-can we produce documentation to prove its authenticity? And if so, will others be willing to accept the truth, or will they continue to believe what suits them best?
-Italian researcher Walter Quattrociocchi, in an article for the financial newspaper <a href="https://www.ilsole24ore.com/art/armarsi-contro-fake-news-strumenti-il-prebunking-e-debunking-AGTHB8W">Il Sole 24 ore</a>, explains that debunking doesn’t work, mostly because people stick to their mental models
-even when confronted with the truth. This is where prebunking becomes useful.
-Prebunking, also known as inoculation theory in communication studies, is a proactive approach to combating misinformation.
-The goal of prebunking is to equip people with the skills to spot false and misleading information online before they encounter it, thereby preempting manipulation.
-This method works by exposing individuals to weakened forms of misinformation and teaching them how to identify and counter deceptive tactics.</p>
-
-<p>Key aspects of prebunking include:</p>
-
-<ol>
-  <li>Education: Teaching critical thinking skills and common manipulation techniques used in misinformation.</li>
-  <li>Exposure: Presenting mild doses of misinformation along with explanations of why it’s misleading.</li>
-  <li>Practice: Allowing individuals to apply their new knowledge in controlled scenarios.</li>
-  <li>Reinforcement: Regularly updating and reinforcing these skills as misinformation tactics evolve.</li>
-</ol>
-
-<p>By implementing prebunking strategies, the aim is to make online users more resilient to being misled in the future.
-This approach acknowledges that prevention is often more effective than cure when it comes to battling the spread of misinformation in our digital age.</p>
-
-<p>I’ve been back to Italy with the whole family after two years. Many things have changed, and I feel I belong to a different place now.
-But still, when I come here, many sweet memories come to my mind, and I start questioning my past choices.
-I guess it’s normal, given that I moved to the UK for two main reasons: better job opportunities for a Rubyist and putting some distance between myself and all the pressures my former life was
-putting on me. 
-Anyway, seeing what my kids have become and the happiness in my wife’s eyes is enough to say that our life has improved a lot,
-despite Brexit and all the xenophobic rhetoric that comes from the British far right.</p>
-
-<p>I want to learn how to solve a Rubik’s cube! :smile: I remember when I was a kid, back in the 80s, I had a Rubik’s cube and after scrambling it, I detached all the coloured stickers and
-put them back in the right order, pretending I had solved it!</p>
-
-<p>I’m reading “Ruby under a Microscope” again. Sometimes I need to refresh my understanding of the language, and I think that I know more about Ruby than I do about Rails.
-This hasn’t always been valued during interviews. What fascinates me is the way the language handles different scenarios, such as <code class="language-plaintext highlighter-rouge">include</code>, <code class="language-plaintext highlighter-rouge">extend</code>, and <code class="language-plaintext highlighter-rouge">prepend</code>,
-the algorithms used to parse the code, and generally all the internal mechanisms that make my life as a developer easier.</p>
-
-<hr />
-
-<h4 id="things-i-like---in-random-order">Things I like - in random order</h4>
-
-<p>Some other pictures I recently took:</p>
-
-<p><br />
-<img src="https://pxscdn.com/public/m/_v2/424813098022428933/3781ba7d4-1bb9dc/8S7jdImacpHV/VPQAShFmJHjrIN6kSm5rsgAEpqHGsNxA9IEYmgIf.jpg" alt="a woman smiling while walking the dogs in Brighton" class="post-image" />
-<br />
-<br />
-<img src="https://pxscdn.com/public/m/_v2/424813098022428933/530d83cd3-f15549/ShUL7h8BaWYq/b5eRHVRH7oE3gvjTsAuXkrwGUOmNmbb2OreasATo.jpg" alt="a photographer with some dancers posing for him in kelham island sheffield" class="post-image" />
-<br />
-<br /></p>
-
-<p>:heart: I’ve tried many IDEs in my career but I always come back to Lunarvim or Emacs :heart:</p>
-
-<hr />
-
-<h4 id="todays-links">Today’s Links</h4>
-
-<p>Prebunking with <a href="https://prebunking.withgoogle.com">Google</a></p>
-
-<p>You need just 19 words to provide <a href="https://www.youtube.com/watch?v=8lfQGSV47Y8">wise feedback</a> from Daniel Pink <code class="language-plaintext highlighter-rouge">Pinkcast</code></p>
-
-<p>Microsoft refuses to patch multiple flaws in Microsoft macOS apps <a href="https://www.theregister.com/2024/08/19/cisco_talos_microsoft_macos/">The Register</a></p>
-
-<p>Who uses LLM <a href="https://www.theregister.com/2024/08/13/who_uses_llm_prompt_injection/">prompt injection?</a></p>
-
-<p>The Obamas’ <a href="https://slate.com/news-and-politics/2024/08/barack-obama-crowd-size-michelle-obama-black-jobs-dnc-speech.html">real superpower</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[AI-generated images are a problem, no more or less than “natural” ones. Can we determine whether an image is authentic or not? If someone claims an image is fake - e.g., Trump regarding a Kamala Harris rally - can we produce documentation to prove its authenticity? And if so, will others be willing to accept the truth, or will they continue to believe what suits them best? Italian researcher Walter Quattrociocchi, in an article for the financial newspaper Il Sole 24 ore, explains that debunking doesn’t work, mostly because people stick to their mental models even when confronted with the truth. This is where prebunking becomes useful. Prebunking, also known as inoculation theory in communication studies, is a proactive approach to combating misinformation. The goal of prebunking is to equip people with the skills to spot false and misleading information online before they encounter it, thereby preempting manipulation. This method works by exposing individuals to weakened forms of misinformation and teaching them how to identify and counter deceptive tactics.]]></summary></entry></feed>
+Hacker’s Movie <a href="https://cybersecurityventures.com/movies-about-cybersecurity-and-hacking/">Guide</a></p>]]></content><author><name>Wildeng</name></author><summary type="html"><![CDATA[I’m quite proud of how my blogpost template generator is taking shape. While there are still some edge cases that I haven’t covered, and a few more improvements to be made, it’s coming along nicely. If you want to take a look, I linked the repository in a previous post. Here’s the permalink to the latest version of the script. Shifting gears, I’m finally working on something pretty interesting at my day job. It’s simple codewise, but the theory behind it has been engaging. I’ve been focusing on building predictors for young athletes. While these predictors aren’t complex from a technical perspective, they are quite powerful in terms of the insights they provide about athletic potential.]]></summary></entry></feed>
