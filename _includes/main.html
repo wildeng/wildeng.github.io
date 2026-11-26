@@ -1,12 +1,14 @@
 <section id="main">
   <div class="main-container">
-    <div class="title-one">YET ANOTHER ENGINEER
-      <div class="subtitle">
-        <hr />
-        Alain Mauri - Wildeng - No Tracking and No cookies here!
-      </div>
+    <div class="homepage-intro">
+      <h1 class="title-one">YET ANOTHER ENGINEER</h1>
+      <hr />
+      <p class="subtitle">Software engineering, photography, computing history and other curiosities.</p>
+      <p class="homepage-privacy">No tracking. No cookies.</p>
     </div>
-    <p class="copyright">&copy; 1971-{{ "now" | date: "%Y" }} <b>Alain Mauri</b>.
-    <br>rev {{ site.github.build_revision }} - {{ "now" | date: "%Y.%m.%d" }}</p>
+    <footer class="homepage-footer">
+      &copy; 1971-{{ "now" | date: "%Y" }} <b>Alain Mauri</b>.
+      <br>rev {{ site.github.build_revision | slice: 0, 8 }} - {{ "now" | date: "%Y.%m.%d" }}
+    </footer>
   </div>
 </section>

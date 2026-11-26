@@ -46,6 +46,30 @@
 .menu-container {
   color: #FFF;
   font-family: var(--font-secondary);
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  margin: 0 var(--spacing-sm);
+  font-size: clamp(1.6rem, 2.3vw, 1.75rem);
+  max-width: 112rem;
+  margin-inline: auto;
+  padding-inline: var(--spacing-md);
+}
+
+.menu-container .navbar-nav > li > a {
+  padding-inline: var(--spacing-sm);
+}
+
+.menu-container .navbar-brand:focus-visible,
+.menu-container .navbar-nav > li > a:focus-visible,
+.menu-container .navbar-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+@media (width < 768px) {
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: var(--color-bg-menu);
+  }
+
+  .menu-container .navbar-nav > li > a {
+    padding-block: 12px;
+  }
 }
